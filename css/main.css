@@ -11,12 +11,58 @@ body {
     user-select: none;
 }
 
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #464646;
+    border-radius: 9999px;
+    border: .25rem solid transparent;
+    background-clip: padding-box
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(66, 66, 66, 0.816);
+    border-radius: 9999px;
+    border: .25rem solid transparent;
+    background-clip: padding-box
+}
+
 .rotateObj {
     width: 110px;
     transform-origin: center 10px;
     display: inline-block;
     transform: rotate(90deg);
     text-align: center;
+}
+
+.container {
+    position: relative;
+}
+
+.wrapper {
+    width: 90%;
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wrapper.notfound {
+    margin-top: 17%;
+}
+
+.wrapper.uabg {
+    background: url("../img/ukraine-flag.svg") repeat;
+    background-size: auto 53px;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    margin-top: 12%;
 }
 
 .navbar {
@@ -73,18 +119,6 @@ body {
     color: unset;
 }
 
-.container {
-    position: relative;
-}
-
-.wrapper {
-    width: 90%;
-    max-width: 1170px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10%;
-}
-
 .intro {
     width: 90%;
     max-width: 1170px;
@@ -100,12 +134,16 @@ body {
     color: red;
 }
 
-.uabg {
-    background: url("../img/ukraine-flag.svg") repeat;
-    background-size: auto 55px;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
+.intro h2 {
+    color: darkgray;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.intro h3 {
+    color: darkgray;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 #animated-text {
@@ -114,8 +152,8 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
-    animation: run 5s linear infinite;
-    animation-direction: unset;
+    animation: run 7s linear infinite;
+    animation-direction: reverse;
 }
 
 @keyframes run {
@@ -129,53 +167,6 @@ body {
     max-width: 1920px;
     margin-left: auto;
     margin-right: auto;
-}
-
-::-webkit-scrollbar {
-    width: 15px;
-}
-
-::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #464646;
-    border-radius: 9999px;
-    border: .25rem solid transparent;
-    background-clip: padding-box
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: rgba(66, 66, 66, 0.816);
-    border-radius: 9999px;
-    border: .25rem solid transparent;
-    background-clip: padding-box
-}
-
-a.link {
-    display: inline-block;
-    position: relative;
-    color: #ffcece;
-    text-decoration: none;
-    transition: color .3s ease-in;
-}
-
-a.link:hover {
-    color: #722929;
-}
-
-a.link:after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: #333;
-    z-index: -1;
-    transition: all 0.1s cubic-bezier(0.000, 0.590, 1.000, 0.260);
 }
 
 #discord,
@@ -211,6 +202,31 @@ a:focus {
     white-space: nowrap;
     border-radius: 3px;
     text-decoration: none;
+}
+
+a.link {
+    display: inline-block;
+    position: relative;
+    color: #ffcece;
+    text-decoration: none;
+    transition: color .3s ease-in;
+}
+
+a.link:hover {
+    color: #722929;
+}
+
+a.link:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #333;
+    z-index: -1;
+    transition: all 0.1s cubic-bezier(0.000, 0.590, 1.000, 0.260);
 }
 
 footer {
