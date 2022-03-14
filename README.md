@@ -1,3 +1,1 @@
-# misternano.github.io
-
-## :)
+# nanos.club
