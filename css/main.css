@@ -54,6 +54,7 @@ body {
 
 .wrapper.notfound {
     margin-top: 17%;
+    line-height: 0.5em;
 }
 
 #uabg {
@@ -62,7 +63,7 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
-    margin-top: 15%;
+    margin-top: 17%;
 }
 
 .navbar {
@@ -221,7 +222,7 @@ a.link {
 }
 
 a.link:hover {
-    color: #722929;
+    color: #d43a3a;
 }
 
 a.link:after {

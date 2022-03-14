@@ -3,14 +3,17 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="author" content="Nano">
-    <meta name="description" content="">
-    <meta name="keywords" content="personal, nano, nanovirus, influencer, dev">
+    <meta name="author" content="Nano" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="personal, nano, nanovirus, influencer, dev" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="theme-color" content="#171717" />
     <title>Nano's Club</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="icon" type="image/x-icon" href="img/silkicons/cake.png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="icon" type="image/x-icon" href="img/silkicons/cup.png">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="https://kit.fontawesome.com/8ab913bf22.js" crossorigin="anonymous"></script>
     <script>
         console.log("%cfuck off 🌷", "color:#e8a0e3;font-size:14px;padding:14px;font-family:monospace;")
@@ -18,6 +21,10 @@
 </head>
 
 <body>
+    <script>
+        AOS.init();
+    </script>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
     <nav>
         <div class="navbar">
             <div class="navbar logo"></div>
@@ -30,24 +37,21 @@
     </nav>
     <div class="container">
         <div class="intro">
-            <h1 id="animated-text" style="font-weight:800;">Hi, I'm Nano :)</h1>
-            <h2>jschlatt stan and social media influencer.</h2>
-            <h3>Join the group <a class="link" href="https://www.discordapp.com/invite/C2FncEMqUx" alt="Discord server invite" target="_blank">here</a>.</h3>
+            <h1 data-aos="fade-in" id="animated-text" style="font-weight:800;">Hi, I'm Nano :)</h1>
+            <h2 data-aos="fade-in">jschlatt stan and social media influencer.</h2>
+            <h3 data-aos="fade-in">Join the group <a class="link" href="https://www.discordapp.com/invite/C2FncEMqUx" alt="Discord server invite" target="_blank">here</a>.</h3>
         </div>
         <div class="wrapper">
-            <p id="uabg">Stand with Ukraine</p>
+            <p data-aos="fade-up" id="uabg">Stand with Ukraine</p>
         </div>
     </div>
-    <footer>
-        <div class="socials">
-            <a class="link" id="discord" href="https://www.discord.com/users/272535850200596480/" alt="Discord" target="_blank"><i class="fa-brands fa-discord"></i></a>
-            <a class="link" id="twitter" href="https://www.twitter.com/fruitynano/" alt="Twitter" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-            <a class="link" id="twitch" href="https://www.twitch.tv/mrnanovirus/" alt="Twitch" target="_blank"><i class="fa-brands fa-twitch"></i></a>
-            <a class="link" id="youtube" href="https://www.youtube.com/channel/UCMhXoxlrF-iJvPZcMjZyn_g/" alt="YouTube" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-            <a class="link" id="steam" href="https://www.steamcommunity.com/id/cjstitt/" alt="Steam" target="_blank"><i class="fa-brands fa-steam"></i></a>
-            <a class="link" id="github" href="https://github.com/misternano/" alt="Github" target="_blank"><i class="fa-brands fa-github"></i></a>
-        </div>
-    </footer>
+    <div id="footer-placeholder">
+    </div>
+    <script>
+        $(function() {
+            $("#footer-placeholder").load("/common/footer.html");
+        });
+    </script>
 </body>
 
 </html>
