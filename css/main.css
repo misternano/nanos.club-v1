@@ -56,13 +56,13 @@ body {
     margin-top: 17%;
 }
 
-.wrapper.uabg {
+#uabg {
     background: url("../img/ukraine-flag.svg") repeat;
-    background-size: auto 53px;
+    background-size: auto 55px;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
-    margin-top: 12%;
+    margin-top: 15%;
 }
 
 .navbar {
@@ -126,6 +126,7 @@ body {
     margin-right: auto;
     margin-top: 5%;
     line-height: 0em;
+    text-align: left;
 }
 
 .intro h1 {
@@ -163,17 +164,20 @@ body {
 }
 
 .socials {
-    width: 96%;
+    width: 98%;
     max-width: 1920px;
+    padding-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
+    text-align: left;
 }
 
 #discord,
 #twitter,
 #twitch,
 #youtube,
-#steam {
+#steam,
+#github {
     color: white;
 }
 
@@ -195,6 +199,10 @@ body {
 
 #steam:hover {
     color: #2a475e;
+}
+
+#github:hover {
+    color: #333;
 }
 
 a:focus {
