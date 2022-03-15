@@ -1,0 +1,3 @@
+AOS.init({
+    // global settings
+});
