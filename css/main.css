@@ -201,7 +201,7 @@ body {
         -webkit-text-fill-color: transparent;
         background-clip: text;
         -webkit-background-clip: text;
-        margin-top: 6%;
+        margin-top: 5%;
     }
     .arrow {
         animation: bouncing 1s infinite ease-in-out;
