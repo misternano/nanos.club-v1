@@ -9,9 +9,11 @@ body {
     font-size: 40px;
     text-align: center;
     user-select: none;
+    overflow-x: hidden;
 }
 
-::-webkit-scrollbar {
+
+/*::-webkit-scrollbar {
     width: 15px;
 }
 
@@ -27,29 +29,21 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(66, 66, 66, 0.816);
+    background: rgb(66, 66, 66, 0.816);
     border-radius: 9999px;
     border: .25rem solid transparent;
     background-clip: padding-box
-}
-
-.rotateObj {
-    width: 110px;
-    transform-origin: center 10px;
-    display: inline-block;
-    transform: rotate(90deg);
-    text-align: center;
-}
-
-.container {
-    position: relative;
-}
+}*/
 
 .wrapper {
     width: 90%;
     max-width: 1170px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.wrapper.qa {
+    margin-bottom: 60px;
 }
 
 .wrapper.notfound {
@@ -73,15 +67,6 @@ body {
     padding: 5px 5px;
 }
 
-.navbar .logo {
-    float: right;
-    margin-right: 20%;
-    padding: 20px 20px;
-    background-image: url(../img/3b984476e13e22e0f07e301e74ca9dd0.png);
-    background-size: 100% 100%;
-    border-radius: 50%;
-}
-
 .navbar .container {
     padding-left: 20%;
     float: left;
@@ -93,7 +78,6 @@ body {
     padding: 9px 16px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 12px;
     cursor: pointer;
     margin: 0px 10px;
@@ -115,7 +99,7 @@ body {
     color: unset;
 }
 
-.navlink:after {
+.navlink:focus {
     text-decoration: none;
     color: unset;
 }
@@ -126,13 +110,13 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-top: 5%;
-    line-height: 0em;
+    line-height: 0.6em;
     text-align: left;
 }
 
 .intro h1 {
-    max-width: 837px;
-    line-height: 1em;
+    max-width: 1004.4px;
+    line-height: 1.2em;
     color: red;
 }
 
@@ -140,17 +124,19 @@ body {
     color: darkgray;
     font-size: 30px;
     font-weight: bold;
+    margin: 0;
 }
 
 .intro h3 {
     color: darkgray;
     font-size: 20px;
     font-weight: bold;
+    margin: 0;
 }
 
-#animated-text {
+.animated-text {
     background: url("../img/EecPYwAAAABJRU5ErkJggg.png") repeat;
-    background-size: auto 80px;
+    background-size: auto 96px;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
@@ -164,13 +150,56 @@ body {
     }
 }
 
-.socials {
-    width: 98%;
-    max-width: 1920px;
-    padding-bottom: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
+@media (max-width:1920px) {
+    .animated-text {
+        background: transparent;
+        -webkit-text-fill-color: white;
+        color: white;
+    }
+    .navbar .logo {
+        float: right;
+        margin-right: 2%;
+        padding: 21px 21px;
+        background-image: url(../img/3b984476e13e22e0f07e301e74ca9dd0.png);
+        background-size: 100% 100%;
+        border-radius: 50%;
+    }
+    .socials {
+        width: 98%;
+        max-width: 100%;
+        padding-bottom: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+}
+
+@media (min-width:1170px) {
+    .animated-text {
+        background: url("../img/EecPYwAAAABJRU5ErkJggg.png") repeat;
+        background-size: auto 96px;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        animation: run 7s linear infinite;
+        animation-direction: reverse;
+    }
+    .navbar .logo {
+        float: right;
+        margin-right: 20%;
+        padding: 21px 21px;
+        background-image: url(../img/3b984476e13e22e0f07e301e74ca9dd0.png);
+        background-size: 100% 100%;
+        border-radius: 50%;
+    }
+    .socials {
+        width: 98%;
+        max-width: 100%;
+        padding-bottom: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+    }
 }
 
 #discord,
@@ -214,7 +243,7 @@ a:focus {
 }
 
 a.link {
-    display: inline-block;
+    display: inline;
     position: relative;
     color: #ffcece;
     text-decoration: none;
@@ -225,21 +254,39 @@ a.link:hover {
     color: #d43a3a;
 }
 
-a.link:after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: #333;
-    z-index: -1;
-    transition: all 0.1s cubic-bezier(0.000, 0.590, 1.000, 0.260);
-}
-
 footer {
     width: 100%;
     position: fixed;
     bottom: 0;
+}
+
+
+/* temporary */
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.arrow {
+    animation: bouncing 1s infinite ease-in-out;
+    bottom: 0;
+    display: block;
+    height: 50px;
+    width: 50px;
+    left: 50%;
+    margin-left: -25px;
+    position: absolute;
+    color: darkgray;
+}
+
+@keyframes bouncing {
+    0% {
+        bottom: 5px;
+    }
+    50% {
+        bottom: 15px;
+    }
+    100% {
+        bottom: 5px;
+    }
 }
