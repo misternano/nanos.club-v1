@@ -51,27 +51,11 @@ body {
     line-height: 0.5em;
 }
 
-#uabg {
-    background: url("../img/ukraine-flag.svg") repeat;
-    background-size: auto 55px;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-    margin-top: 17%;
-}
-
 .navbar {
     background: #242424;
     overflow: hidden;
     border-radius: 5px;
     padding: 5px 5px;
-}
-
-.navbar .container {
-    padding-left: 20%;
-    float: left;
-    display: flex;
-    flex: 1;
 }
 
 .navbar .btn {
@@ -154,7 +138,6 @@ body {
     .animated-text {
         background: transparent;
         -webkit-text-fill-color: white;
-        color: white;
     }
     .navbar .logo {
         float: right;
@@ -171,6 +154,12 @@ body {
         margin-left: auto;
         margin-right: auto;
         text-align: center;
+    }
+    .navbar .container {
+        padding-left: 2%;
+        float: left;
+        display: flex;
+        flex: 1;
     }
 }
 
@@ -199,6 +188,31 @@ body {
         margin-left: auto;
         margin-right: auto;
         text-align: left;
+    }
+    .navbar .container {
+        padding-left: 20%;
+        float: left;
+        display: flex;
+        flex: 1;
+    }
+    #uabg {
+        background: url("../img/ukraine-flag.svg") repeat;
+        background-size: auto 55px;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        margin-top: 6%;
+    }
+    .arrow {
+        animation: bouncing 1s infinite ease-in-out;
+        bottom: 0;
+        display: block;
+        height: 50px;
+        width: 50px;
+        left: 50%;
+        margin-left: -25px;
+        position: absolute;
+        color: darkgray;
     }
 }
 
@@ -265,18 +279,6 @@ footer {
 
 ::-webkit-scrollbar {
     display: none;
-}
-
-.arrow {
-    animation: bouncing 1s infinite ease-in-out;
-    bottom: 0;
-    display: block;
-    height: 50px;
-    width: 50px;
-    left: 50%;
-    margin-left: -25px;
-    position: absolute;
-    color: darkgray;
 }
 
 @keyframes bouncing {
