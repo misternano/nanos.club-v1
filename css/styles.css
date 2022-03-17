@@ -54,18 +54,18 @@ a.link:hover {
     color: #d43a3a;
 }
 
-.wrapper {
+.content-wrapper {
     width: 90%;
     max-width: 1170px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.wrapper.qa {
+.content-wrapper.qa {
     margin-bottom: 60px;
 }
 
-.wrapper.notfound {
+.content-wrapper.notfound {
     margin-top: 15%;
     line-height: 1em;
 }
