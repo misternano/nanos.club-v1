@@ -35,6 +35,25 @@ body {
     background-clip: padding-box
 }*/
 
+:focus {
+    white-space: nowrap;
+    border-radius: 3px;
+    text-decoration: none;
+    padding: 1px;
+}
+
+a.link {
+    display: inline;
+    position: relative;
+    color: #ffcece;
+    text-decoration: none;
+    transition: color .3s ease-in;
+}
+
+a.link:hover {
+    color: #d43a3a;
+}
+
 .wrapper {
     width: 90%;
     max-width: 1170px;
@@ -51,14 +70,13 @@ body {
     line-height: 1em;
 }
 
-.navbar {
+nav {
     background: #242424;
     overflow: hidden;
-    border-radius: 5px;
     padding: 5px 5px;
 }
 
-.navbar .btn {
+.nav-btn {
     padding: 9px 16px;
     text-align: center;
     text-decoration: none;
@@ -66,24 +84,25 @@ body {
     cursor: pointer;
     margin: 0px 10px;
     text-transform: uppercase;
+    border-radius: 5px;
 }
 
-.navbar .btn:hover {
+.nav-btn:hover {
     background-color: #3a3a3a;
     border: none;
     cursor: pointer;
 }
 
-.navbar .btn.active {
+.nav-btn.active {
     background-color: #171717;
 }
 
-.navlink {
+.nav-link {
     text-decoration: none;
     color: unset;
 }
 
-.navlink:focus {
+.nav-link:focus {
     text-decoration: none;
     color: unset;
 }
@@ -135,11 +154,13 @@ body {
 }
 
 @media (max-width:1920px) {
-    .animated-text {
-        background: transparent;
-        -webkit-text-fill-color: white;
+    .nav-container {
+        padding-left: 2%;
+        float: left;
+        display: flex;
+        flex: 1;
     }
-    .navbar .logo {
+    .nav-logo {
         float: right;
         margin-right: 2%;
         padding: 21px 21px;
@@ -147,23 +168,44 @@ body {
         background-size: 100% 100%;
         border-radius: 50%;
     }
-    .socials {
+    .animated-text {
+        background: transparent;
+        -webkit-text-fill-color: white;
+    }
+    #uabg {
+        background: transparent;
+        -webkit-text-fill-color: white;
+        margin-top: 5%;
+    }
+    #uabg::before {
+        content: "🇺🇦 ";
+    }
+    footer {
         width: 98%;
-        max-width: 100%;
         padding-bottom: 10px;
         margin-left: auto;
         margin-right: auto;
         text-align: center;
-    }
-    .navbar .container {
-        padding-left: 2%;
-        float: left;
-        display: flex;
-        flex: 1;
+        position: fixed;
+        bottom: 0;
     }
 }
 
 @media (min-width:1170px) {
+    .nav-container {
+        padding-left: 20%;
+        float: left;
+        display: flex;
+        flex: 1;
+    }
+    .nav-logo {
+        float: right;
+        margin-right: 20%;
+        padding: 21px 21px;
+        background-image: url(../img/3b984476e13e22e0f07e301e74ca9dd0.png);
+        background-size: 100% 100%;
+        border-radius: 50%;
+    }
     .animated-text {
         background: url("../img/EecPYwAAAABJRU5ErkJggg.png") repeat;
         background-size: auto 96px;
@@ -173,35 +215,25 @@ body {
         animation: run 7s linear infinite;
         animation-direction: reverse;
     }
-    .navbar .logo {
-        float: right;
-        margin-right: 20%;
-        padding: 21px 21px;
-        background-image: url(../img/3b984476e13e22e0f07e301e74ca9dd0.png);
-        background-size: 100% 100%;
-        border-radius: 50%;
-    }
-    .socials {
-        width: 98%;
-        max-width: 100%;
-        padding-bottom: 30px;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: left;
-    }
-    .navbar .container {
-        padding-left: 20%;
-        float: left;
-        display: flex;
-        flex: 1;
-    }
     #uabg {
         background: url("../img/ukraine-flag.svg") repeat;
         background-size: auto 55px;
         -webkit-text-fill-color: transparent;
         background-clip: text;
         -webkit-background-clip: text;
-        margin-top: 5%;
+        margin-top: 17%;
+    }
+    #uabg::before {
+        content: "";
+    }
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 98%;
+        padding-bottom: 30px;
+        margin-left: 30px;
+        margin-right: auto;
+        text-align: left;
     }
     .arrow {
         animation: bouncing 1s infinite ease-in-out;
@@ -247,31 +279,6 @@ body {
 
 #github:hover {
     color: #333;
-}
-
-a:focus {
-    color: rgb(255, 206, 206);
-    white-space: nowrap;
-    border-radius: 3px;
-    text-decoration: none;
-}
-
-a.link {
-    display: inline;
-    position: relative;
-    color: #ffcece;
-    text-decoration: none;
-    transition: color .3s ease-in;
-}
-
-a.link:hover {
-    color: #d43a3a;
-}
-
-footer {
-    width: 100%;
-    position: fixed;
-    bottom: 0;
 }
 
 
