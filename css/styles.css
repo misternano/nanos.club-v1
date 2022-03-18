@@ -150,6 +150,7 @@ nav {
     font-size: 1.5rem;
     font-weight: bold;
     margin: 0;
+    padding-bottom: 5px;
 }
 
 .intro h3 {
@@ -170,7 +171,7 @@ nav {
 #uabg {
     background: transparent;
     -webkit-text-fill-color: white;
-    margin-top: 10%;
+    margin-top: 13%;
     font-size: 2rem;
 }
 
@@ -219,6 +220,7 @@ footer {
         font-size: 2rem;
         font-weight: bold;
         margin: 0;
+        padding-bottom: 0;
     }
     .intro h3 {
         color: darkgray;
