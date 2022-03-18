@@ -104,6 +104,30 @@ nav {
     color: unset;
 }
 
+@keyframes colortext {
+    100% {
+        background-position: 100%;
+    }
+}
+
+
+/* small screen display */
+
+.nav-btn-container {
+    padding-left: 2%;
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-logo {
+    float: right;
+    margin-right: 2%;
+    padding: 16px 16px;
+    background-image: url(../img/3b984476e13e22e0f07e301e74ca9dd0.png);
+    background-size: 100% 100%;
+    border-radius: 50%;
+}
+
 .intro {
     width: 90%;
     max-width: 1170px;
@@ -114,76 +138,55 @@ nav {
     text-align: left;
 }
 
+.intro h1 {
+    font-size: 4.5rem;
+    max-width: 1004.4px;
+    line-height: 1.2em;
+    color: red;
+}
+
 .intro h2 {
     color: darkgray;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     margin: 0;
 }
 
 .intro h3 {
     color: darkgray;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: bold;
     margin: 0;
 }
 
-@keyframes colortext {
-    100% {
-        background-position: 100%;
-    }
+.animated-text {
+    background: url("../img/EecPYwAAAABJRU5ErkJggg.png");
+    background-size: cover;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
 }
 
+#uabg {
+    background: transparent;
+    -webkit-text-fill-color: white;
+    margin-top: 20%;
+    font-size: 2rem;
+}
 
-/* small screen display */
+#uabg::before {
+    content: "🇺🇦 ";
+}
 
-@media (max-width:1920px) {
-    .nav-btn-container {
-        padding-left: 2%;
-        float: left;
-        display: flex;
-        flex: 1;
-    }
-    .nav-logo {
-        float: right;
-        margin-right: 2%;
-        padding: 16px 16px;
-        background-image: url(../img/3b984476e13e22e0f07e301e74ca9dd0.png);
-        background-size: 100% 100%;
-        border-radius: 50%;
-    }
-    .intro h1 {
-        font-size: 4.5rem;
-        max-width: 1004.4px;
-        line-height: 1.2em;
-        color: red;
-    }
-    .animated-text {
-        background: url("../img/EecPYwAAAABJRU5ErkJggg.png");
-        background-size: cover;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        -webkit-background-clip: text;
-    }
-    #uabg {
-        background: transparent;
-        -webkit-text-fill-color: white;
-        margin-top: 30%;
-        font-size: 2rem;
-    }
-    #uabg::before {
-        content: "🇺🇦 ";
-    }
-    footer {
-        width: 98%;
-        padding-bottom: 10px;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-        position: fixed;
-        bottom: 0;
-        font-size: 2.5rem;
-    }
+footer {
+    width: 98%;
+    padding-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    font-size: 2.5rem;
 }
 
 
@@ -192,13 +195,15 @@ nav {
 @media (min-width:1170px) {
     .nav-btn-container {
         padding-left: 20%;
+        padding-top: 0;
+        padding-bottom: 0;
         display: flex;
         flex-direction: row;
     }
     .nav-logo {
         float: right;
         margin-right: 20%;
-        padding: 18px 18px;
+        padding: 16px 16px;
         background-image: url(../img/3b984476e13e22e0f07e301e74ca9dd0.png);
         background-size: 100% 100%;
         border-radius: 50%;
@@ -208,6 +213,18 @@ nav {
         max-width: 1004.4px;
         line-height: 1.2em;
         color: red;
+    }
+    .intro h2 {
+        color: darkgray;
+        font-size: 2rem;
+        font-weight: bold;
+        margin: 0;
+    }
+    .intro h3 {
+        color: darkgray;
+        font-size: 1.25rem;
+        font-weight: bold;
+        margin: 0;
     }
     .animated-text {
         background: url("../img/EecPYwAAAABJRU5ErkJggg.png") repeat;
@@ -224,7 +241,7 @@ nav {
         -webkit-text-fill-color: transparent;
         background-clip: text;
         -webkit-background-clip: text;
-        margin-top: 12%;
+        margin-top: 15%;
         font-size: 2.5rem;
     }
     #uabg::before {
@@ -303,4 +320,8 @@ nav {
     100% {
         bottom: 5px;
     }
+}
+
+.fs-40 {
+    font-size: 2.5rem;
 }
