@@ -153,7 +153,7 @@ nav {
         border-radius: 50%;
     }
     .intro h1 {
-        font-size: 60px;
+        font-size: 70px;
         max-width: 1004.4px;
         line-height: 1.2em;
         color: red;
@@ -168,7 +168,7 @@ nav {
     #uabg {
         background: transparent;
         -webkit-text-fill-color: white;
-        margin-top: 10%;
+        margin-top: 20%;
         font-size: 20px;
     }
     #uabg::before {
