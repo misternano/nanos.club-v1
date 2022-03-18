@@ -135,17 +135,7 @@ nav {
     margin: 0;
 }
 
-.animated-text {
-    background: url("../img/EecPYwAAAABJRU5ErkJggg.png") repeat;
-    background-size: auto 96px;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-    animation: run 7s linear infinite;
-    animation-direction: reverse;
-}
-
-@keyframes run {
+@keyframes colortext {
     100% {
         background-position: 100%;
     }
@@ -168,7 +158,7 @@ nav {
     }
     .animated-text {
         background: transparent;
-        -webkit-text-fill-color: white;
+        -webkit-text-fill-color: #F06B70;
     }
     #uabg {
         background: transparent;
@@ -210,7 +200,7 @@ nav {
         -webkit-text-fill-color: transparent;
         background-clip: text;
         -webkit-background-clip: text;
-        animation: run 7s linear infinite;
+        animation: colortext 7s linear infinite;
         animation-direction: reverse;
     }
     #uabg {
@@ -219,7 +209,7 @@ nav {
         -webkit-text-fill-color: transparent;
         background-clip: text;
         -webkit-background-clip: text;
-        margin-top: 17%;
+        margin-top: 12%;
     }
     #uabg::before {
         content: "";
