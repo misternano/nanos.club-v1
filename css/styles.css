@@ -9,8 +9,7 @@ body {
     overflow-x: hidden;
 }
 
-
-/*::-webkit-scrollbar {
+::-webkit-scrollbar {
     width: 15px;
 }
 
@@ -26,11 +25,11 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgb(66, 66, 66, 0.8);
+    background: rgb(66, 66, 66, 0.815);
     border-radius: 9999px;
     border: .25rem solid transparent;
     background-clip: padding-box
-}*/
+}
 
 :focus {
     white-space: nowrap;
@@ -59,7 +58,7 @@ a.link:hover {
 }
 
 .content-wrapper.qa {
-    margin-bottom: 60px;
+    margin-bottom: 100px;
 }
 
 .content-wrapper.notfound {
@@ -306,23 +305,7 @@ footer {
 }
 
 
-/* temporary */
-
-::-webkit-scrollbar {
-    display: none;
-}
-
-@keyframes bouncing {
-    0% {
-        bottom: 5px;
-    }
-    50% {
-        bottom: 15px;
-    }
-    100% {
-        bottom: 5px;
-    }
-}
+/*temporary*/
 
 .fs-40 {
     font-size: 2.5rem;
