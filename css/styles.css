@@ -1,4 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    /* not yet used, placeholder */
+    --main-brand-color: #171717;
+}
+
 body {
     font-family: "Inter", sans-serif;
     background-color: #171717;
@@ -309,4 +320,8 @@ footer {
 
 .fs-40 {
     font-size: 2.5rem;
+}
+
+.fw-800 {
+    font-weight: 800;
 }
