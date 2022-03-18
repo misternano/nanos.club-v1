@@ -52,10 +52,6 @@ body {
     padding: 1px;
 }
 
-.spacer {
-    margin: 100px;
-}
-
 a.link {
     display: inline;
     position: relative;
@@ -261,7 +257,7 @@ nav {
 
 footer {
     width: 98%;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -270,10 +266,38 @@ footer {
     font-size: 2.5rem;
 }
 
+.spacer {
+    margin-bottom: 3rem;
+}
+
 @keyframes colortext {
     100% {
         background-position: 100%;
     }
+}
+
+#discord {
+    color: #7289da;
+}
+
+#twitter {
+    color: #00acee;
+}
+
+#twitch {
+    color: #6441a5;
+}
+
+#youtube {
+    color: #ff0000;
+}
+
+#steam {
+    color: #2a475e;
+}
+
+#github {
+    color: #646464;
 }
 
 
@@ -367,45 +391,38 @@ footer {
         position: fixed;
         bottom: 0;
         width: 98%;
-        padding-bottom: 30px;
-        margin-left: 30px;
+        padding-bottom: 15px;
+        margin-left: 15px;
         margin-right: auto;
         text-align: left;
         font-size: 2.5rem;
     }
-}
-
-#discord,
-#twitter,
-#twitch,
-#youtube,
-#steam,
-#github {
-    color: white;
-}
-
-#discord:hover {
-    color: #7289da;
-}
-
-#twitter:hover {
-    color: #00acee;
-}
-
-#twitch:hover {
-    color: #6441a5;
-}
-
-#youtube:hover {
-    color: #ff0000;
-}
-
-#steam:hover {
-    color: #2a475e;
-}
-
-#github:hover {
-    color: #333;
+    #discord,
+    #twitter,
+    #twitch,
+    #youtube,
+    #steam,
+    #github {
+        color: white;
+    }
+    #discord:hover {
+        color: #7289da;
+    }
+    #twitter:hover {
+        color: #00acee;
+    }
+    #twitch:hover {
+        color: #6441a5;
+    }
+    #youtube:hover {
+        color: #ff0000;
+    }
+    #steam:hover {
+        color: #2a475e;
+    }
+    #github:hover {
+        color: #646464;
+    }
 }
 
 
