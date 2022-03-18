@@ -1,0 +1,67 @@
+.tag.opensource {
+    background-color: #298a20;
+}
+
+.tag.closedsource {
+    background-color: #d43a3a;
+}
+
+.tag.html {
+    background-color: #E44D26;
+}
+
+.tag.css {
+    background-color: #42A5F5;
+}
+
+.tag.scss {
+    background-color: #BF4080;
+}
+
+.tag.js {
+    background-color: #FFCA28;
+}
+
+.tag.bootstrap {
+    background-color: #1E88E5;
+}
+
+.tag.react {
+    background-color: #00BCD4;
+}
+
+.tag.swift {
+    background-color: #FE5E2F;
+}
+
+.tag.git {
+    background-color: #E64A19;
+}
+
+.tag.tailwind {
+    background-color: #4DB6AC;
+}
+
+.tag.mysql {
+    background-color: #f29111;
+}
+
+.tag.php {
+    background-color: #1E88E5;
+}
+
+.tag.c {
+    background-color: #0277BD;
+}
+
+.tag.nodejs {
+    background-color: #8BC34A;
+}
+
+.tag.ahk {
+    background-color: #4CAF50;
+}
+
+.tag.lua {
+    background-color: #000080;
+}

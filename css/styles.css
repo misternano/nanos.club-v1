@@ -7,7 +7,10 @@
 
 :root {
     /* not yet used, placeholder */
-    --main-brand-color: #171717;
+    --main-color: #171717;
+    --primary-color: #242424;
+    --accent-color: #464646;
+    --secondary-color: darkgray;
 }
 
 body {
@@ -49,6 +52,10 @@ body {
     padding: 1px;
 }
 
+.spacer {
+    margin: 100px;
+}
+
 a.link {
     display: inline;
     position: relative;
@@ -78,13 +85,13 @@ a.link:hover {
 }
 
 nav {
-    background: #242424;
+    background: var(--primary-color);
     overflow: hidden;
-    padding: 10px 10px;
+    padding: .75rem 0;
 }
 
 .nav-btn {
-    padding: 9px 16px;
+    padding: .75rem 1rem;
     text-align: center;
     text-decoration: none;
     font-size: 12px;
@@ -104,6 +111,11 @@ nav {
     background-color: #171717;
 }
 
+.nav-btn.disabled {
+    cursor: not-allowed;
+    color: #464646;
+}
+
 .nav-link {
     text-decoration: none;
     color: unset;
@@ -114,14 +126,60 @@ nav {
     color: unset;
 }
 
-@keyframes colortext {
-    100% {
-        background-position: 100%;
-    }
+.logo {
+    display: absolute;
+    vertical-align: middle;
+    height: 2.5em;
+    border-radius: 100%;
 }
 
+.infocard-container {
+    width: 90%;
+    display: inline-block;
+    background: rgba(36, 36, 36, 0.75);
+    padding: 2rem;
+    border-radius: .35rem;
+    margin-bottom: 1rem;
+}
 
-/* small screen display */
+.infocard.title {
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+}
+
+.infocard.content {
+    color: white;
+    font-size: 1rem;
+}
+
+.infocard.languages {
+    padding-top: 1rem;
+    line-height: 1.3rem;
+}
+
+.infocard.display {
+    display: absolute;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+}
+
+.infocard.img {
+    height: 135px;
+    width: 240px;
+    border-radius: .25rem;
+}
+
+.tag {
+    padding: 3px 4px 3px;
+    font-size: 11px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    white-space: nowrap;
+    border-radius: 5px;
+    text-decoration: none;
+}
 
 .nav-btn-container {
     padding-left: 2%;
@@ -132,31 +190,25 @@ nav {
 .nav-logo {
     float: right;
     margin-right: 2%;
-    padding: 16px 16px;
-    background-image: url(../img/3b984476e13e22e0f07e301e74ca9dd0.png);
-    background-size: 100% 100%;
     border-radius: 50%;
 }
 
 .intro {
-    width: 90%;
     max-width: 1170px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 5%;
-    line-height: 1.7em;
     text-align: left;
 }
 
 .intro h1 {
     font-size: 4.5rem;
     max-width: 1004.4px;
-    line-height: 1.2em;
     color: red;
 }
 
 .intro h2 {
-    color: darkgray;
+    color: var(--secondary-color);
     font-size: 1.5rem;
     font-weight: bold;
     margin: 0;
@@ -164,13 +216,31 @@ nav {
 }
 
 .intro h3 {
-    color: darkgray;
+    color: var(--secondary-color);
     font-size: 1.5rem;
     font-weight: bold;
     margin: 0;
 }
 
-.animated-text {
+.project-header {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.project-subheader {
+    text-align: center;
+    font-size: 1rem;
+    padding-top: 0;
+    margin-top: 0;
+    padding-bottom: 1rem;
+}
+
+.project-subheader::before {
+    content: "Personal and collaborative works.";
+}
+
+.animated-text,
+.project-header {
     background: url("../img/EecPYwAAAABJRU5ErkJggg.png");
     background-size: cover;
     -webkit-text-fill-color: transparent;
@@ -200,6 +270,12 @@ footer {
     font-size: 2.5rem;
 }
 
+@keyframes colortext {
+    100% {
+        background-position: 100%;
+    }
+}
+
 
 /* large screen display */
 
@@ -214,29 +290,42 @@ footer {
     .nav-logo {
         float: right;
         margin-right: 20%;
-        padding: 16px 16px;
-        background-image: url(../img/3b984476e13e22e0f07e301e74ca9dd0.png);
-        background-size: 100% 100%;
-        border-radius: 50%;
     }
     .intro h1 {
         font-size: 5.2rem;
         max-width: 1004.4px;
-        line-height: 1.2em;
+        line-height: 1.15em;
         color: red;
     }
     .intro h2 {
-        color: darkgray;
+        color: var(--secondary-color);
         font-size: 2rem;
         font-weight: bold;
         margin: 0;
         padding-bottom: 0;
     }
     .intro h3 {
-        color: darkgray;
+        color: var(--secondary-color);
         font-size: 1.25rem;
         font-weight: bold;
         margin: 0;
+    }
+    .project-subheader::before {
+        content: "A collection of personal and collaborative works.";
+    }
+    .infocard-container {
+        width: 40%;
+        display: inline-block;
+        background: rgba(36, 36, 36, 0.75);
+        padding: 2rem;
+        border-radius: .35rem;
+        border: solid 1px #333;
+        margin: 0 .4rem 1rem .4rem;
+    }
+    .infocard.img {
+        height: 270px;
+        width: 480px;
+        border-radius: .25rem;
     }
     .animated-text {
         background: url("../img/EecPYwAAAABJRU5ErkJggg.png") repeat;
@@ -244,8 +333,23 @@ footer {
         -webkit-text-fill-color: transparent;
         background-clip: text;
         -webkit-background-clip: text;
-        animation: colortext 7s linear infinite;
+        animation: colortext 20s linear infinite;
         animation-direction: reverse;
+    }
+    .project-header {
+        background: url("../img/EecPYwAAAABJRU5ErkJggg.png") repeat;
+        background-size: contain;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        animation: colortext 12s linear infinite;
+        animation-direction: reverse;
+        display: inline-block;
+        text-align: center;
+        width: 510px;
+        font-size: 2.5rem;
+        padding-bottom: 0;
+        margin-bottom: 0;
     }
     #uabg {
         background: url("../img/ukraine-flag.svg") repeat;
@@ -268,17 +372,6 @@ footer {
         margin-right: auto;
         text-align: left;
         font-size: 2.5rem;
-    }
-    .arrow {
-        animation: bouncing 1s infinite ease-in-out;
-        bottom: 0;
-        display: block;
-        height: 50px;
-        width: 50px;
-        left: 50%;
-        margin-left: -25px;
-        position: absolute;
-        color: darkgray;
     }
 }
 
