@@ -149,7 +149,7 @@ nav {
     width: 90%;
     display: inline-block;
     background: rgba(36, 36, 36, 0.5);
-    border: solid 2px var(--primary-color);
+    box-shadow: 0 0 5px var(--primary-color);
     padding: 2rem 2rem 1.5rem;
     border-radius: .35rem;
     margin-bottom: 1rem;
