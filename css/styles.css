@@ -7,10 +7,17 @@
 
 :root {
     /* not yet used, placeholder */
-    --main-color: #171717;
-    --primary-color: #242424;
-    --accent-color: #464646;
-    --secondary-color: darkgray;
+    --clr-main: #171717;
+    --clr-primary: #242424;
+    --clr-accent: #3a3a3a;
+    --clr-secondary: darkgray;
+    --clr-fallback-text: #F18A4F;
+    --clr-discord: #7289da;
+    --clr-twitter: #00acee;
+    --clr-twitch: #6441a5;
+    --clr-youtube: #ff0000;
+    --clr-steam: #2a475e;
+    --clr-github: #646464;
 }
 
 body {
@@ -81,7 +88,7 @@ a.link:hover {
 }
 
 nav {
-    background: var(--primary-color);
+    background: var(--clr-primary);
     overflow: hidden;
     padding: .75rem 0;
 }
@@ -104,13 +111,13 @@ nav {
 }
 
 .nav-btn:hover {
-    background-color: #3a3a3a;
+    background-color: var(--clr-accent);
     border: none;
     cursor: pointer;
 }
 
 .nav-btn.active {
-    background-color: #171717;
+    background-color: var(--clr-main);
 }
 
 .nav-btn.disabled {
@@ -149,33 +156,33 @@ nav {
     width: 90%;
     display: inline-block;
     background: rgba(36, 36, 36, 0.5);
-    box-shadow: 0 0 5px var(--primary-color);
+    box-shadow: 0 0 5px var(--clr-primary);
     padding: 2rem 2rem 1.5rem;
     border-radius: .35rem;
     margin-bottom: 1rem;
 }
 
-.infocard.title {
+.infocard__title {
     color: white;
     text-transform: uppercase;
     font-size: 1.25rem;
     margin-bottom: .5rem;
 }
 
-.infocard.content {
+.infocard__content {
     color: white;
     font-size: 1rem;
-    background-color: var(--primary-color);
+    background-color: var(--clr-primary);
     border-radius: .25rem;
-    padding: 1rem 1rem 1rem 1rem;
+    padding: .75rem;
 }
 
-.infocard.languages {
+.infocard__languages {
     padding-top: 1.5rem;
     line-height: 1.5rem;
 }
 
-.infocard.display {
+.infocard__display {
     display: absolute;
     padding-top: .75rem;
     padding-bottom: .75rem;
@@ -209,11 +216,11 @@ nav {
 .intro h1 {
     font-size: 4.5rem;
     max-width: 1004.4px;
-    color: red;
+    color: var(--clr-fallback-text);
 }
 
 .intro h2 {
-    color: var(--secondary-color);
+    color: var(--clr-secondary);
     font-size: 1.5rem;
     font-weight: bold;
     margin: 0;
@@ -221,7 +228,7 @@ nav {
 }
 
 .intro h3 {
-    color: var(--secondary-color);
+    color: var(--clr-secondary);
     font-size: 1.5rem;
     font-weight: bold;
     margin: 0;
@@ -253,6 +260,15 @@ nav {
     -webkit-background-clip: text;
 }
 
+.socials {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 98%;
+    background-color: rgba(40, 40, 40, .9);
+    border-radius: .5rem;
+    padding: .4rem 0;
+}
+
 footer {
     width: 98%;
     padding-bottom: 5px;
@@ -271,27 +287,27 @@ footer {
 }
 
 #discord {
-    color: #7289da;
+    color: var(--clr-discord);
 }
 
 #twitter {
-    color: #00acee;
+    color: var(--clr-twitter);
 }
 
 #twitch {
-    color: #6441a5;
+    color: var(--clr-twitch);
 }
 
 #youtube {
-    color: #ff0000;
+    color: var(--clr-youtube);
 }
 
 #steam {
-    color: #2a475e;
+    color: var(--clr-steam);
 }
 
 #github {
-    color: #646464;
+    color: var(--clr-github);
 }
 
 
@@ -313,17 +329,17 @@ footer {
         font-size: 5.2rem;
         max-width: 1004.4px;
         line-height: 1.15em;
-        color: red;
+        color: var(--clr-fallback-text);
     }
     .intro h2 {
-        color: var(--secondary-color);
+        color: var(--clr-secondary);
         font-size: 2rem;
         font-weight: bold;
         margin: 0;
         padding-bottom: 0;
     }
     .intro h3 {
-        color: var(--secondary-color);
+        color: var(--clr-secondary);
         font-size: 1.25rem;
         font-weight: bold;
         margin: 0;
@@ -359,6 +375,15 @@ footer {
         padding-bottom: 0;
         margin-bottom: 0;
     }
+    .socials {
+        display: flex;
+        gap: 1rem;
+        justify-content: unset;
+        max-width: unset;
+        background-color: unset;
+        border-radius: unset;
+        padding: unset;
+    }
     footer {
         position: fixed;
         bottom: 0;
@@ -378,22 +403,22 @@ footer {
         color: white;
     }
     #discord:hover {
-        color: #7289da;
+        color: var(--clr-discord);
     }
     #twitter:hover {
-        color: #00acee;
+        color: var(--clr-twitter);
     }
     #twitch:hover {
-        color: #6441a5;
+        color: var(--clr-twitch);
     }
     #youtube:hover {
-        color: #ff0000;
+        color: var(--clr-youtube);
     }
     #steam:hover {
-        color: #2a475e;
+        color: var(--clr-steam);
     }
     #github:hover {
-        color: #646464;
+        color: var(--clr-github);
     }
 }
 

@@ -1,17 +1,3 @@
-.tag.collab,
-.tag.collab::before {
-    content: "collaborative";
-    background-color: white;
-    color: black;
-}
-
-.tag.solo,
-.tag.solo::before {
-    content: "personal";
-    background-color: white;
-    color: black;
-}
-
 .tag.opensource,
 .tag.opensource::before {
     content: "open source";
