@@ -31,7 +31,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 15px;
+    width: 1rem;
 }
 
 ::-webkit-scrollbar-track {
@@ -79,7 +79,7 @@ a.link:hover {
 }
 
 .content-wrapper.qa {
-    margin-bottom: 100px;
+    margin-bottom: 5rem;
 }
 
 .content-wrapper.notfound {
@@ -91,6 +91,7 @@ nav {
     background: var(--clr-primary);
     overflow: hidden;
     padding: .75rem 0;
+    border-radius: .5rem;
 }
 
 .nav-btn-container {
@@ -103,11 +104,11 @@ nav {
     padding: .75rem 1rem;
     text-align: center;
     text-decoration: none;
-    font-size: 12px;
+    font-size: .75rem;
     cursor: pointer;
-    margin: 0px 10px;
+    margin: 0 .5rem;
     text-transform: uppercase;
-    border-radius: 5px;
+    border-radius: .5rem;
 }
 
 .nav-btn:hover {
@@ -156,7 +157,7 @@ nav {
     width: 90%;
     display: inline-block;
     background: rgba(36, 36, 36, 0.5);
-    box-shadow: 0 0 5px var(--clr-primary);
+    box-shadow: 0 0 .4rem var(--clr-primary);
     padding: 2rem 2rem 1.5rem;
     border-radius: .35rem;
     margin-bottom: 1rem;
@@ -271,7 +272,7 @@ nav {
 
 footer {
     width: 98%;
-    padding-bottom: 5px;
+    padding-bottom: .5rem;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -388,8 +389,8 @@ footer {
         position: fixed;
         bottom: 0;
         width: 98%;
-        padding-bottom: 15px;
-        margin-left: 15px;
+        padding-bottom: 1rem;
+        margin-left: 1rem;
         margin-right: auto;
         text-align: left;
         font-size: 2.5rem;
