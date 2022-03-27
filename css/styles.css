@@ -54,9 +54,8 @@ body {
 
 :focus {
     white-space: nowrap;
-    border-radius: 3px;
+    border-radius: .15rem;
     text-decoration: none;
-    padding: 1px;
 }
 
 a.link {
@@ -254,7 +253,7 @@ nav {
 
 .animated-text,
 .project-header {
-    background: url("../img/EecPYwAAAABJRU5ErkJggg.png");
+    background: url("../assets/EecPYwAAAABJRU5ErkJggg.png");
     background-size: cover;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -353,7 +352,7 @@ footer {
         margin: 0 .4rem 1rem .4rem;
     }
     .animated-text {
-        background: url("../img/EecPYwAAAABJRU5ErkJggg.png") repeat;
+        background: url("../assets/EecPYwAAAABJRU5ErkJggg.png") repeat;
         background-size: auto 96px;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -362,7 +361,7 @@ footer {
         animation-direction: reverse;
     }
     .project-header {
-        background: url("../img/EecPYwAAAABJRU5ErkJggg.png") repeat;
+        background: url("../assets/EecPYwAAAABJRU5ErkJggg.png") repeat;
         background-size: contain;
         -webkit-text-fill-color: transparent;
         background-clip: text;
