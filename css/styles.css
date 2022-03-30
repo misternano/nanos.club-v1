@@ -10,9 +10,9 @@
     --clr-main: #171717;
     --clr-primary: #242424;
     --clr-accent: #3a3a3a;
-    --clr-secondary: darkgray;
+    --clr-secondary: gray;
     --clr-fallback-text: #F18A4F;
-    --clr-discord: #7289da;
+    --clr-discord: #5865F2;
     --clr-twitter: #00acee;
     --clr-twitch: #6441a5;
     --clr-youtube: #ff0000;
@@ -169,7 +169,15 @@ nav {
     margin-bottom: .5rem;
 }
 
+.infocard__content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
 .infocard__content {
+    justify-self: flex-start;
+    flex: 70%;
     color: white;
     font-size: 1rem;
     background-color: var(--clr-primary);
@@ -177,8 +185,20 @@ nav {
     padding: .75rem;
 }
 
+.infocard__languages-label {
+    justify-self: flex-end;
+    flex: 30%;
+    background-color: var(--clr-primary);
+    border-radius: .35rem;
+    padding: .5rem;
+}
+
+.infocard__languages-label::before {
+    content: "Languages";
+}
+
 .infocard__languages {
-    padding-top: 1.5rem;
+    margin-top: .25rem;
     line-height: 1.5rem;
 }
 
@@ -210,7 +230,7 @@ nav {
     margin-left: auto;
     margin-right: auto;
     margin-top: 10%;
-    text-align: left;
+    text-align: center;
 }
 
 .intro h1 {
@@ -325,6 +345,9 @@ footer {
         float: right;
         margin-right: 20%;
     }
+    .intro {
+        text-align: left;
+    }
     .intro h1 {
         font-size: 5.2rem;
         max-width: 1004.4px;
@@ -350,6 +373,12 @@ footer {
     .infocard-container {
         width: 40%;
         margin: 0 .4rem 1rem .4rem;
+    }
+    .infocard__content-wrapper {
+        flex-direction: row;
+    }
+    .infocard__languages {
+        margin-top: .75rem;
     }
     .animated-text {
         background: url("../assets/EecPYwAAAABJRU5ErkJggg.png") repeat;
