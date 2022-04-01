@@ -7,6 +7,9 @@
 <p align="center">
     <a><img alt="Licensing" src="https://img.shields.io/github/license/misternano/misternano.github.io" /></a>
     <a><img alt="Issues" src="https://img.shields.io/github/issues/misternano/misternano.github.io" /></a>
-    <a><img alt="Build" src="https://github.com/misternano/misternano.github.io/actions/workflows/pages/pages-build-deployment/badge.svg" /></a>
-    <a><img alt="Deploy" src="https://img.shields.io/github/deployments/badges/shields/shields-staging" /></a>
+    <a><img alt="Pages Build & Deploy" src="https://github.com/misternano/misternano.github.io/actions/workflows/pages/pages-build-deployment/badge.svg" /></a>
+</p>
+<p align="center">
+    <a><img alt="Lines of Code" src="https://tokei.rs/b1/github/misternano/misternano.github.io?category=lines" /></a>
+    <a><img alt="Lines of Code" src="https://tokei.rs/b1/github/misternano/misternano.github.io?category=files" /></a>
 </p>
