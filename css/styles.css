@@ -149,11 +149,11 @@ nav {
     border-radius: 100%;
 }
 
-.infocards {
+.infocard-container {
     margin: 1rem 1rem 4rem 1rem;
 }
 
-.infocard-container {
+.infocard-wrapper {
     width: 90%;
     display: inline-block;
     background: rgba(36, 36, 36, 0.5);
@@ -176,7 +176,7 @@ nav {
     gap: .5rem;
 }
 
-.infocard__content {
+.infocard__description {
     justify-self: flex-start;
     flex: 70%;
     color: white;
@@ -184,6 +184,7 @@ nav {
     background-color: var(--clr-primary);
     border-radius: .25rem;
     padding: .75rem;
+    min-height: 5.5rem;
 }
 
 .infocard__languages-label {
@@ -371,7 +372,7 @@ footer {
     .project-subheader::before {
         content: "A collection of personal and collaborative works.";
     }
-    .infocard-container {
+    .infocard-wrapper {
         width: 40%;
         margin: 0 .4rem 1rem .4rem;
     }
