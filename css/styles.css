@@ -5,18 +5,6 @@
     box-sizing: border-box;
 }
 
-@font-face {
-    font-family: 'opendyslexic';
-    src: url('http://dyslexicfonts.com/fonts/OpenDyslexic-Regular.otf');
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: eulexia;
-    src: url('http://dyslexicfonts.com/fonts/eulexia.ttf');
-}
-
 :root {
     /* not yet used, placeholder */
     --clr-main: #171717;
