@@ -5,6 +5,18 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'opendyslexic';
+    src: url('http://dyslexicfonts.com/fonts/OpenDyslexic-Regular.otf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: eulexia;
+    src: url('http://dyslexicfonts.com/fonts/eulexia.ttf');
+}
+
 :root {
     /* not yet used, placeholder */
     --clr-main: #171717;
@@ -94,13 +106,13 @@ nav {
     border-radius: .5rem;
 }
 
-.nav-btn-container {
+.navbtn-container {
     padding-left: 2%;
     display: flex;
     flex-direction: row;
 }
 
-.nav-btn {
+.navbtn {
     padding: .75rem 1rem;
     text-align: center;
     text-decoration: none;
@@ -111,17 +123,17 @@ nav {
     border-radius: .5rem;
 }
 
-.nav-btn:hover {
+.navbtn:hover {
     background-color: var(--clr-accent);
     border: none;
     cursor: pointer;
 }
 
-.nav-btn.active {
+.navbtn.active {
     background-color: var(--clr-main);
 }
 
-.nav-btn.disabled {
+.navbtn.disabled {
     cursor: not-allowed;
     color: #464646;
 }
@@ -284,6 +296,7 @@ nav {
 
 .socials {
     display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
     max-width: 98%;
     background-color: rgba(40, 40, 40, .9);
@@ -336,7 +349,7 @@ footer {
 /* large screen display */
 
 @media only screen and (min-width:1200px) {
-    .nav-btn-container {
+    .navbtn-container {
         padding-left: 20%;
         padding-top: 0;
         padding-bottom: 0;
@@ -408,7 +421,8 @@ footer {
     }
     .socials {
         display: flex;
-        gap: 1rem;
+        flex-direction: column;
+        gap: .5rem;
         justify-content: unset;
         max-width: unset;
         background-color: unset;
@@ -418,8 +432,8 @@ footer {
     footer {
         position: fixed;
         bottom: 0;
-        width: 98%;
-        padding-bottom: 1rem;
+        width: auto;
+        padding-bottom: 25vh;
         margin-left: 1rem;
         margin-right: auto;
         text-align: left;
