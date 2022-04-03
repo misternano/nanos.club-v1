@@ -411,7 +411,7 @@ footer {
         display: flex;
         flex-direction: column;
         gap: .5rem;
-        justify-content: unset;
+        justify-content: center;
         max-width: unset;
         background-color: unset;
         border-radius: unset;
@@ -419,12 +419,10 @@ footer {
     }
     footer {
         position: fixed;
-        bottom: 0;
         width: auto;
-        padding-bottom: 25vh;
-        margin-left: 1rem;
-        margin-right: auto;
-        text-align: left;
+        vertical-align: middle;
+        padding: 2vh 0;
+        margin: 0 2vh;
         font-size: 2.5rem;
     }
     #discord,
