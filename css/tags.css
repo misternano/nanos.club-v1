@@ -1,12 +1,6 @@
-.tag.opensource,
-.tag.opensource::before {
-    content: "open source";
-    background-color: #298a20;
-}
-
-.tag.closedsource,
-.tag.closedsource::before {
-    content: "closed source";
+.tag.na,
+.tag.na::before {
+    content: "n/a";
     background-color: #d43a3a;
 }
 
