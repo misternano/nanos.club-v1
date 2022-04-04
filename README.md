@@ -9,7 +9,3 @@
     <a><img alt="Pages Build & Deploy" src="https://github.com/misternano/misternano.github.io/actions/workflows/pages/pages-build-deployment/badge.svg" /></a>
     <a><img alt="Issues" src="https://img.shields.io/github/issues/misternano/misternano.github.io" /></a>
 </p>
-<p align="center">
-    <a><img alt="Lines of Code" src="https://tokei.rs/b1/github/misternano/misternano.github.io?category=lines" /></a>
-    <a><img alt="Numer of Files" src="https://tokei.rs/b1/github/misternano/misternano.github.io?category=files" /></a>
-</p>

@@ -186,6 +186,11 @@ nav {
     margin-bottom: .5rem;
 }
 
+.infocard__title::before {
+    font: var(--fa-font-solid);
+    content: "\f121 \00a0";
+}
+
 .infocard__content-wrapper {
     display: flex;
     flex-direction: column;
@@ -324,34 +329,52 @@ footer {
     }
 }
 
-#discord {
+#discord,
+#discord::before {
+    font: var(--fa-font-brands);
+    content: "\f392";
     color: var(--clr-discord);
 }
 
-#twitter {
+#twitter,
+#twitter::before {
+    font: var(--fa-font-brands);
+    content: "\f099";
     color: var(--clr-twitter);
 }
 
-#twitch {
+#twitch,
+#twitch::before {
+    font: var(--fa-font-brands);
+    content: "\f1e8";
     color: var(--clr-twitch);
 }
 
-#youtube {
+#youtube,
+#youtube::before {
+    font: var(--fa-font-brands);
+    content: "\f167";
     color: var(--clr-youtube);
 }
 
-#steam {
+#steam,
+#steam::before {
+    font: var(--fa-font-brands);
+    content: "\f1b6";
     color: var(--clr-steam);
 }
 
-#github {
+#github,
+#github::before {
+    font: var(--fa-font-brands);
+    content: "\f09b";
     color: var(--clr-github);
 }
 
 
 /* large screen display */
 
-@media only screen and (min-width:1200px) {
+@media only screen and (min-width: 1200px) {
     .navbtn-container {
         padding-left: 20%;
         padding-top: 0;
@@ -426,7 +449,7 @@ footer {
     .socials {
         display: flex;
         flex-direction: column;
-        gap: .5rem;
+        gap: 1rem;
         justify-content: center;
         max-width: unset;
         background-color: unset;
@@ -437,9 +460,17 @@ footer {
         position: fixed;
         width: auto;
         vertical-align: middle;
-        padding: 2vh 0;
+        padding: 25vh 0;
         margin: 0 2vh;
         font-size: 2.5rem;
+    }
+    #discord::before,
+    #twitter::before,
+    #twitch::before,
+    #youtube::before,
+    #steam::before,
+    #github::before {
+        color: unset;
     }
     #discord,
     #twitter,
