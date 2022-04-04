@@ -207,7 +207,7 @@ nav {
     min-height: 5.5rem;
 }
 
-.infocard__languages-label {
+.infocard__languages-container {
     justify-self: flex-end;
     flex: 30%;
     background-color: var(--clr-primary);
@@ -215,11 +215,11 @@ nav {
     padding: .5rem;
 }
 
-.infocard__languages-label::before {
+.infocard__languages-container::before {
     content: "Languages";
 }
 
-.infocard__languages {
+.infocard__languages-wrapper {
     margin-top: .25rem;
     line-height: 1.5rem;
 }
@@ -419,7 +419,7 @@ footer {
     .infocard__content-wrapper {
         flex-direction: row;
     }
-    .infocard__languages {
+    .infocard__languages-wrapper {
         margin-top: .75rem;
     }
     .animated-text {
