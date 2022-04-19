@@ -269,13 +269,6 @@ nav {
     padding-bottom: 3%;
 }
 
-.intro h3 {
-    color: var(--clr-secondary);
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: 0;
-}
-
 .project-header {
     padding-bottom: 0;
     margin-bottom: 0;
@@ -401,12 +394,6 @@ footer {
         font-weight: bold;
         margin: 0;
         padding-bottom: 0;
-    }
-    .intro h3 {
-        color: var(--clr-secondary);
-        font-size: 1.25rem;
-        font-weight: bold;
-        margin: 0;
     }
     .project-subheader::before {
         content: "A collection of personal and collaborative works.";
