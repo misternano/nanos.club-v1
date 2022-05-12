@@ -278,6 +278,10 @@ nav {
     font-style: oblique;
 }
 
+#quote {
+    quotes: '"' '"';
+}
+
 #quote::before {
     content: open-quote;
 }
