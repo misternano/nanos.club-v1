@@ -274,8 +274,16 @@ nav {
     font-size: 1rem;
     font-weight: bold;
     margin: 0;
-    padding-top: 5%;
+    padding-top: 10%;
     font-style: oblique;
+}
+
+#quote::before {
+    content: open-quote;
+}
+
+#quote::after {
+    content: close-quote;
 }
 
 .project-header {
