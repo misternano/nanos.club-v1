@@ -1,7 +1,8 @@
-.tag.na,
-.tag.na::before {
-    content: "n/a";
-    background-color: #d43a3a;
+.tag.tbd,
+.tag.tbd::before {
+    content: "tbd";
+    color: #000;
+    background-color: #fff;
 }
 
 .tag.html,
@@ -70,9 +71,9 @@
     background-color: #1E88E5;
 }
 
-.tag.c,
-.tag.c::before {
-    content: "c";
+.tag.cs,
+.tag.cs::before {
+    content: "c#";
     background-color: #0277BD;
 }
 
@@ -88,8 +89,8 @@
     background-color: #4CAF50;
 }
 
-.tag.lua,
-.tag.lua::before {
-    content: "lua";
-    background-color: #000080;
+.tag.jquery,
+.tag.jquery::before {
+    content: "jquery";
+    background-color: #0277BD;
 }

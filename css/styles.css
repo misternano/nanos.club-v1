@@ -87,6 +87,11 @@ a.link:hover {
     color: #d43a3a;
 }
 
+a.redirect,
+a.redirect::after {
+    content: "";
+}
+
 .content-wrapper {
     width: 90%;
     max-width: 1170px;
@@ -234,6 +239,7 @@ nav {
     height: 100%;
     width: 100%;
     border-radius: .25rem;
+    box-shadow: 0 0 1rem var(--clr-primary);
 }
 
 .tag {
@@ -259,6 +265,7 @@ nav {
     font-size: 4.5rem;
     max-width: 1004.4px;
     color: var(--clr-fallback-text);
+    margin: 0;
 }
 
 .intro h2 {
@@ -269,17 +276,17 @@ nav {
     padding-bottom: 3%;
 }
 
-.intro h3 {
+.intro p {
     color: var(--clr-secondary);
     font-size: 1rem;
     font-weight: bold;
-    margin: 0;
-    padding-top: 10%;
-    font-style: oblique;
+    margin: .15rem;
 }
 
 #quote {
     quotes: '"' '"';
+    padding-top: 10%;
+    font-style: oblique;
 }
 
 #quote::before {
@@ -408,6 +415,7 @@ footer {
         max-width: 1004.4px;
         line-height: 1.15em;
         color: var(--clr-fallback-text);
+        margin: 0;
     }
     .intro h2 {
         color: var(--clr-secondary);
@@ -415,6 +423,13 @@ footer {
         font-weight: bold;
         margin: 0;
         padding-bottom: 0;
+    }
+    .intro p {
+        color: var(--clr-secondary);
+        font-size: 1.4rem;
+        font-weight: bold;
+        margin: .15rem;
+        text-align: center;
     }
     .project-subheader::before {
         content: "A collection of personal and collaborative works.";
