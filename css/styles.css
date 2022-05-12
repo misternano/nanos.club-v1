@@ -275,6 +275,8 @@ nav {
     font-weight: bold;
     margin: 0;
     padding-top: 5%;
+    font-style: oblique;
+}
 
 .project-header {
     padding-bottom: 0;
