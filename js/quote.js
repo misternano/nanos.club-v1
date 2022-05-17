@@ -5,6 +5,6 @@ $(document).ready(function() {
         "amazing things will happen today if you decide not to be a miserable cunt.",
         "maybe the only reason you think you're not good enough is because you're surrounded by a bunch of cunts."
     ];
-    var x = Math.floor((Math.random() * 4)); /* change number to fit how many quotes are in the array */
+    var x = Math.floor((Math.random() * text.length));
     $('#quote').html(text[x]);
 });

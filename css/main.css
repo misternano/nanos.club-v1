@@ -175,14 +175,13 @@ nav {
 }
 
 .infocard-wrapper {
-    width: 90%;
     display: inline-block;
     background: rgba(36, 36, 36, 0.5);
     box-shadow: 0 0 .4rem var(--clr-primary);
     padding: 1rem;
     border-radius: .35rem;
-    margin-bottom: 1rem;
     color: var(--clr-white);
+    margin-bottom: 1.5rem;
 }
 
 .infocard__title {
@@ -204,29 +203,26 @@ nav {
 
 .infocard__description {
     justify-self: flex-start;
-    flex: 70%;
+    flex: 80%;
     font-size: 1rem;
     background-color: var(--clr-primary);
     border-radius: .25rem;
     padding: .75rem;
-    min-height: 5.5rem;
+    min-height: 4rem
 }
 
 .infocard__languages-container {
     justify-self: flex-end;
-    flex: 30%;
+    flex: 20%;
     background-color: var(--clr-primary);
     border-radius: .35rem;
+    display: flex;
+    column-gap: .35rem;
+    row-gap: .35rem;
+    flex-wrap: wrap;
     padding: .5rem;
-}
-
-.infocard__languages-container::before {
-    content: "Languages";
-}
-
-.infocard__languages-wrapper {
-    margin-top: .25rem;
-    line-height: 1.5rem;
+    align-items: center;
+    justify-content: center;
 }
 
 .infocard__display {
@@ -238,19 +234,8 @@ nav {
 .infocard.img {
     height: 100%;
     width: 100%;
-    border-radius: .25rem;
-    box-shadow: 0 0 1rem var(--clr-primary);
-}
-
-.tag {
-    padding: 3px 4px 3px;
-    font-size: 11px;
-    font-weight: bold;
-    color: #fff;
-    text-transform: uppercase;
-    white-space: nowrap;
-    border-radius: 5px;
-    text-decoration: none;
+    border: 1px solid transparent;
+    border-image: url("../assets/EecPYwAAAABJRU5ErkJggg.png") 10% stretch;
 }
 
 .intro {
@@ -311,7 +296,7 @@ nav {
 }
 
 .project-subheader::before {
-    content: "Personal and collaborative works.";
+    content: "Personal and collaborative work.";
 }
 
 .animated-text,
@@ -432,18 +417,24 @@ footer {
         text-align: center;
     }
     .project-subheader::before {
-        content: "A collection of personal and collaborative works.";
+        content: "A collection of personal and collaborative work.";
+    }
+    .infocard-container {
+        margin: 1rem 10% 5rem 10%;
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-auto-rows: auto;
+        grid-gap: 1.75rem;
     }
     .infocard-wrapper {
-        width: 40%;
-        margin: 0 .6rem 1.5rem .6rem;
         padding: 2rem 2rem 1.5rem;
+        margin-bottom: unset;
     }
     .infocard__content-wrapper {
         flex-direction: row;
     }
-    .infocard__languages-wrapper {
-        margin-top: .75rem;
+    .infocard.img {
+        border-image: url("../assets/EecPYwAAAABJRU5ErkJggg.png") 1 stretch;
     }
     .animated-text {
         background: url("../assets/EecPYwAAAABJRU5ErkJggg.png") repeat;
