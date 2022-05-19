@@ -177,6 +177,7 @@ nav {
 }
 
 .infocard-wrapper {
+    position: relative;
     display: inline-block;
     background: rgba(36, 36, 36, 0.5);
     box-shadow: 0 0 .4rem var(--clr-primary);
@@ -192,7 +193,10 @@ nav {
     margin-bottom: .5rem;
 }
 
-.infocard__title::before {
+.infocard-wrapper::before {
+    position: absolute;
+    left: 4%;
+    top: 3%;
     font: var(--fa-font-solid);
     content: "\f121 \00a0";
 }
@@ -438,6 +442,10 @@ footer {
     .infocard-wrapper {
         padding: 2rem 2rem 1.5rem;
         margin-bottom: unset;
+    }
+    .infocard-wrapper::before {
+        left: 3%;
+        top: 4%;
     }
     .infocard__content-wrapper {
         flex-direction: row;
