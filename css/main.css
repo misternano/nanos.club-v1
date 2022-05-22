@@ -91,9 +91,9 @@ a.link:hover {
     color: var(--clr-link-hover);
 }
 
-a.redirect::after {
+a.link.external::after {
     font: var(--fa-font-solid);
-    content: "\00a0 \f08e";
+    content: "\00a0\f08e";
     font-size: .75rem;
 }
 
@@ -216,6 +216,7 @@ nav {
     border-left: 10px solid var(--clr-accent);
     padding: 1.25rem;
     text-align: left;
+    box-shadow: 0 0 .4rem var(--clr-primary);
 }
 
 .quote-wrapper::before {
