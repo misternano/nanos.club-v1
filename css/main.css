@@ -211,9 +211,9 @@ nav {
     width: 90%;
     position: absolute;
     bottom: 20%;
-    background-color: var(--clr-primary);
+    background: rgba(36, 36, 36, 0.75);
     border-radius: 0 .5rem .5rem 0;
-    border-left: 10px solid var(--clr-accent);
+    border-left: 10px solid rgba(58, 58, 58, 0.75);
     padding: 1.25rem;
     text-align: left;
     box-shadow: 0 0 .4rem var(--clr-primary);
@@ -442,6 +442,7 @@ footer {
         width: unset;
         bottom: 1rem;
         padding: 1.5rem;
+        margin-left: 1.25vw;
     }
     .quote-wrapper::before {
         font-size: 3rem;
