@@ -103,7 +103,7 @@
 .tag.jquery,
 .tag.jquery::before {
     content: "jquery";
-    background-color: #0277BD;
+    background-color: #0769AD;
 }
 
 .tag.lua,
