@@ -346,7 +346,7 @@ footer {
 .container {
     display: flex;
     flex-direction: column;
-    min-height: 75vh;
+    min-height: 77.5vh;
 }
 
 #footer {
