@@ -33,6 +33,7 @@
     --clr-black: #000;
     --clr-white: #fff;
     --clr-fallback-text: #f18a4f;
+    /* social */
     --clr-discord: #5865F2;
     --clr-twitter: #00acee;
     --clr-twitch: #6441a5;
@@ -63,14 +64,14 @@ html {
     background: var(--clr-scrollbar);
     border-radius: 9999px;
     border: .25rem solid transparent;
-    background-clip: padding-box
+    background-clip: padding-box;
 }
 
 ::-webkit-scrollbar-thumb:hover {
     background: rgb(66, 66, 66, 0.815);
     border-radius: 9999px;
     border: .25rem solid transparent;
-    background-clip: padding-box
+    background-clip: padding-box;
 }
 
 :focus {
@@ -95,6 +96,11 @@ a.link.external::after {
     font: var(--fa-font-solid);
     content: "\00a0\f08e";
     font-size: .75rem;
+}
+
+a.slink {
+    text-decoration: none;
+    transition: color .2s ease-in;
 }
 
 .content-wrapper {
@@ -210,11 +216,11 @@ nav {
 .quote-wrapper {
     width: 90%;
     position: absolute;
-    bottom: 20%;
+    bottom: 10%;
     background: rgba(36, 36, 36, 0.75);
     border-radius: 0 .5rem .5rem 0;
     border-left: 10px solid rgba(58, 58, 58, 0.75);
-    padding: 1.25rem;
+    padding: 1rem;
     text-align: left;
     box-shadow: 0 0 .4rem var(--clr-primary);
 }
@@ -224,7 +230,7 @@ nav {
     color: #ccc;
     content: open-quote;
     font-size: 2rem;
-    margin-right: .5rem;
+    margin-right: .4rem;
     line-height: 0;
     vertical-align: -0.3em;
 }
@@ -256,7 +262,7 @@ nav {
 }
 
 .infocard-container {
-    margin: 1rem 1rem 4rem 1rem;
+    margin: 1rem 1rem 0 1rem;
 }
 
 .infocard-wrapper {
@@ -329,30 +335,22 @@ nav {
     border-image: url("../assets/EecPYwAAAABJRU5ErkJggg.png") 10% stretch;
 }
 
+footer {
+    width: 98%;
+    margin: 0 auto;
+    text-align: center;
+    bottom: 0;
+    font-size: 2.5rem;
+}
+
 .socials {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    max-width: 98%;
+    max-width: 100%;
     background-color: rgba(40, 40, 40, .9);
     border-radius: .5rem;
     padding: .4rem 0;
-}
-
-a.slink {
-    text-decoration: none;
-    transition: color .2s ease-in;
-}
-
-footer {
-    width: 98%;
-    padding-bottom: .5rem;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    font-size: 2.5rem;
 }
 
 @keyframes colortext {
@@ -495,6 +493,13 @@ footer {
         padding-bottom: 0;
         margin-bottom: 0;
     }
+    footer {
+        position: fixed;
+        width: auto;
+        padding: 30vh 0;
+        margin: 0 2vh;
+        font-size: 2.5rem;
+    }
     .socials {
         display: flex;
         flex-direction: column;
@@ -504,13 +509,6 @@ footer {
         background-color: unset;
         border-radius: unset;
         padding: unset;
-    }
-    footer {
-        position: fixed;
-        width: auto;
-        padding: 30vh 0;
-        margin: 0 2vh;
-        font-size: 2.5rem;
     }
     #discord::before,
     #twitter::before,
@@ -548,13 +546,20 @@ footer {
     }
 }
 
-
-/*temporary*/
-
 .fs-40 {
     font-size: 2.5rem;
 }
 
 .fw-800 {
     font-weight: 800;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh;
+}
+
+#footer {
+    margin-top: auto;
 }
