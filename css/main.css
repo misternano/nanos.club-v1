@@ -503,6 +503,10 @@ footer {
         padding-bottom: 0;
         margin-bottom: 0;
     }
+    .container {
+        display: inline;
+        min-height: unset;
+    }
     footer {
         position: fixed;
         width: auto;
