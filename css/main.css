@@ -101,11 +101,13 @@ nav li {
 
 nav a {
     text-underline-offset: .35rem;
+    -webkit-underline-offet: .35rem;
 }
 
 nav a.active {
     text-decoration: underline #d2d2d2;
     text-decoration-thickness: 4px;
+    -webkit-text-decoration-thickness: 4px;
 }
 
 nav a:hover {
@@ -372,7 +374,7 @@ nav a.disabled {
     }
     /* Homepage */
     .hero-container {
-        margin-top: 15%;
+        margin-top: 5%;
     }
     .hero__greet {
         font-size: 4rem;
