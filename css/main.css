@@ -62,7 +62,7 @@ a.link {
     color: #008080;
 }
 
-a:hover {
+a.link:hover {
     color: #00b1b1;
 }
 
@@ -191,7 +191,7 @@ nav a.disabled {
 .socials {
     font-size: 3rem;
     padding: 0 .25rem;
-    transition: color .3s ease-in;
+    transition: color .2s ease-in;
     cursor: pointer;
 }
 
