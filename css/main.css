@@ -104,7 +104,8 @@ nav a {
 }
 
 nav a.active {
-    text-decoration: underline #d2d2d2 4px;
+    text-decoration: underline #d2d2d2;
+    text-decoration-thickness: 4px;
 }
 
 nav a:hover {
@@ -371,7 +372,7 @@ nav a.disabled {
     }
     /* Homepage */
     .hero-container {
-        margin-top: 25%;
+        margin-top: 15%;
     }
     .hero__greet {
         font-size: 4rem;
