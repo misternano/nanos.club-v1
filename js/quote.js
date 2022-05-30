@@ -6,5 +6,5 @@ $(document).ready(function() {
         "maybe the only reason you think you're not good enough is because you're surrounded by a bunch of cunts."
     ];
     var x = Math.floor((Math.random() * text.length));
-    $('#quote').html(text[x]);
+    $('#quotes').html(text[x]);
 });

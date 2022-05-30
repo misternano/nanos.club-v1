@@ -4,8 +4,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Nano's Club &mdash; Projects</title>
-    <link rel="icon" type="image/x-icon" href="assets/silkicons/lightning.png">
+    <title>Nano's Club &mdash; Home</title>
+    <link href="assets/silkicons/lightning.png" rel="icon" type="image/png">
+    <link href="assets/silkicons/lightning.png" rel="apple-touch-icon">
     <meta name="author" content="Nano" />
     <meta name="description" content="Portfolio" />
     <meta name="keywords" content="personal, nano, nanovirus, influencer, dev, clubhouse, blog" />
@@ -31,19 +32,19 @@
 
 <body>
     <nav>
-        <div class="nav-logo">
-            <a class="nav-link" href="https://github.com/misternano/misternano.github.io" title="Visit GitHub" alt="Github Page" target="_blank"><img class="logo" src="assets/C6143F31-47BF-48C4-88F4-49D4187BC07E.gif" /></a>
-        </div>
-        <div class="navbtn-container">
-            <div class="navbtn"><a class="nav-link" href="/" alt="Home">Home</a></div>
-            <div class="navbtn active"><a class="nav-link" href="/projects" alt="Projects">Projects</a></div>
-            <div class="navbtn disabled">About</div>
-        </div>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li class="nav-spacer"></li>
+            <li><a class="active" href="/projects.html">Projects</a></li>
+        </ul>
+        <div class="navigation__logo"><img class="logo" src="assets/C6143F31-47BF-48C4-88F4-49D4187BC07E.gif"></div>
     </nav>
-    <noscript><p class="fs-40 fw-800">You need to enable JavaScript to run this app.</p></noscript>
+
+    <noscript><p class="java-disabled">You need to enable JavaScript to run this app.</p></noscript>
+
     <main>
-        <div class="content-wrapper fs-40">
-            <p class="project-header fw-800">Projects</p>
+        <div class="content-wrapper">
+            <p class="project-header">Projects</p>
             <p class="project-subheader" data-aos="fade-in" data-aos-delay="500" data-aos-duration="2500"></p>
         </div>
         <main class="infocard-container">
@@ -60,7 +61,7 @@
                         <span class="tag js"></span>
                         <span class="tag jquery"></span>
                     </div>
-                    <div class="infocard__description">You're here! A display of projects I've worked on and info about me. This will be updated when new projects are created.</div>
+                    <div class="infocard__description">You're here! A display of projects I've worked on and info about me. This will be updated when new projects are being developed.</div>
                 </div>
             </div>
 
@@ -118,7 +119,7 @@
                     </div>
                     <div class="infocard__description">Dedicated FiveM Server</div>
                 </div>
-                <br><a class="link external" href="https://fivem.net">fivem.net</a>
+                <br><a class="link external" href="https://fivem.net" target="_blank" rel="nofollow">fivem.net</a>
             </div>
 
             <!--
@@ -150,7 +151,6 @@
 
             </div>
         </main>
-        <div id="footer"></div>
         <script src="js/init.js"></script>
 </body>
 

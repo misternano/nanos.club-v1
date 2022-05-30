@@ -5,7 +5,8 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>Nano's Club &mdash; Home</title>
-    <link rel="icon" type="image/x-icon" href="assets/silkicons/lightning.png">
+    <link href="assets/silkicons/lightning.png" rel="icon" type="image/png">
+    <link href="assets/silkicons/lightning.png" rel="apple-touch-icon">
     <meta name="author" content="Nano" />
     <meta name="description" content="Portfolio" />
     <meta name="keywords" content="personal, nano, nanovirus, influencer, dev, clubhouse, blog" />
@@ -13,10 +14,8 @@
     <meta property="twitter:card" content="summary" />
     <meta property="twitter:title" content="Featured &mdash; Nano's Club" />
     <meta property="twitter:description" content="Personal portfolio" />
-    <meta property="twitter:image:src" content="assets/noise-texture-o5-d14-c-171717-t0.png" />
     <meta property="og:title" content="Featured &mdash; Nano's Club" />
     <meta property="og:description" content="Personal portfolio" />
-    <meta property="og:image" content="assets/noise-texture-o5-d14-c-171717-t0.png" />
     <meta name="theme-color" content="#171717" />
     <script src="https://kit.fontawesome.com/8ab913bf22.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="css/main.css">
@@ -32,25 +31,33 @@
 
 <body>
     <nav>
-        <div class="nav-logo">
-            <a class="nav-link" href="https://github.com/misternano/misternano.github.io" title="Visit GitHub" alt="Github Page" target="_blank"><img class="logo" src="assets/C6143F31-47BF-48C4-88F4-49D4187BC07E.gif" /></a>
-        </div>
-        <div class="navbtn-container">
-            <div class="navbtn active"><a class="nav-link" href="/" alt="Home">Home</a></div>
-            <div class="navbtn"><a class="nav-link" href="/projects" alt="Projects">Projects</a></div>
-            <div class="navbtn disabled">About</div>
+        <ul>
+            <li><a class="active" href="/">Home</a></li>
+            <li class="nav-spacer"></li>
+            <li><a href="/projects.html">Projects</a></li>
+        </ul>
+        <div class="navigation__logo">
+            <a href="https://github.com/misternano/misternano.github.io" title="Visit GitHub" alt="Github Page" target="_blank"><img class="logo" src="assets/C6143F31-47BF-48C4-88F4-49D4187BC07E.gif"></a>
         </div>
     </nav>
-    <noscript><p class="fs-40 fw-800">You need to enable JavaScript to run this app.</p></noscript>
-    <main class="container">
-        <div class="intro">
-            <h1 class="animated-text fw-800" id="greet"></h1>
-            <h2 data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="800">a developer</h2>
+
+    <noscript><p class="java-disabled">You need to enable JavaScript to run this app.</p></noscript>
+
+    <main>
+        <div class="hero-container">
+            <div class="hero-wrapper">
+                <div class="hero__greet" id="greet"></div>
+                <div class="hero__quote" id="quotes"></div>
+                <div class="hero__socials">
+                    <div class="socials" id="discord"><a href="https://www.discord.com/users/272535850200596480/" alt="Discord" target="_blank" rel="nofollow"><i class="fa-brands fa-discord"></i></a></div>
+                    <div class="socials" id="twitter"><a href="https://www.twitter.com/fruitynano/" alt="Twitter" target="_blank" rel="nofollow"><i class="fa-brands fa-twitter"></i></a></div>
+                    <div class="socials" id="twitch"><a href="https://www.twitch.tv/mrnanovirus/" alt="Twitch" target="_blank" rel="nofollow"><i class="fa-brands fa-twitch"></i></a></div>
+                    <div class="socials" id="youtube"><a href="https://www.youtube.com/channel/UCMhXoxlrF-iJvPZcMjZyn_g/" alt="YouTube" target="_blank" rel="nofollow"><i class="fa-brands fa-youtube"></i></a></div>
+                    <div class="socials" id="steam"><a href="https://www.steamcommunity.com/id/cjstitt/" alt="Steam" target="_blank" rel="nofollow"><i class="fa-brands fa-steam"></i></a></div>
+                    <div class="socials" id="github"><a href="https://github.com/misternano/" alt="Github" target="_blank" rel="nofollow"><i class="fa-brands fa-github "></i></a></div>
+                </div>
+            </div>
         </div>
-        <div class="quote-wrapper">
-            <p id="quote"></p>
-        </div>
-        <div id="footer"></div>
     </main>
     <script src="js/init.js"></script>
 </body>

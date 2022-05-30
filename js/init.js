@@ -2,6 +2,11 @@ AOS.init({
     // global settings
 });
 
-$(function() {
-    $("#footer").load("/components/footer.html");
-});
+
+//// For future use?
+//
+// $(function() {
+//     $("#footer").load("/components/footer.html");
+// });
+//
+////
