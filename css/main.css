@@ -167,6 +167,14 @@ nav a.disabled {
 
 /* Home screen hero section */
 
+.rainbow {
+    background: url("../assets/EecPYwAAAABJRU5ErkJggg.png") 100%;
+    background-size: cover;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
 .hero-container {
     margin: 10% auto;
     width: 80%;
@@ -182,11 +190,6 @@ nav a.disabled {
 .hero__greet {
     font-size: 5rem;
     font-weight: 800;
-    background: url("../assets/EecPYwAAAABJRU5ErkJggg.png");
-    background-size: cover;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
 }
 
 .hero__quote {
@@ -246,17 +249,19 @@ nav a.disabled {
 
 /* Projects */
 
-.content-wrapper {
+.project-wrapper {
     font-size: 2.5rem;
 }
 
-.project-header {
+.project__header {
+    margin: 2.5rem auto;
+    width: 20%;
     padding-bottom: 0;
     margin-bottom: 0;
     font-weight: 800;
 }
 
-.project-subheader {
+.project__subheader {
     text-align: center;
     font-size: 1rem;
     padding-top: 0;
@@ -264,7 +269,7 @@ nav a.disabled {
     padding-bottom: 1rem;
 }
 
-.project-subheader::before {
+.project__subheader::before {
     content: "A collection of personal and collaborative work.";
 }
 
@@ -410,7 +415,10 @@ nav a.disabled {
         padding: 1.5rem;
     }
     /* Project */
-    .project-subheader::before {
+    .project__header {
+        width: 100%;
+    }
+    .project__subheader::before {
         content: "Personal and collaborative work.";
     }
     /* Infocard */
