@@ -30,14 +30,15 @@
 
 :root {
     --border: .5rem;
+    --shadow: 0 0 .4rem rgb(var(--clr-primary));
     --clr-discord: #5865F2;
     --clr-twitter: #00acee;
     --clr-twitch: #6441a5;
     --clr-youtube: #ff0000;
     --clr-steam: #2a475e;
     --clr-github: #646464;
-    --clr-primary: 36, 36, 36;
     --nav-alpha: .75;
+    --clr-primary: 36, 36, 36;
     --clr-link: 189, 143, 27;
 }
 
@@ -50,6 +51,7 @@ html {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    scroll-behavior: smooth;
     overflow-x: hidden;
     color: #ddd;
     margin: 0;
@@ -87,9 +89,9 @@ html {
 a {
     text-decoration: none;
     color: unset;
-    -webkit-transition: color .2s ease-out;
-    -o-transition: color .2s ease-out;
-    transition: color .2s ease-out;
+    -webkit-transition: color .2s ease-in;
+    -o-transition: color .2s ease-in;
+    transition: color .2s ease-in;
 }
 
 a.external::after {
@@ -160,8 +162,9 @@ nav li {
 nav a {
     color: #ccc;
     text-underline-offset: 0.35rem;
-    -webkit-transition: color 0.3s, text-decoration-color 0.3s, -webkit-text-decoration-color 0.3s;
-    -o-transition: color 0.3s, text-decoration-color 0.3s, -webkit-text-decoration-color 0.3s;
+    -webkit-transition: color 0.3s, -webkit-text-decoration-color 0.3s;
+    -o-transition: color 0.3s, text-decoration-color 0.3s;
+    transition: color 0.3s, text-decoration-color 0.3s;
     transition: color 0.3s, text-decoration-color 0.3s, -webkit-text-decoration-color 0.3s;
     -webkit-text-decoration-color: transparent;
     text-decoration-color: transparent;
@@ -193,6 +196,8 @@ nav a.disabled {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-grid-row-align: center;
+    -ms-grid-column-align: center;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -218,7 +223,7 @@ nav li:not(:last-child)::after {
 /* Footer */
 
 footer {
-    margin: 2rem auto 0;
+    margin: 1rem auto;
     max-width: 80%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -285,8 +290,8 @@ footer p {
     border-left: 10px solid rgba(58, 58, 58, 0.75);
     padding: 1rem;
     text-align: left;
-    -webkit-box-shadow: 0 0 .4rem #24242b;
-    box-shadow: 0 0 .4rem #24242b;
+    -webkit-box-shadow: var(--shadow);
+    box-shadow: var(--shadow);
     font-style: oblique;
     color: #808080;
     font-weight: bold;
@@ -304,8 +309,8 @@ footer p {
     padding: .5rem 2rem;
     border-radius: var(--border);
     background-color: rgba(32, 32, 32, 0.75);
-    -webkit-box-shadow: 0 0 .4rem rgb(var(--clr-primary));
-    box-shadow: 0 0 .4rem rgb(var(--clr-primary));
+    -webkit-box-shadow: var(--shadow);
+    box-shadow: var(--shadow);
 }
 
 .socials {
@@ -415,8 +420,8 @@ footer p {
     position: relative;
     display: inline-block;
     background: rgba(36, 36, 36, 0.5);
-    -webkit-box-shadow: 0 0 .4rem rgb(var(--clr-primary));
-    box-shadow: 0 0 .4rem rgb(var(--clr-primary));
+    -webkit-box-shadow: var(--shadow);
+    box-shadow: var(--shadow);
     padding: 1rem 2rem 1.5rem;
     border-radius: var(--border);
     color: var(--clr-white);
@@ -457,12 +462,14 @@ footer p {
     background-color: rgb(var(--clr-primary));
     border-radius: var(--border);
     padding: .75rem;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+    -ms-grid-row-align: center;
+    -ms-grid-column-align: center;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 .infocard__languages {
@@ -478,12 +485,14 @@ footer p {
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+    -ms-grid-row-align: center;
+    -ms-grid-column-align: center;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-column-gap: .35rem;
     -moz-column-gap: .35rem;
     column-gap: .35rem;
@@ -524,6 +533,40 @@ footer p {
     font-size: 2rem;
     height: 100%;
     margin-top: 15%;
+}
+
+.topBtn {
+    position: fixed;
+    display: none;
+    background-color: rgb(var(--clr-primary));
+    border: 1px solid rgb(var(--clr-link));
+    border-radius: 50%;
+    padding: 1.75rem;
+    inset: auto 3rem 3rem auto;
+    cursor: pointer;
+    -webkit-transition: -webkit-transform .2s ease-in;
+    -o-transition: transform .2s ease-in;
+    transition: transform .2s ease-in, -webkit-transform .2s ease-in;
+}
+
+.topBtn:hover {
+    -webkit-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    transform: scale(1.15);
+    -webkit-transition: -webkit-transform .2s ease-out;
+    -o-transition: transform .2s ease-out;
+    transition: transform .2s ease-out, -webkit-transform .2s ease-out;
+}
+
+.topBtn::before {
+    position: absolute;
+    font: var(--fa-font-solid);
+    content: "\f106";
+    color: white;
+    font-size: 1.5rem;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 
@@ -589,6 +632,15 @@ footer p {
         top: 5%;
         font: var(--fa-font-solid);
         content: "\f121 \00a0";
+    }
+    .topBtn {
+        inset: auto 1rem 5rem auto;
+    }
+    .topBtn:hover {
+        transform: unset;
+        -webkit-transition: unset;
+        -o-transition: unset;
+        transition: unset;
     }
     #discord {
         color: var(--clr-discord);
