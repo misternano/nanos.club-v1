@@ -418,7 +418,7 @@ footer p {
 
 .infocard-wrapper {
     position: relative;
-    display: inline-block;
+    display: block;
     background: rgba(36, 36, 36, 0.5);
     -webkit-box-shadow: var(--shadow);
     box-shadow: var(--shadow);
@@ -561,7 +561,7 @@ footer p {
 .topBtn::before {
     position: absolute;
     font: var(--fa-font-solid);
-    content: "\f106";
+    content: "\f062";
     color: white;
     font-size: 1.5rem;
     -webkit-transform: translate(-50%, -50%);
@@ -627,11 +627,8 @@ footer p {
         flex-direction: column;
     }
     .infocard-wrapper::before {
-        position: absolute;
         left: 6%;
         top: 5%;
-        font: var(--fa-font-solid);
-        content: "\f121 \00a0";
     }
     .topBtn {
         inset: auto 1rem 5rem auto;
