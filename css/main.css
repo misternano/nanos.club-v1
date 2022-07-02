@@ -29,6 +29,9 @@
 }
 
 :root {
+    --nav-alpha: .75;
+    --clr-primary: 36, 36, 36;
+    --clr-link: 189, 143, 27;
     --border: .5rem;
     --shadow: 0 0 .4rem rgb(var(--clr-primary));
     --clr-discord: #5865F2;
@@ -37,9 +40,6 @@
     --clr-youtube: #ff0000;
     --clr-steam: #2a475e;
     --clr-github: #646464;
-    --nav-alpha: .75;
-    --clr-primary: 36, 36, 36;
-    --clr-link: 189, 143, 27;
 }
 
 html {
@@ -260,7 +260,7 @@ footer p {
 
 .hero-container {
     margin: 0 auto;
-    padding-top: 12rem;
+    padding-top: 25vh;
     width: 80%;
 }
 
@@ -306,7 +306,7 @@ footer p {
     -ms-flex-direction: row;
     flex-direction: row;
     gap: 2.5rem;
-    padding: .5rem 2rem;
+    padding: .5rem 1rem;
     border-radius: var(--border);
     background-color: rgba(32, 32, 32, 0.75);
     -webkit-box-shadow: var(--shadow);
@@ -538,7 +538,7 @@ footer p {
 .topBtn {
     position: fixed;
     display: none;
-    background-color: rgb(var(--clr-primary));
+    background-color: rgb(var(--clr-primary), 0.8);
     border: 1px solid rgb(var(--clr-link));
     border-radius: 50%;
     padding: 1.75rem;
@@ -587,10 +587,10 @@ footer p {
     }
     /* Homepage */
     .hero-container {
-        padding: 2.5rem 0;
+        padding: 10vh 0;
     }
     .hero-wrapper {
-        gap: 2rem;
+        gap: 5rem;
     }
     .hero__greet {
         font-size: 4rem;
@@ -601,8 +601,8 @@ footer p {
         -ms-grid-columns: minmax(0, 1fr) 1.5rem minmax(0, 1fr) 1.5rem minmax(0, 1fr);
         grid-template-columns: repeat(3, minmax(0, 1fr));
         grid-auto-rows: auto;
-        grid-gap: 1.25rem;
-        padding: 1.25rem;
+        grid-gap: 2.5rem;
+        padding: 1.5rem;
     }
     /* Project */
     .project__header {
