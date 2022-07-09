@@ -425,6 +425,11 @@ footer p {
     padding: 1rem 2rem 1.5rem;
     border-radius: var(--border);
     color: var(--clr-white);
+    transition: transform .3s ease-in;
+}
+
+.infocard-wrapper:hover {
+    transform: scale(1.02);
 }
 
 .infocard-wrapper::before {
