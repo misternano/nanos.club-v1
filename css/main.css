@@ -294,6 +294,7 @@ footer p {
     font-style: oblique;
     color: #808080;
     font-weight: bold;
+    /* CURRENTLY DISABLED */
 }
 
 .hero__quote::before {
@@ -333,37 +334,9 @@ footer p {
 }
 
 .socials:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
     transform: scale(1.2);
-}
-
-#discord::before {
-    font: var(--fa-font-brands);
-    content: "\f392";
-}
-
-#twitter::before {
-    font: var(--fa-font-brands);
-    content: "\f099";
-}
-
-#youtube::before {
-    font: var(--fa-font-brands);
-    content: "\f167";
-}
-
-#twitch::before {
-    font: var(--fa-font-brands);
-    content: "\f1e8";
-}
-
-#steam::before {
-    font: var(--fa-font-brands);
-    content: "\f1b6";
-}
-
-#github::before {
-    font: var(--fa-font-brands);
-    content: "\f09b";
 }
 
 #discord:hover {
@@ -723,6 +696,11 @@ footer p {
         grid-gap: 2.5rem;
         padding: 1.5rem;
     }
+    .socials:hover {
+        -webkit-transform: unset;
+        -ms-transform: unset;
+        transform: unset;
+    }
     /* Project */
     .project__header {
         width: 100%;
@@ -738,6 +716,16 @@ footer p {
     }
     .infocard-wrapper {
         padding: 1rem;
+        -webkit-transition: unset;
+        -o-transition: unset;
+        transition: none;
+    }
+    .infocard-wrapper:hover {
+        -webkit-transform: unset;
+        -ms-transform: unset;
+        transform: unset;
+        -webkit-animation: unset;
+        animation: unset;
     }
     .infocard__content-wrapper {
         -webkit-box-orient: vertical;
