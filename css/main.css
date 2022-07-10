@@ -28,20 +28,6 @@
     box-sizing: border-box;
 }
 
-:root {
-    --nav-alpha: 0.75;
-    --clr-primary: 36, 36, 36;
-    --clr-link: 189, 143, 27;
-    --border: 0.5rem;
-    --shadow: 0 0 0.4rem rgb(var(--clr-primary));
-    --clr-discord: #5865f2;
-    --clr-twitter: #00acee;
-    --clr-twitch: #6441a5;
-    --clr-youtube: #ff0000;
-    --clr-steam: #2a475e;
-    --clr-github: #646464;
-}
-
 html {
     font-family: "Inter", sans-serif;
     background-color: #171717;
@@ -56,6 +42,20 @@ html {
     color: #ddd;
     margin: 0;
     padding: 0;
+}
+
+:root {
+    --border: 0.5rem;
+    --shadow: 0 0 0.4rem rgb(var(--clr-primary));
+    --nav-alpha: 0.75;
+    --clr-primary: 36, 36, 36;
+    --clr-link: 189, 143, 27;
+    --clr-discord: #5865f2;
+    --clr-twitter: #00acee;
+    --clr-twitch: #6441a5;
+    --clr-youtube: #ff0000;
+    --clr-steam: #2a475e;
+    --clr-github: #646464;
 }
 
 
@@ -162,10 +162,9 @@ nav li {
 nav a {
     color: #ccc;
     text-underline-offset: 0.35rem;
-    -webkit-transition: color 0.3s, -webkit-text-decoration-color 0.3s;
+    -webkit-transition: color 0.3s, text-decoration-color 0.3s;
     -o-transition: color 0.3s, text-decoration-color 0.3s;
     transition: color 0.3s, text-decoration-color 0.3s;
-    transition: color 0.3s, text-decoration-color 0.3s, -webkit-text-decoration-color 0.3s;
     -webkit-text-decoration-color: transparent;
     text-decoration-color: transparent;
 }
@@ -284,10 +283,10 @@ footer p {
 }
 
 .hero__quote {
+    /* CURRENTLY DISABLED */
     font-family: "Karla", sans-sarif;
     background: rgba(36, 36, 36, 0.75);
-    border-radius: 0 var(--border) var(--border) 0;
-    border-left: 10px solid rgba(58, 58, 58, 0.75);
+    border-radius: var(--border);
     padding: 1rem;
     text-align: left;
     -webkit-box-shadow: var(--shadow);
@@ -295,6 +294,14 @@ footer p {
     font-style: oblique;
     color: #808080;
     font-weight: bold;
+}
+
+.hero__quote::before {
+    content: open-quote "\00a0";
+}
+
+.hero__quote::after {
+    content: "\00a0" close-quote;
 }
 
 .socials-wrapper {
@@ -438,7 +445,11 @@ footer p {
 }
 
 .infocard-wrapper:hover {
+    -webkit-transform: scale(1.02);
+    -ms-transform: scale(1.02);
     transform: scale(1.02);
+    -webkit-animation: shake .5s 5s;
+    animation: shake .5s 5s;
 }
 
 .infocard-wrapper::before {
@@ -549,6 +560,100 @@ footer p {
     margin-top: 15%;
 }
 
+@-webkit-keyframes shake {
+    0% {
+        -webkit-transform: rotate(0deg) scale(1.02);
+        transform: rotate(0deg) scale(1.02);
+    }
+    10% {
+        -webkit-transform: rotate(.5deg) scale(1.02);
+        transform: rotate(.5deg) scale(1.02);
+    }
+    20% {
+        -webkit-transform: rotate(1deg) scale(1.02);
+        transform: rotate(1deg) scale(1.02);
+    }
+    30% {
+        -webkit-transform: rotate(.5deg) scale(1.02);
+        transform: rotate(.5deg) scale(1.02);
+    }
+    40% {
+        -webkit-transform: rotate(0deg) scale(1.02);
+        transform: rotate(0deg) scale(1.02);
+    }
+    50% {
+        -webkit-transform: rotate(.5deg) scale(1.02);
+        transform: rotate(.5deg) scale(1.02);
+    }
+    60% {
+        -webkit-transform: rotate(1deg) scale(1.02);
+        transform: rotate(1deg) scale(1.02);
+    }
+    70% {
+        -webkit-transform: rotate(.5deg) scale(1.02);
+        transform: rotate(.5deg) scale(1.02);
+    }
+    80% {
+        -webkit-transform: rotate(0deg) scale(1.02);
+        transform: rotate(0deg) scale(1.02);
+    }
+    90% {
+        -webkit-transform: rotate(.5deg) scale(1.02);
+        transform: rotate(.5deg) scale(1.02);
+    }
+    100% {
+        -webkit-transform: rotate(1deg) scale(1.02);
+        transform: rotate(1deg) scale(1.02);
+    }
+}
+
+@keyframes shake {
+    0% {
+        -webkit-transform: rotate(0deg) scale(1.02);
+        transform: rotate(0deg) scale(1.02);
+    }
+    10% {
+        -webkit-transform: rotate(.5deg) scale(1.02);
+        transform: rotate(.5deg) scale(1.02);
+    }
+    20% {
+        -webkit-transform: rotate(1deg) scale(1.02);
+        transform: rotate(1deg) scale(1.02);
+    }
+    30% {
+        -webkit-transform: rotate(.5deg) scale(1.02);
+        transform: rotate(.5deg) scale(1.02);
+    }
+    40% {
+        -webkit-transform: rotate(0deg) scale(1.02);
+        transform: rotate(0deg) scale(1.02);
+    }
+    50% {
+        -webkit-transform: rotate(.5deg) scale(1.02);
+        transform: rotate(.5deg) scale(1.02);
+    }
+    60% {
+        -webkit-transform: rotate(1deg) scale(1.02);
+        transform: rotate(1deg) scale(1.02);
+    }
+    70% {
+        -webkit-transform: rotate(.5deg) scale(1.02);
+        transform: rotate(.5deg) scale(1.02);
+    }
+    80% {
+        -webkit-transform: rotate(0deg) scale(1.02);
+        transform: rotate(0deg) scale(1.02);
+    }
+    90% {
+        -webkit-transform: rotate(.5deg) scale(1.02);
+        transform: rotate(.5deg) scale(1.02);
+    }
+    100% {
+        -webkit-transform: rotate(1deg) scale(1.02);
+        transform: rotate(1deg) scale(1.02);
+    }
+}
+
 
 /* Back to Top Button */
 
@@ -561,18 +666,15 @@ footer p {
     padding: 1.75rem;
     inset: auto 3rem 3rem auto;
     cursor: pointer;
-    -webkit-transition: -webkit-transform 0.2s ease-in;
-    -o-transition: transform 0.2s ease-in;
-    transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
+    -webkit-transition: transform .2s ease-in;
+    -o-transition: transform .2s ease-in;
+    transition: transform .2s ease-in;
 }
 
 .topBtn:hover {
-    -webkit-transform: scale(1.15);
-    -ms-transform: scale(1.15);
-    transform: scale(1.15);
-    -webkit-transition: -webkit-transform 0.2s ease-out;
-    -o-transition: transform 0.2s ease-out;
-    transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .topBtn::before {
@@ -652,9 +754,6 @@ footer p {
     }
     .topBtn:hover {
         transform: unset;
-        -webkit-transition: unset;
-        -o-transition: unset;
-        transition: unset;
     }
     /* Socials branding */
     #discord {
@@ -691,7 +790,7 @@ footer p {
     color: #fff;
     text-transform: uppercase;
     white-space: nowrap;
-    border-radius: 0.35rem;
+    border-radius: 0.25rem;
     text-decoration: none;
 }
 
