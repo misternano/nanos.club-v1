@@ -1,4 +1,4 @@
-/* MINIFY CSS https://www.cleancss.com/css-minify/ */
+/* RESET */
 
 @media (prefers-reduced-motion: reduce) {
     *,
@@ -28,6 +28,9 @@
     box-sizing: border-box;
 }
 
+
+/* BASE */
+
 html {
     font-family: "Inter", sans-serif;
     background-color: #171717;
@@ -38,7 +41,7 @@ html {
     -ms-user-select: none;
     user-select: none;
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    overflow: overlay;
     color: #ddd;
     margin: 0;
     padding: 0;
@@ -48,8 +51,9 @@ html {
     --border: 0.5rem;
     --shadow: 0 0 0.4rem rgb(var(--clr-primary));
     --nav-alpha: 0.75;
+    --clr-link: 224, 123, 123;
     --clr-primary: 36, 36, 36;
-    --clr-link: 189, 143, 27;
+    /* branding */
     --clr-discord: #5865f2;
     --clr-twitter: #00acee;
     --clr-twitch: #6441a5;
@@ -59,14 +63,10 @@ html {
 }
 
 
-/* Scrollbar formatting */
+/* SCROLLBAR */
 
 ::-webkit-scrollbar {
     width: 1rem;
-}
-
-::-webkit-scrollbar-track {
-    background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -84,7 +84,7 @@ html {
 }
 
 
-/* Link formatting */
+/* LINKS */
 
 a {
     text-decoration: none;
@@ -111,11 +111,11 @@ a.link {
 }
 
 a.link:hover {
-    color: rgba(var(--clr-link), 0.75);
+    color: rgba(var(--clr-link), .75);
 }
 
 
-/* Navigation */
+/* NAVIGATION */
 
 nav {
     margin: 1rem auto 0;
@@ -219,7 +219,7 @@ nav li:not(:last-child)::after {
 }
 
 
-/* Footer */
+/* FOOTER */
 
 footer {
     margin: 3rem auto 1rem;
@@ -247,7 +247,7 @@ footer p {
 }
 
 
-/* Home screen hero section */
+/* HOME -> HERO SECTION */
 
 .rainbow {
     background: url("../assets/EecPYwAAAABJRU5ErkJggg.png") 100%;
@@ -364,7 +364,7 @@ footer p {
 }
 
 
-/* Projects */
+/* PROJECTS */
 
 .project-wrapper {
     font-size: 2.5rem;
@@ -391,7 +391,7 @@ footer p {
 }
 
 
-/* Projects -> Infocards */
+/* PROJECTS -> INFOCARDS */
 
 .infocard-container {
     margin: 1rem 12vw;
@@ -517,7 +517,7 @@ footer p {
 }
 
 
-/* Miscellaneous */
+/* MISCELLANEOUS */
 
 .java-disabled {
     font-weight: 800;
@@ -532,6 +532,245 @@ footer p {
     height: 100%;
     margin-top: 15%;
 }
+
+
+/* BACK TO TOP BUTTON */
+
+.topBtn {
+    position: fixed;
+    display: none;
+    background-color: rgb(var(--clr-primary), 0.8);
+    border: 1px solid rgb(var(--clr-link));
+    border-radius: 50%;
+    padding: 1.75rem;
+    inset: auto 3rem 3rem auto;
+    cursor: pointer;
+    -webkit-transition: transform .2s ease-in;
+    -o-transition: transform .2s ease-in;
+    transition: transform .2s ease-in;
+}
+
+.topBtn:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.topBtn::before {
+    position: absolute;
+    font: var(--fa-font-solid);
+    content: "\f062";
+    color: white;
+    font-size: 1.5rem;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+
+/* Small screen display adjustments */
+
+@media only screen and (max-width: 1200px) {
+    /* Nav */
+    nav {
+        max-width: 100%;
+        padding: 0.25rem 7%;
+    }
+    nav a {
+        text-underline-offset: 0.5rem;
+        -webkit-underline-offet: 0.5rem;
+    }
+    footer {
+        max-width: 100%;
+    }
+    /* Homepage */
+    .hero-container {
+        padding: 10vh 0;
+    }
+    .hero-wrapper {
+        gap: 5rem;
+    }
+    .hero__greet {
+        font-size: 4rem;
+    }
+    .socials-wrapper {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: minmax(0, 1fr) 1.5rem minmax(0, 1fr) 1.5rem minmax(0, 1fr);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-auto-rows: auto;
+        grid-gap: 2.5rem;
+        padding: 1.5rem;
+    }
+    /* Project */
+    .project__header {
+        width: 100%;
+    }
+    .project__subheader::before {
+        content: "Personal and collaborative work.";
+    }
+    /* Infocard */
+    .infocard-container {
+        margin: 1rem 5%;
+        -ms-grid-columns: 100%;
+        grid-template-columns: repeat(1, 100%);
+    }
+    .infocard-wrapper {
+        padding: 1rem;
+        -webkit-transition: unset;
+        -o-transition: unset;
+        transition: none;
+    }
+    .infocard-wrapper:hover {
+        -webkit-transform: unset;
+        -ms-transform: unset;
+        transform: unset;
+        -webkit-animation: unset;
+        animation: unset;
+    }
+    .infocard__content-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .infocard-wrapper::before {
+        left: 6%;
+        top: 5%;
+    }
+    /* Top btn */
+    .topBtn {
+        inset: auto 1rem 5rem auto;
+    }
+    .topBtn:hover {
+        transform: unset;
+    }
+    /* Socials branding */
+    #discord {
+        color: var(--clr-discord);
+    }
+    #twitter {
+        color: var(--clr-twitter);
+    }
+    #twitch {
+        color: var(--clr-twitch);
+    }
+    #youtube {
+        color: var(--clr-youtube);
+    }
+    #steam {
+        color: var(--clr-steam);
+    }
+    #github {
+        color: var(--clr-github);
+    }
+    .notfound {
+        margin: 2rem;
+        margin-top: 40%;
+    }
+}
+
+
+/* Languages tags */
+
+.tag {
+    padding: 3px 4px;
+    font-size: 11px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    white-space: nowrap;
+    border-radius: 0.25rem;
+    text-decoration: none;
+}
+
+.tag.tbd,
+.tag.tbd::before {
+    content: "tbd";
+    color: #000;
+    background-color: #fff;
+}
+
+.tag.html,
+.tag.html::before {
+    content: "html";
+    background-color: #e44d26;
+}
+
+.tag.css,
+.tag.css::before {
+    content: "css";
+    background-color: #42a5f5;
+}
+
+.tag.scss,
+.tag.scss::before {
+    content: "scss";
+    background-color: #bf4080;
+}
+
+.tag.js,
+.tag.js::before {
+    content: "js";
+    background-color: #ffca28;
+}
+
+.tag.bootstrap,
+.tag.bootstrap::before {
+    content: "bootstrap";
+    background-color: #1E88E5;
+}
+
+.tag.git,
+.tag.git::before {
+    content: "git";
+    background-color: #e64a19;
+}
+
+.tag.tailwind,
+.tag.tailwind::before {
+    content: "tailwind css";
+    background-color: #4db6ac;
+}
+
+.tag.mysql,
+.tag.mysql::before {
+    content: "mysql";
+    background-color: #f29111;
+}
+
+.tag.php,
+.tag.php::before {
+    content: "php";
+    background-color: #1e88e5;
+}
+
+.tag.cs,
+.tag.cs::before {
+    content: "c#";
+    background-color: #0277bd;
+}
+
+.tag.ahk,
+.tag.ahk::before {
+    content: "ahk";
+    background-color: #4caf50;
+}
+
+.tag.jquery,
+.tag.jquery::before {
+    content: "jquery";
+    background-color: #0769ad;
+}
+
+.tag.lua,
+.tag.lua::before {
+    content: "lua";
+    background-color: #000080;
+}
+
+
+/* ANIMATION */
 
 @-webkit-keyframes shake {
     0% {
@@ -625,238 +864,4 @@ footer p {
         -webkit-transform: rotate(1deg) scale(1.02);
         transform: rotate(1deg) scale(1.02);
     }
-}
-
-
-/* Back to Top Button */
-
-.topBtn {
-    position: fixed;
-    display: none;
-    background-color: rgb(var(--clr-primary), 0.8);
-    border: 1px solid rgb(var(--clr-link));
-    border-radius: 50%;
-    padding: 1.75rem;
-    inset: auto 3rem 3rem auto;
-    cursor: pointer;
-    -webkit-transition: transform .2s ease-in;
-    -o-transition: transform .2s ease-in;
-    transition: transform .2s ease-in;
-}
-
-.topBtn:hover {
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
-}
-
-.topBtn::before {
-    position: absolute;
-    font: var(--fa-font-solid);
-    content: "\f062";
-    color: white;
-    font-size: 1.5rem;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-
-
-/* Small screen display adjustments */
-
-@media only screen and (max-width: 1200px) {
-    /* Nav */
-    nav {
-        max-width: 100%;
-        padding: 0.25rem 7%;
-    }
-    nav a {
-        text-underline-offset: 0.5rem;
-        -webkit-underline-offet: 0.5rem;
-    }
-    footer {
-        max-width: 100%;
-    }
-    /* Homepage */
-    .hero-container {
-        padding: 10vh 0;
-    }
-    .hero-wrapper {
-        gap: 5rem;
-    }
-    .hero__greet {
-        font-size: 4rem;
-    }
-    .socials-wrapper {
-        display: -ms-grid;
-        display: grid;
-        -ms-grid-columns: minmax(0, 1fr) 1.5rem minmax(0, 1fr) 1.5rem minmax(0, 1fr);
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        grid-auto-rows: auto;
-        grid-gap: 2.5rem;
-        padding: 1.5rem;
-    }
-    .socials:hover {
-        -webkit-transform: unset;
-        -ms-transform: unset;
-        transform: unset;
-    }
-    /* Project */
-    .project__header {
-        width: 100%;
-    }
-    .project__subheader::before {
-        content: "Personal and collaborative work.";
-    }
-    /* Infocard */
-    .infocard-container {
-        margin: 1rem 5%;
-        -ms-grid-columns: 100%;
-        grid-template-columns: repeat(1, 100%);
-    }
-    .infocard-wrapper {
-        padding: 1rem;
-        -webkit-transition: unset;
-        -o-transition: unset;
-        transition: none;
-    }
-    .infocard-wrapper:hover {
-        -webkit-transform: unset;
-        -ms-transform: unset;
-        transform: unset;
-        -webkit-animation: unset;
-        animation: unset;
-    }
-    .infocard__content-wrapper {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-    }
-    .infocard-wrapper::before {
-        left: 6%;
-        top: 5%;
-    }
-    .topBtn {
-        inset: auto 1rem 5rem auto;
-    }
-    .topBtn:hover {
-        transform: unset;
-    }
-    /* Socials branding */
-    #discord {
-        color: var(--clr-discord);
-    }
-    #twitter {
-        color: var(--clr-twitter);
-    }
-    #twitch {
-        color: var(--clr-twitch);
-    }
-    #youtube {
-        color: var(--clr-youtube);
-    }
-    #steam {
-        color: var(--clr-steam);
-    }
-    #github {
-        color: var(--clr-github);
-    }
-    .notfound {
-        margin: 2rem;
-        margin-top: 40%;
-    }
-}
-
-
-/* Languages tags */
-
-.tag {
-    padding: 3px 4px;
-    font-size: 11px;
-    font-weight: bold;
-    color: #fff;
-    text-transform: uppercase;
-    white-space: nowrap;
-    border-radius: 0.25rem;
-    text-decoration: none;
-}
-
-.tag.tbd,
-.tag.tbd::before {
-    content: "tbd";
-    color: #000;
-    background-color: #fff;
-}
-
-.tag.html,
-.tag.html::before {
-    content: "html";
-    background-color: #e44d26;
-}
-
-.tag.css,
-.tag.css::before {
-    content: "css";
-    background-color: #42a5f5;
-}
-
-.tag.scss,
-.tag.scss::before {
-    content: "scss";
-    background-color: #bf4080;
-}
-
-.tag.js,
-.tag.js::before {
-    content: "js";
-    background-color: #ffca28;
-}
-
-.tag.git,
-.tag.git::before {
-    content: "git";
-    background-color: #e64a19;
-}
-
-.tag.tailwind,
-.tag.tailwind::before {
-    content: "tailwind css";
-    background-color: #4db6ac;
-}
-
-.tag.mysql,
-.tag.mysql::before {
-    content: "mysql";
-    background-color: #f29111;
-}
-
-.tag.php,
-.tag.php::before {
-    content: "php";
-    background-color: #1e88e5;
-}
-
-.tag.cs,
-.tag.cs::before {
-    content: "c#";
-    background-color: #0277bd;
-}
-
-.tag.ahk,
-.tag.ahk::before {
-    content: "ahk";
-    background-color: #4caf50;
-}
-
-.tag.jquery,
-.tag.jquery::before {
-    content: "jquery";
-    background-color: #0769ad;
-}
-
-.tag.lua,
-.tag.lua::before {
-    content: "lua";
-    background-color: #000080;
 }
