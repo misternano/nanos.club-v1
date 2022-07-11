@@ -20,14 +20,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Karla:ital,wght@1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <script src="https://kit.fontawesome.com/8ab913bf22.js" crossorigin="anonymous"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script>
-        console.log("%cfuck off 🌷", "color:#e8a0e3;font-size:14px;padding:14px;font-family:monospace;")
-    </script>
 </head>
 
 <body>
@@ -43,12 +40,12 @@
 
     <noscript><p class="java-disabled">You need to enable JavaScript to run this app.</p></noscript>
 
-    <main>
+    <main id="swup" class="transition-fade">
         <div class="project-wrapper">
             <p class="project__header rainbow">Projects</p>
             <p class="project__subheader" data-aos="fade-in" data-aos-delay="500" data-aos-duration="2500"></p>
         </div>
-        <main class="infocard-container">
+        <div class="infocard-container">
 
             <!-- A Project List -->
 
@@ -158,16 +155,16 @@
                 <div class="infocard__description">Quality Assurance</div>
             </div>
             -->
-
-            </div>
-        </main>
-        <button onclick="topFunction()" class="topBtn" id="topBtn" title="Back to top"></button>
-        <footer>
-            <p>nanos.club &copy; 2022</p>
-            <p>Back to <a class="link" href="/">Home</a></p>
-        </footer>
-        <script src="js/init.js"></script>
-        <script src="js/topButton.js"></script>
+        </div>
+        </div>
+    </main>
+    <button onclick="topFunction()" class="topBtn" id="topBtn" title="Back to top"></button>
+    <footer>
+        <p>nanos.club &copy; 2022</p>
+        <p>Back to <a class="link" href="/">Home</a></p>
+    </footer>
+    <script src="js/topButton.js"></script>
+    <script src="js/init.js"></script>
 </body>
 
 </html>

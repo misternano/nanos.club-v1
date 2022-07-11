@@ -20,23 +20,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Karla:ital,wght@1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <script src="https://kit.fontawesome.com/8ab913bf22.js" crossorigin="anonymous"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="js/greet.js"></script>
-    <!-- <script src="js/quote.js"></script> -->
-    <script>
-        console.log("%cfuck off 🌷", "color:#e8a0e3;font-size:14px;padding:14px;font-family:monospace;")
-    </script>
 </head>
 
 <body>
     <nav>
         <ul>
             <li><a class="active" href="#">Home</a></li>
-            <li><a href="/projects">Projects</a></li>
+            <li><a href="/projects.html">Projects</a></li>
         </ul>
         <div class="logo-wrapper">
             <a href="https://github.com/misternano/misternano.github.io" title="Visit GitHub Repo" alt="Github Page Repo" target="_blank"><img class="logo" src="assets/C6143F31-47BF-48C4-88F4-49D4187BC07E.gif"></a>
@@ -45,28 +41,28 @@
 
     <noscript><p class="java-disabled">You need to enable JavaScript to run this app.</p></noscript>
 
-    <main>
+    <main id="swup" class="transition-fade">
         <div class="hero-container">
             <div class="hero-wrapper">
                 <div class="hero__greet rainbow" id="greet" data-aos="fade-in" data-aos-delay="100"></div>
                 <!-- <div class="hero__quote" id="quotes"></div> -->
-                <div class="socials-wrapper" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
-                    <div class="socials" id="discord">
+                <div class="socials-wrapper" data-aos="fade-in" data-aos-delay="100">
+                    <div class="socials" id="discord" data-aos="fade-up" data-aos-delay="300" data-aos-once="true">
                         <a href="https://www.discord.com/users/272535850200596480/" alt="Discord" target="_blank" rel="nofollow"><i class="fa-brands fa-discord"></i></a>
                     </div>
-                    <div class="socials" id="twitter">
+                    <div class="socials" id="twitter" data-aos="fade-up" data-aos-delay="400" data-aos-once="true">
                         <a href="https://www.twitter.com/fruitynano/" alt="Twitter" target="_blank" rel="nofollow"><i class="fa-brands fa-twitter"></i></a>
                     </div>
-                    <div class="socials" id="twitch">
+                    <div class="socials" id="twitch" data-aos="fade-up" data-aos-delay="500" data-aos-once="true">
                         <a href="https://www.twitch.tv/mrnanovirus/" alt="Twitch" target="_blank" rel="nofollow"><i class="fa-brands fa-twitch"></i></a>
                     </div>
-                    <div class="socials" id="youtube">
+                    <div class="socials" id="youtube" data-aos="fade-up" data-aos-delay="600" data-aos-once="true">
                         <a href="https://www.youtube.com/channel/UCMhXoxlrF-iJvPZcMjZyn_g/" alt="YouTube" target="_blank" rel="nofollow"><i class="fa-brands fa-youtube"></i></a>
                     </div>
-                    <div class="socials" id="steam">
+                    <div class="socials" id="steam" data-aos="fade-up" data-aos-delay="700" data-aos-once="true">
                         <a href="https://www.steamcommunity.com/id/cjstitt/" alt="Steam" target="_blank" rel="nofollow"><i class="fa-brands fa-steam"></i></a>
                     </div>
-                    <div class="socials" id="github">
+                    <div class="socials" id="github" data-aos="fade-up" data-aos-delay="800" data-aos-once="true">
                         <a href="https://github.com/misternano/" alt="Github" target="_blank" rel="nofollow"><i class="fa-brands fa-github"></i></a>
                     </div>
                 </div>
