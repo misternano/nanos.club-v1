@@ -153,9 +153,8 @@ nav ul {
 
 nav li {
     display: inline;
-    padding: 0 0.25rem;
     text-transform: uppercase;
-    padding: 0.5rem 0;
+    padding: 0.5rem 0.25rem;
     margin: 0.5rem 0;
 }
 
@@ -191,6 +190,12 @@ nav a.disabled {
     text-decoration: none;
 }
 
+nav li:not(:last-child)::after {
+    color: #555;
+    content: "|";
+    margin: 0 1.5rem;
+}
+
 .logo-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -210,12 +215,6 @@ nav a.disabled {
     vertical-align: middle;
     height: 2.5em;
     border-radius: 50%;
-}
-
-nav li:not(:last-child)::after {
-    color: #555;
-    content: "|";
-    margin: 0 1.5rem;
 }
 
 
