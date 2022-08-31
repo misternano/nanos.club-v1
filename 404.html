@@ -21,7 +21,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800;900&family=Karla:ital,wght@1,600;1,700;1,800&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/min.main.css">
     <script src="https://kit.fontawesome.com/8ab913bf22.js" crossorigin="anonymous"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" crossorigin="anonymous"></script>
@@ -29,7 +29,14 @@
 </head>
 
 <body>
-    <noscript><p class="java-disabled">You need to enable JavaScript to run this app.</p></noscript>
+    <noscript>
+        <div class="nojs-container">
+            <div class="nojs-wrapper">
+                <img style="height:32px;width:auto;" src="assets/alert-circle-orange.png" />
+                <p>You need to enable JavaScript to run this app.</p>
+            </div>
+        </div>
+    </noscript>
     <main>
         <div class="notfound">
             <h1>404</h1>

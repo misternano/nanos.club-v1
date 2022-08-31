@@ -21,7 +21,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Karla:ital,wght@1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/min.main.css">
     <script src="https://kit.fontawesome.com/8ab913bf22.js" crossorigin="anonymous"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" crossorigin="anonymous"></script>
@@ -38,7 +38,14 @@
         </div>
     </nav>
 
-    <noscript><p class="java-disabled">You need to enable JavaScript to run this app.</p></noscript>
+    <noscript>
+        <div class="nojs-container">
+            <div class="nojs-wrapper">
+                <img style="height:32px;width:auto;" src="assets/alert-circle-orange.png" />
+                <p>You need to enable JavaScript to run this app.</p>
+            </div>
+        </div>
+    </noscript>
 
     <main>
         <div class="project-wrapper">
@@ -103,17 +110,6 @@
             </div>
 
             <div class="infocard-wrapper">
-                <div class="infocard__title">???</div>
-                <div class="infocard__display"><img class="infocard img" src="docs/images/placeholder.png" /></div>
-                <div class="infocard__content-wrapper">
-                    <div class="infocard__languages">
-                        <span class="tag tbd"></span>
-                    </div>
-                    <div class="infocard__description">???</div>
-                </div>
-            </div>
-
-            <div class="infocard-wrapper">
                 <div class="infocard__title">hopey.club</div>
                 <div class="infocard__display"><img class="infocard img" src="docs/images/ASLLQ.png" alt="hopey.club" /></div>
                 <div class="infocard__content-wrapper">
@@ -142,6 +138,17 @@
                 </div>
             </div>
 
+            <div class="infocard-wrapper">
+                <div class="infocard__title">???</div>
+                <div class="infocard__display"><img class="infocard img" src="docs/images/placeholder.png" /></div>
+                <div class="infocard__content-wrapper">
+                    <div class="infocard__languages">
+                        <span class="tag tbd"></span>
+                    </div>
+                    <div class="infocard__description"><a class="link external" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="nofollow">a sneak peek...</a></div>
+                </div>
+            </div>
+
             <!--
             <div class="infocard-wrapper">
                 <div class="infocard__title">QA</div>
@@ -166,6 +173,7 @@
                 <div class="infocard__description">Quality Assurance</div>
             </div>
             -->
+
         </div>
         </div>
     </main>
@@ -174,6 +182,7 @@
         <p>nanos.club &copy; 2022</p>
         <p>Back to <a class="link" href="/">Home</a></p>
     </footer>
+    <div id="fade"></div>
     <script src="js/topButton.js"></script>
     <script src="js/init.js"></script>
 </body>
