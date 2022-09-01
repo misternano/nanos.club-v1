@@ -410,10 +410,6 @@ footer p {
     border-radius: var(--border);
 }
 
-.infocard__content-wrapper {
-    flex-direction: row;
-}
-
 
 /* MISCELLANEOUS */
 

@@ -509,13 +509,6 @@ footer p {
     border-radius: var(--border);
 }
 
-.infocard__content-wrapper {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-}
-
 
 /* MISCELLANEOUS */
 
