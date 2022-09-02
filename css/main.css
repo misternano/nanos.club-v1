@@ -90,7 +90,6 @@ a.external::after {
 a.link {
     color: rgb(var(--clr-link));
     text-underline-offset: 0.15rem;
-    -webkit-underline-offet: 0.15rem;
     -webkit-text-decoration: underline;
     text-decoration: underline;
     text-decoration-thickness: 2px;
@@ -107,8 +106,6 @@ a.link:hover {
 nav {
     margin: 1rem auto 0;
     max-width: 60%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -330,33 +327,34 @@ footer p {
 
 .infocard-container {
     margin: 1rem 12vw;
-    display: -ms-grid;
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-auto-rows: auto;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
     grid-gap: 1.5rem;
 }
 
 .infocard-wrapper {
     position: relative;
-    display: block;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
     background-color: rgba(36, 36, 36, 0.5);
     /* box-shadow: var(--shadow); */
-    padding: 1rem 2rem 1.5rem;
+    border: 2px solid rgb(var(--clr-primary));
+    padding: 2rem;
     border-radius: var(--border);
     color: var(--clr-white);
     transition: transform 0.2s ease-in;
-    border: 2px solid rgb(var(--clr-primary));
 }
 
-.infocard-wrapper:hover {
-    transform: scale(1.02);
-    animation: shake .5s 5s;
+.infocard__spacer {
+    transform: translateY(5%);
+    max-height: 90%;
+    border-right: 3px solid rgb(51 51 51 / .5);
 }
 
 .infocard-wrapper::before {
     position: absolute;
-    left: 3%;
+    right: 1%;
     top: 4%;
     font: var(--fa-font-solid);
     content: "\f121 \00a0";
@@ -364,50 +362,61 @@ footer p {
 
 .infocard__title {
     text-transform: uppercase;
-    font-size: 1.25rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-decoration: underline white;
+    -webkit-text-decoration: underline white;
+    text-decoration-thickness: 1px;
+    text-underline-offset: .3rem;
 }
 
-.infocard__content-wrapper {
+.infocard__content {
     display: flex;
-    flex-direction: row;
-    gap: 0.5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 50%;
 }
 
 .infocard__description {
     display: flex;
-    flex: 80%;
-    font-size: 1rem;
-    background-color: rgb(var(--clr-primary));
-    border-radius: var(--border);
-    padding: 0.75rem;
+    font-size: 1.15rem;
+    padding: 0 2rem;
     justify-content: center;
     align-items: center;
+    text-align: left;
 }
 
-.infocard__languages {
-    display: flex;
-    flex: 20%;
-    padding: 0.5rem;
-    background-color: rgb(var(--clr-primary));
-    border-radius: var(--border);
+.languages-wrapper {
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    padding: 0.5rem;
+    background-color: rgb(var(--clr-primary));
+    border: 2px solid #333;
+    border-radius: var(--border);
     column-gap: 0.35rem;
     row-gap: 0.35rem;
+    width: fit-content;
 }
 
-.infocard__display {
-    display: absolute;
-    padding: 0.75rem 0 0.25rem;
+.media-wrapper {
+    display: flex;
+    flex: 50%;
 }
 
-.infocard.img {
+.infocard__img {
+    display: block;
     height: 100%;
     width: 100%;
-    border: 2px solid rgb(var(--clr-primary));
+    border: 2px solid #333;
     border-radius: var(--border);
+    transition: transform .3s ease-in;
+}
+
+.infocard__img:hover {
+    transform: scale(1.05);
 }
 
 
@@ -478,8 +487,9 @@ footer p {
     height: 2rem;
     width: 100%;
     bottom: 0;
-    background: linear-gradient(0deg, rgba(23, 23, 23, 1) 0%, rgba(23, 23, 23, 0)100%);
+    background: linear-gradient(0deg, rgba(23, 23, 23, 1) 0%, rgba(23, 23, 23, 0) 100%);
     z-index: 99;
+    pointer-events: none;
 }
 
 
@@ -493,7 +503,6 @@ footer p {
     }
     nav a {
         text-underline-offset: 0.5rem;
-        -webkit-underline-offet: 0.5rem;
     }
     footer {
         max-width: 100%;
@@ -509,7 +518,6 @@ footer p {
         font-size: 4rem;
     }
     .socials-wrapper {
-        display: -ms-grid;
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         grid-auto-rows: auto;
@@ -526,22 +534,27 @@ footer p {
     /* Infocard */
     .infocard-container {
         margin: 1rem 5%;
-        grid-template-columns: repeat(1, 100%);
     }
     .infocard-wrapper {
-        padding: 1rem;
-        transition: none;
-    }
-    .infocard-wrapper:hover {
-        transform: unset;
-        animation: unset;
-    }
-    .infocard__content-wrapper {
         flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+    }
+    .infocard__spacer {
+        transform: translateX(5%);
+        border-right: unset;
+        border-bottom: 2px solid #333;
+        max-width: 90%;
+    }
+    .infocard__content {
+        min-width: unset;
+        max-width: unset;
     }
     .infocard-wrapper::before {
-        left: 6%;
-        top: 5%;
+        display: none;
+    }
+    .infocard__description {
+        padding: 2rem 1rem;
     }
     /* Top btn */
     .topBtn {
@@ -677,79 +690,4 @@ footer p {
 .tag.lua::before {
     content: "lua";
     background-color: #000080;
-}
-
-
-/* ANIMATION */
-
-@-webkit-keyframes shake {
-    0% {
-        transform: rotate(0deg) scale(1.02);
-    }
-    10% {
-        transform: rotate(.5deg) scale(1.02);
-    }
-    20% {
-        transform: rotate(1deg) scale(1.02);
-    }
-    30% {
-        transform: rotate(.5deg) scale(1.02);
-    }
-    40% {
-        transform: rotate(0deg) scale(1.02);
-    }
-    50% {
-        transform: rotate(.5deg) scale(1.02);
-    }
-    60% {
-        transform: rotate(1deg) scale(1.02);
-    }
-    70% {
-        transform: rotate(.5deg) scale(1.02);
-    }
-    80% {
-        transform: rotate(0deg) scale(1.02);
-    }
-    90% {
-        transform: rotate(.5deg) scale(1.02);
-    }
-    100% {
-        transform: rotate(1deg) scale(1.02);
-    }
-}
-
-@keyframes shake {
-    0% {
-        transform: rotate(0deg) scale(1.02);
-    }
-    10% {
-        transform: rotate(.5deg) scale(1.02);
-    }
-    20% {
-        transform: rotate(1deg) scale(1.02);
-    }
-    30% {
-        transform: rotate(.5deg) scale(1.02);
-    }
-    40% {
-        transform: rotate(0deg) scale(1.02);
-    }
-    50% {
-        transform: rotate(.5deg) scale(1.02);
-    }
-    60% {
-        transform: rotate(1deg) scale(1.02);
-    }
-    70% {
-        transform: rotate(.5deg) scale(1.02);
-    }
-    80% {
-        transform: rotate(0deg) scale(1.02);
-    }
-    90% {
-        transform: rotate(.5deg) scale(1.02);
-    }
-    100% {
-        transform: rotate(1deg) scale(1.02);
-    }
 }
