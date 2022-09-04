@@ -37,7 +37,7 @@ html {
 }
 
 :root {
-    --border: 0.5rem;
+    --border: .5rem;
     --shadow: 0 0 0.4rem rgb(var(--clr-primary));
     --nav-alpha: 0.75;
     --clr-link: 224 123 123;
@@ -72,19 +72,17 @@ html {
     background-clip: padding-box;
 }
 
+::-webkit-scrollbar:window-inactive {
+    visibility: hidden;
+}
+
 
 /* LINKS */
 
 a {
     text-decoration: none;
     color: unset;
-    transition: color 0.2s ease-in;
-}
-
-a.external::after {
-    font: var(--fa-font-solid);
-    content: "\00a0\f08e";
-    font-size: 0.75rem;
+    transition: color .15s ease-in;
 }
 
 a.link {
@@ -97,7 +95,13 @@ a.link {
 }
 
 a.link:hover {
-    color: rgb(var(--clr-link) / .75);
+    color: rgb(var(--clr-link) / .6);
+}
+
+a.external::after {
+    font: var(--fa-font-solid);
+    content: "\00a0\f08e";
+    font-size: 0.75rem;
 }
 
 
@@ -334,19 +338,18 @@ CURRENTLY DISABLED */
 
 .projectsBtn {
     position: absolute;
-    bottom: 10%;
+    bottom: 5%;
     background: transparent;
     border: 0;
     cursor: pointer;
-}
-
-.projectsBtn::before {
-    position: absolute;
-    font: var(--fa-font-solid);
-    content: "\f175";
     color: white;
     font-size: 2rem;
     animation: bounce 3s ease-in-out infinite;
+}
+
+.projectsBtn::before {
+    font: var(--fa-font-solid);
+    content: "\f175";
 }
 
 
@@ -387,23 +390,25 @@ CURRENTLY DISABLED */
     border-right: 3px solid rgb(51 51 51 / .5);
 }
 
-.infocard__title {
-    text-transform: uppercase;
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: #fff;
-}
-
 .infocard__content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    flex: 50%;
+    flex: 55%;
+}
+
+.infocard__title {
+    --fs-titl: 1.4rem;
+    text-transform: uppercase;
+    font-size: var(--fs-titl);
+    font-weight: 600;
+    color: #fff;
 }
 
 .infocard__description {
+    --fs-desc: 1.15rem;
     display: flex;
-    font-size: 1.15rem;
+    font-size: var(--fs-desc);
     padding: 1rem 0;
     justify-content: center;
     align-items: center;
@@ -428,7 +433,7 @@ CURRENTLY DISABLED */
 
 .media-wrapper {
     display: flex;
-    flex: 50%;
+    flex: 45%;
     position: relative;
     transition: transform .3s ease-in;
 }
@@ -468,8 +473,9 @@ CURRENTLY DISABLED */
 .nojs-container {
     position: absolute;
     inset: 0;
-    background-color: rgb(23, 23, 23, .75);
+    background-color: rgb(23, 23, 23, .25);
     z-index: 1000;
+    backdrop-filter: blur(.25rem);
 }
 
 .nojs-wrapper {
@@ -541,7 +547,111 @@ CURRENTLY DISABLED */
 }
 
 
-/* Small screen display adjustments */
+/* Languages tags */
+
+.tag {
+    --fs-tags: 11px;
+    padding: 3px 4px;
+    font-size: var(--fs-tags);
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    white-space: nowrap;
+    border-radius: 0.25rem;
+    text-decoration: none;
+}
+
+.tag:hover {
+    transform: scale(1.1);
+}
+
+.tag.tbd,
+.tag.tbd::before {
+    content: "tbd";
+    color: #000;
+    background-color: #fff;
+}
+
+.tag.html,
+.tag.html::before {
+    content: "html";
+    background-color: #e44d26;
+}
+
+.tag.css,
+.tag.css::before {
+    content: "css";
+    background-color: #42a5f5;
+}
+
+.tag.scss,
+.tag.scss::before {
+    content: "scss";
+    background-color: #bf4080;
+}
+
+.tag.js,
+.tag.js::before {
+    content: "js";
+    background-color: #ffca28;
+}
+
+.tag.bootstrap,
+.tag.bootstrap::before {
+    content: "bootstrap";
+    background-color: #1E88E5;
+}
+
+.tag.git,
+.tag.git::before {
+    content: "git";
+    background-color: #e64a19;
+}
+
+.tag.tailwind,
+.tag.tailwind::before {
+    content: "tailwind css";
+    background-color: #4db6ac;
+}
+
+.tag.mysql,
+.tag.mysql::before {
+    content: "mysql";
+    background-color: #f29111;
+}
+
+.tag.php,
+.tag.php::before {
+    content: "php";
+    background-color: #1e88e5;
+}
+
+.tag.cs,
+.tag.cs::before {
+    content: "c#";
+    background-color: #0277bd;
+}
+
+.tag.ahk,
+.tag.ahk::before {
+    content: "ahk";
+    background-color: #4caf50;
+}
+
+.tag.jquery,
+.tag.jquery::before {
+    content: "jquery";
+    background-color: #0769ad;
+}
+
+.tag.lua,
+.tag.lua::before {
+    content: "lua";
+    background-color: #000080;
+}
+
+
+/* SMALL SCREEN ADJUSTMENTS */
 
 @media only screen and (max-width: 1200px) {
     /* Nav */
@@ -647,102 +757,21 @@ CURRENTLY DISABLED */
 }
 
 
-/* Languages tags */
+/* LARGE SCREEN ADJUSTMENTS */
 
-.tag {
-    padding: 3px 4px;
-    font-size: 11px;
-    font-weight: bold;
-    color: #fff;
-    text-transform: uppercase;
-    white-space: nowrap;
-    border-radius: 0.25rem;
-    text-decoration: none;
-}
-
-.tag.tbd,
-.tag.tbd::before {
-    content: "tbd";
-    color: #000;
-    background-color: #fff;
-}
-
-.tag.html,
-.tag.html::before {
-    content: "html";
-    background-color: #e44d26;
-}
-
-.tag.css,
-.tag.css::before {
-    content: "css";
-    background-color: #42a5f5;
-}
-
-.tag.scss,
-.tag.scss::before {
-    content: "scss";
-    background-color: #bf4080;
-}
-
-.tag.js,
-.tag.js::before {
-    content: "js";
-    background-color: #ffca28;
-}
-
-.tag.bootstrap,
-.tag.bootstrap::before {
-    content: "bootstrap";
-    background-color: #1E88E5;
-}
-
-.tag.git,
-.tag.git::before {
-    content: "git";
-    background-color: #e64a19;
-}
-
-.tag.tailwind,
-.tag.tailwind::before {
-    content: "tailwind css";
-    background-color: #4db6ac;
-}
-
-.tag.mysql,
-.tag.mysql::before {
-    content: "mysql";
-    background-color: #f29111;
-}
-
-.tag.php,
-.tag.php::before {
-    content: "php";
-    background-color: #1e88e5;
-}
-
-.tag.cs,
-.tag.cs::before {
-    content: "c#";
-    background-color: #0277bd;
-}
-
-.tag.ahk,
-.tag.ahk::before {
-    content: "ahk";
-    background-color: #4caf50;
-}
-
-.tag.jquery,
-.tag.jquery::before {
-    content: "jquery";
-    background-color: #0769ad;
-}
-
-.tag.lua,
-.tag.lua::before {
-    content: "lua";
-    background-color: #000080;
+@media only screen and (min-width: 3840px) {
+    .infocard-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .infocard__title {
+        font-size: calc(var(--fs-titl)*1.4);
+    }
+    .infocard__description {
+        font-size: calc(var(--fs-desc)*1.4);
+    }
+    .tag {
+        font-size: calc(var(--fs-tags)*1.5);
+    }
 }
 
 
@@ -754,12 +783,12 @@ CURRENTLY DISABLED */
     50%,
     80%,
     100% {
-        transform: translate(-100%, 0);
+        transform: translate(-50%, 0);
     }
     40% {
-        transform: translate(-100%, -15px);
+        transform: translate(-50%, -15px);
     }
     60% {
-        transform: translate(-100%, -7px);
+        transform: translate(-50%, -7px);
     }
 }
