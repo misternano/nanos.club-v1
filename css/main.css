@@ -185,6 +185,11 @@ nav li:not(:last-child)::after {
     border-radius: 50%;
 }
 
+.menu-label,
+.menu {
+    display: none;
+}
+
 
 /* FOOTER */
 
@@ -233,10 +238,7 @@ footer p {
     font-weight: 800;
 }
 
-
-/* CURRENTLY DISABLED 
-
-.hero__quote { 
+.hero__quote {
     font-family: "Karla", sans-sarif;
     background-color: rgb(36, 36, 36, 0.75);
     border-radius: var(--border);
@@ -255,8 +257,6 @@ footer p {
 .hero__quote::after {
     content: "\00a0" close-quote;
 }
-
-CURRENTLY DISABLED */
 
 .socials-wrapper {
     display: flex;
@@ -476,6 +476,7 @@ CURRENTLY DISABLED */
     background-color: rgb(23, 23, 23, .25);
     z-index: 1000;
     backdrop-filter: blur(.25rem);
+    -webkit-backdrop-filter: blur(.25rem);
 }
 
 .nojs-wrapper {
@@ -662,6 +663,47 @@ CURRENTLY DISABLED */
     nav a {
         text-underline-offset: 0.5rem;
     }
+    nav ul {
+        flex-direction: column;
+    }
+    nav li:not(:last-child)::after {
+        display: none;
+    }
+    /* hambuger menu clusterfuck */
+    .links {
+        display: none;
+        position: absolute;
+        background-color: rgb(var(--clr-primary) / .8);
+        backdrop-filter: blur(.5rem);
+        -webkit-backdrop-filter: blur(.5rem);
+        z-index: 99;
+        padding: 5rem 3rem;
+        inset: 0 30% 0 0;
+        animation: menu .2s;
+    }
+    .menu {
+        display: none;
+    }
+    .menu-label {
+        font-size: 2rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        z-index: 100;
+    }
+    .menu-label::before {
+        font: var(--fa-font-solid);
+        content: "\f0c9";
+    }
+    .menu:checked~.links {
+        display: block;
+        transition: inset .2s ease-in;
+    }
+    .menu:checked~.menu-label::before {
+        font: var(--fa-font-solid);
+        content: "\f00d";
+    }
+    /*  */
     footer {
         max-width: 100%;
     }
@@ -790,5 +832,14 @@ CURRENTLY DISABLED */
     }
     60% {
         transform: translate(-50%, -7px);
+    }
+}
+
+@keyframes menu {
+    0% {
+        inset: 0 100% 0 0;
+    }
+    100% {
+        inset: 0 30% 0 0;
     }
 }

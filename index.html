@@ -4,18 +4,23 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
     <title>Nano's Club &mdash; Home</title>
     <link href="assets/flash.ico" rel="icon" type="image/png">
     <link href="assets/flash.ico" rel="apple-touch-icon">
-    <meta name="author" content="Nano" />
-    <meta name="description" content="Portfolio" />
-    <meta name="keywords" content="nano, nanovirus, personal, portfolio, engineer, projects, influencer, developer, dev, clubhouse, club, blog" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
     <meta property="twitter:card" content="summary" />
     <meta property="twitter:title" content="Featured &mdash; Nano's Club" />
     <meta property="twitter:description" content="Personal portfolio" />
     <meta property="og:title" content="Featured &mdash; Nano's Club" />
     <meta property="og:description" content="Personal portfolio" />
+
+    <meta name="author" content="Nano" />
+    <meta name="description" content="Portfolio" />
+    <meta name="keywords" content="nano, nanovirus, personal, portfolio, engineer, influencer, developer, dev, clubhouse, club, blog" />
+    <meta name="robots" content="noindex,nofollow">
+
     <meta name="theme-color" content="#171717" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,15 +30,20 @@
     <script src="https://kit.fontawesome.com/8ab913bf22.js" crossorigin="anonymous"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" crossorigin="anonymous"></script>
+
     <script src="js/greet.js"></script>
 </head>
 
 <body>
     <nav>
-        <ul>
-            <li><a class="active" href="#">Home</a></li>
-            <li><a href="/projects">Projects</a></li>
-        </ul>
+        <input class="menu" id="menu" type="checkbox">
+        <label class="menu-label" for="menu"></label>
+        <div class="links">
+            <ul>
+                <li><a class="active" href="#">Home</a></li>
+                <li><a href="/projects">Projects</a></li>
+            </ul>
+        </div>
         <div class="logo-wrapper">
             <a href="https://github.com/misternano/misternano.github.io" title="Visit GitHub Repo" alt="Github Page Repo" target="_blank"><img class="logo" src="assets/272535850200596480.png"></a>
         </div>
