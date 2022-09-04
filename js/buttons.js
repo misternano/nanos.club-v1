@@ -15,7 +15,7 @@ function topFunction() {
     document.documentElement.scrollTop = 0;
 }
 
-// FADE AWAY BOUNCING BUTTON ON PROJECTS
+// FADE AWAY BOUNCING ARROW ON PROJECTS
 $(window).scroll(function() {
     $("#projectsBtn").css("opacity", 1 - $(window).scrollTop() / 500);
 });
