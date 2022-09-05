@@ -443,6 +443,7 @@ footer p {
     color: #bbb;
     background-color: rgb(var(--clr-primary) / .5);
     backdrop-filter: blur(1rem);
+    -webkit-backdrop-filter: blur(1rem);
     padding: .35rem 0;
     border-radius: 0 0 var(--border) var(--border);
     transition: opacity .2s linear;
