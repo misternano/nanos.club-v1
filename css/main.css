@@ -442,6 +442,7 @@ footer p {
     bottom: 0;
     color: #bbb;
     background-color: rgb(var(--clr-primary) / .5);
+    backdrop-filter: blur(1rem);
     padding: .35rem 0;
     border-radius: 0 0 var(--border) var(--border);
     transition: opacity .2s linear;
@@ -593,10 +594,22 @@ footer p {
     background-color: #ffca28;
 }
 
+.tag.jquery,
+.tag.jquery::before {
+    content: "jquery";
+    background-color: #0769ad;
+}
+
 .tag.bootstrap,
 .tag.bootstrap::before {
     content: "bootstrap";
     background-color: #1E88E5;
+}
+
+.tag.react,
+.tag.react::before {
+    content: "react";
+    background-color: #5ed3f3;
 }
 
 .tag.git,
@@ -635,16 +648,16 @@ footer p {
     background-color: #4caf50;
 }
 
-.tag.jquery,
-.tag.jquery::before {
-    content: "jquery";
-    background-color: #0769ad;
-}
-
 .tag.lua,
 .tag.lua::before {
     content: "lua";
     background-color: #000080;
+}
+
+.tag.rest,
+.tag.rest::before {
+    content: "rest apis";
+    background-color: #ee0000;
 }
 
 
