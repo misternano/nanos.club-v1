@@ -801,18 +801,9 @@ footer p {
 
 /* LARGE SCREEN ADJUSTMENTS */
 
-@media only screen and (min-width: 3840px) {
+@media only screen and (min-width: 2500px) {
     .infocard-container {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-    .infocard__title {
-        font-size: calc(var(--fs-titl)*1.4);
-    }
-    .infocard__description {
-        font-size: calc(var(--fs-desc)*1.4);
-    }
-    .tag {
-        font-size: calc(var(--fs-tags)*1.5);
     }
 }
 
