@@ -20,6 +20,22 @@
     box-sizing: border-box;
 }
 
+p,
+h1,
+h2,
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    background: url("../assets/EecPYwAAAABJRU5ErkJggg.png") 100%;
+    background-size: cover;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
 
 /* BASE */
 
@@ -166,14 +182,14 @@ nav li:not(:last-child)::after {
     margin: 0 1.5rem;
 }
 
-.logo-wrapper {
+.logo {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1rem;
 }
 
-.logo {
+.logo img {
     display: absolute;
     vertical-align: middle;
     height: 2.5em;
@@ -208,14 +224,6 @@ footer p {
 
 /* HOME -> HERO SECTION */
 
-.rainbow {
-    background: url("../assets/EecPYwAAAABJRU5ErkJggg.png") 100%;
-    background-size: cover;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-}
-
 .hero-container {
     margin: 0 auto;
     padding-top: 25vh;
@@ -229,7 +237,7 @@ footer p {
     gap: 3rem;
 }
 
-.hero__greet {
+.hero-wrapper h1 {
     font-size: 5rem;
     font-weight: 800;
 }
@@ -315,20 +323,21 @@ footer p {
     transform: translate(-50%, -50%);
 }
 
-.project__header {
+.project-wrapper h1 {
     max-width: 20%;
     margin: 0 auto;
+    text-align: center;
     font-size: 3rem;
     font-weight: 800;
 }
 
-.project__subheader {
+.project-wrapper h2 {
     text-align: center;
     font-size: 1.25rem;
-    margin: 0;
+    font-weight: 400;
 }
 
-.project__subheader::before {
+.project-wrapper h2::before {
     content: "A collection of personal and collaborative work.";
 }
 
@@ -386,14 +395,14 @@ footer p {
     border-right: 3px solid rgb(51 51 51 / .5);
 }
 
-.infocard__content {
+.infocard-content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     flex: 55%;
 }
 
-.infocard__title {
+.infocard-content h1 {
     --fs-titl: 1.4rem;
     text-transform: uppercase;
     font-size: var(--fs-titl);
@@ -401,7 +410,7 @@ footer p {
     color: #fff;
 }
 
-.infocard__description {
+.infocard-content p {
     --fs-desc: 1.15rem;
     display: flex;
     font-size: var(--fs-desc);
@@ -457,7 +466,7 @@ footer p {
     opacity: 0;
 }
 
-.infocard__img {
+.media-wrapper img {
     display: block;
     height: 100%;
     width: 100%;
@@ -728,7 +737,7 @@ footer p {
     .hero-wrapper {
         gap: 5rem;
     }
-    .hero__greet {
+    .hero-wrapper h1 {
         font-size: 4rem;
     }
     .socials-wrapper {
@@ -742,10 +751,10 @@ footer p {
     .project-container {
         height: 85vh;
     }
-    .project__header {
+    .project-wrapper h1 {
         max-width: 100%;
     }
-    .project__subheader::before {
+    .project-wrapper h2::before {
         content: "Personal and collaborative work.";
     }
     /* Infocard */
@@ -763,7 +772,7 @@ footer p {
         border-bottom: 2px solid #333;
         max-width: 90%;
     }
-    .infocard__content {
+    .infocard-content {
         min-width: unset;
         max-width: unset;
     }
@@ -771,7 +780,7 @@ footer p {
         top: unset;
         bottom: 2%;
     }
-    .infocard__description {
+    .infocard-content p {
         padding: 1rem;
         text-align: center;
     }
