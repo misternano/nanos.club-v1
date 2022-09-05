@@ -402,7 +402,7 @@ footer p {
     flex: 55%;
 }
 
-.infocard-content h1 {
+.infocard-content h2 {
     --fs-titl: 1.4rem;
     text-transform: uppercase;
     font-size: var(--fs-titl);
