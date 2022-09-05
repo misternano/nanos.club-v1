@@ -607,7 +607,7 @@ footer p {
 
 .tag.tailwind,
 .tag.tailwind::before {
-    content: "tailwind css";
+    content: "tailwind";
     background-color: #4db6ac;
 }
 
