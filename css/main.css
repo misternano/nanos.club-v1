@@ -72,10 +72,6 @@ html {
     background-clip: padding-box;
 }
 
-::-webkit-scrollbar:window-inactive {
-    visibility: hidden;
-}
-
 
 /* LINKS */
 
@@ -672,7 +668,7 @@ footer p {
         display: none;
     }
     /* hambuger menu clusterfuck */
-    .links {
+    .nav-links {
         display: none;
         position: absolute;
         padding: 5rem 3rem;
@@ -699,7 +695,7 @@ footer p {
         font: var(--fa-font-solid);
         content: "\f0c9";
     }
-    .menu:checked~.links {
+    .menu:checked~.nav-links {
         display: block;
         transition: inset .2s ease-in;
     }
