@@ -131,7 +131,7 @@ nav ul {
 nav li {
     display: inline;
     text-transform: uppercase;
-    padding: 0.5rem 0.25rem;
+    padding: 0.5rem 0;
     margin: 0.5rem 0;
 }
 
@@ -665,6 +665,8 @@ footer p {
     }
     nav ul {
         flex-direction: column;
+        gap: 1rem;
+        font-size: 1.25rem;
     }
     nav li:not(:last-child)::after {
         display: none;
@@ -673,13 +675,15 @@ footer p {
     .links {
         display: none;
         position: absolute;
+        padding: 5rem 3rem;
         background-color: rgb(var(--clr-primary) / .8);
+        border-radius: 0 var(--border) var(--border) 0;
+        box-shadow: 6px 0 4px -4px rgb(var(--clr-primary));
         backdrop-filter: blur(.5rem);
         -webkit-backdrop-filter: blur(.5rem);
         z-index: 99;
-        padding: 5rem 3rem;
         inset: 0 30% 0 0;
-        animation: menu .2s;
+        animation: menu .3s;
     }
     .menu {
         display: none;
@@ -837,7 +841,7 @@ footer p {
 
 @keyframes menu {
     0% {
-        inset: 0 100% 0 0;
+        inset: 0 80% 0 0;
     }
     100% {
         inset: 0 30% 0 0;
