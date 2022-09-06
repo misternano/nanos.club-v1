@@ -284,27 +284,27 @@ footer p {
     transform: scale(1.2);
 }
 
-#discord:hover {
+.discord:hover {
     color: var(--clr-discord);
 }
 
-#twitter:hover {
+.twitter:hover {
     color: var(--clr-twitter);
 }
 
-#twitch:hover {
+.twitch:hover {
     color: var(--clr-twitch);
 }
 
-#youtube:hover {
+.youtube:hover {
     color: var(--clr-youtube);
 }
 
-#steam:hover {
+.steam:hover {
     color: var(--clr-steam);
 }
 
-#github:hover {
+.github:hover {
     color: var(--clr-github);
 }
 
@@ -792,22 +792,22 @@ footer p {
         transform: unset;
     }
     /* Socials branding */
-    #discord {
+    .discord {
         color: var(--clr-discord);
     }
-    #twitter {
+    .twitter {
         color: var(--clr-twitter);
     }
-    #twitch {
+    .twitch {
         color: var(--clr-twitch);
     }
-    #youtube {
+    .youtube {
         color: var(--clr-youtube);
     }
-    #steam {
+    .steam {
         color: var(--clr-steam);
     }
-    #github {
+    .github {
         color: var(--clr-github);
     }
     .nojs-wrapper {
