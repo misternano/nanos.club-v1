@@ -35,17 +35,17 @@
 
 <body>
     <nav>
-        <input class="menu" id="menu" type="checkbox">
-        <label class="menu-label" for="menu"></label>
-        <div class="nav-links">
+        <input class="menuToggle" id="menu" type="checkbox">
+        <label class="menuLabel" for="menu"></label>
+        <div class="navigation">
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a class="active" href="/projects">Projects</a></li>
+                <li><a href="/projects" class="active">Projects</a></li>
                 <li><a class="disabled">About</a></li>
             </ul>
         </div>
         <div class="logo">
-            <a href="https://github.com/misternano/nanos.club" title="Visit GitHub Repo" alt="GitHub Repository" target="_blank"><img id="avatar"></a>
+            <a href="https://github.com/misternano/nanos.club" title="Visit GitHub Repo" alt="Preview of GitHub Repository" target="_blank"><img alt="Preview of Avatar" id="avatar"></a>
         </div>
     </nav>
 
@@ -61,134 +61,138 @@
     <main>
         <div class="project-container">
             <div class="project-wrapper">
-                <h1 data-aos="fade-in" data-aos-delay="100">Projects</h3>
-                    <h2 data-aos="fade-in" data-aos-delay="500" data-aos-duration="2500"></h2>
+                <h1 class="rainbow" data-aos="fade-in" data-aos-delay="100">Projects</h3>
+                    <h2 data-aos="fade-in" data-aos-delay="500" data-aos-duration="2500">
+                        <p class="sr-only">A collection of personal and collaborative work.</p>
+                    </h2>
             </div>
-            <button onClick="document.getElementById('projects').scrollIntoView();" class="projectsBtn" id="projectsBtn"></button>
+            <a href="#projects"><button class="projectsBtn" id="projectsBtn" value="Bouncing arrow to projects list"></button></a>
         </div>
-        <a id="projects"></a>
+        <a name="projects"></a>
         <div class="infocard-container">
 
             <!-- A Project List -->
 
             <div class="infocard-wrapper">
-                <div class="media-wrapper"><img src="docs/images/N6fgt.png" alt="Personal Portfolio" /></div>
+                <div class="media-wrapper"><img src="docs/images/N6fgt.png" alt="Preview of Personal Portfolio" /></div>
                 <span class="infocard__spacer"></span>
                 <div class="infocard-content">
                     <h3>Portfolio</h3>
                     <p>You are here! This will serve as a space for previews of projects and other things I'm working on.</p>
                     <div class="languages-wrapper">
-                        <span class="tag html"></span>
-                        <span class="tag css"></span>
-                        <span class="tag jquery"></span>
-                        <span class="tag git"></span>
+                        <span class="tag | html"></span>
+                        <span class="tag | css"></span>
+                        <span class="tag | jquery"></span>
+                        <span class="tag | git"></span>
                     </div>
                 </div>
+                <p class="changelog"><a href="https://github.com/misternano/nanos.club" target="_blank">Changelog</a></p>
             </div>
 
             <div class="infocard-wrapper">
-                <div class="media-wrapper"><img src="docs/images/LRFG1.png" alt="Work Dashboard" /></div>
+                <div class="media-wrapper"><img src="docs/images/LRFG1.png" alt="Preview of Work Dashboard" /></div>
                 <span class="infocard__spacer"></span>
                 <div class="infocard-content">
                     <h3>Dashboard</h3>
                     <p>Concept dashboard featuring a member management panel, interactive calender, messaging system, task management and project management board.</p>
                     <div class="languages-wrapper">
-                        <span class="tag html"></span>
-                        <span class="tag mysql"></span>
-                        <span class="tag css"></span>
-                        <span class="tag jquery"></span>
+                        <span class="tag | html"></span>
+                        <span class="tag | mysql"></span>
+                        <span class="tag | css"></span>
+                        <span class="tag | jquery"></span>
                     </div>
                 </div>
             </div>
 
             <div class="infocard-wrapper">
-                <div class="media-wrapper"><img src="docs/images/wxl6r.png" alt="Reverence House Revamp" /></div>
+                <div class="media-wrapper"><img src="docs/images/wxl6r.png" alt="Preview of Reverence House Revamp" /></div>
                 <span class="infocard__spacer"></span>
                 <div class="infocard-content">
                     <h3>Reverence House</h3>
                     <p>An unfinished redesign for Reverence House.</p>
                     <div class="languages-wrapper">
-                        <span class="tag html"></span>
-                        <span class="tag css"></span>
-                        <span class="tag jquery"></span>
-                        <span class="tag php"></span>
+                        <span class="tag | html"></span>
+                        <span class="tag | css"></span>
+                        <span class="tag | jquery"></span>
+                        <span class="tag | php"></span>
                     </div>
                 </div>
             </div>
 
             <div class="infocard-wrapper">
-                <div class="media-wrapper"><img src="docs/images/rJaOh.png" alt="Website Team Members List" /></div>
+                <div class="media-wrapper"><img src="docs/images/rJaOh.png" alt="Preview of Website Team Members List" /></div>
                 <span class="infocard__spacer"></span>
                 <div class="infocard-content">
                     <h3>Team Members List</h3>
                     <p>A crude concept of a member/team list for forum based websites including dm and email buttons, online status and assignable tags.</p>
                     <div class="languages-wrapper">
-                        <span class="tag html"></span>
-                        <span class="tag css"></span>
+                        <span class="tag | html"></span>
+                        <span class="tag | css"></span>
                     </div>
                 </div>
             </div>
 
             <div class="infocard-wrapper">
-                <div class="media-wrapper"><img src="docs/images/4chsM.png" alt="What Song Is This?" /></div>
+                <div class="media-wrapper"><img src="docs/images/4chsM.png" alt="Preview of What Song Is This?" /></div>
                 <span class="infocard__spacer"></span>
                 <div class="infocard-content">
                     <h3>WSIT</h3>
                     <p>An application that gives you a list of songs used in a YouTube video from a link you provide.</p>
                     <div class="languages-wrapper">
-                        <span class="tag html"></span>
-                        <span class="tag css"></span>
-                        <span class="tag jquery"></span>
-                        <span class="tag rest"></span>
+                        <span class="tag | html"></span>
+                        <span class="tag | css"></span>
+                        <span class="tag | jquery"></span>
+                        <span class="tag | rest"></span>
                     </div>
                 </div>
             </div>
 
             <div class="infocard-wrapper">
-                <div class="media-wrapper"><img src="docs/images/placeholder.png" alt="Placeholder image" /></div>
+                <div class="media-wrapper"><img src="docs/images/placeholder.png" alt="Preview of Placeholder image" /></div>
                 <span class="infocard__spacer"></span>
                 <div class="infocard-content">
                     <h3>???</h3>
                     <p>To Be Updated</p>
                     <div class="languages-wrapper">
-                        <span class="tag tbd"></span>
+                        <span class="tag | tbd"></span>
                     </div>
                 </div>
             </div>
 
             <div class="infocard-wrapper">
-                <div class="media-wrapper"><img src="docs/images/ASLLQ.png" alt="hopey.club" /></div>
+                <div class="media-wrapper"><img src="docs/images/ASLLQ.png" alt="Preview of hopey.club" /></div>
                 <span class="infocard__spacer"></span>
                 <div class="infocard-content">
                     <h3>hopey.club</h3>
                     <p><a class="link external" href="https://hopey.club" target="_blank">hopey.club</a></p>
                     <div class="languages-wrapper">
-                        <span class="tag html"></span>
-                        <span class="tag css"></span>
-                        <span class="tag jquery"></span>
-                        <span class="tag git"></span>
+                        <span class="tag | html"></span>
+                        <span class="tag | css"></span>
+                        <span class="tag | jquery"></span>
+                        <span class="tag | git"></span>
                     </div>
                 </div>
+                <p class="changelog"><a href="https://github.com/naclmk/naclmk.github.io" target="_blank">Changelog</a></p>
             </div>
 
             <div class="infocard-wrapper">
-                <div class="media-wrapper"><img src="docs/images/z8ktl.png" alt="FiveM Dedicated Game Server" /></div>
+                <div class="media-wrapper"><img src="docs/images/z8ktl.png" alt="Preview of FiveM Dedicated Game Server" /></div>
                 <span class="infocard__spacer"></span>
                 <div class="infocard-content">
                     <h3>Dedicated FiveM Server</h3>
                     <p>An online dedicated FiveM menu based roleplay server.</p>
                     <div class="languages-wrapper">
-                        <span class="tag lua"></span>
-                        <span class="tag mysql"></span>
-                        <span class="tag cs"></span>
-                        <span class="tag js"></span>
-                        <span class="tag html"></span>
+                        <span class="tag | lua"></span>
+                        <span class="tag | mysql"></span>
+                        <span class="tag | cs"></span>
+                        <span class="tag | js"></span>
+                        <span class="tag | html"></span>
                     </div>
                 </div>
             </div>
 
             <!-- <div class="infocard-wrapper">
-                <div class="media-wrapper"><img src="docs/images/0x2GI.png" alt="null" /></div>
+                <div class="media-wrapper"><img src="docs/images/0x2GI.png" alt="Preview of null" /></div>
                 <span class="infocard__spacer"></span>
                 <div class="infocard-content">
                     <h3>Quality Assurance</h3>
@@ -197,21 +201,21 @@
                         ex non mollit esse. Cillum adipisicing deserunt amet aute nisi velit aliqua tempor sint adipisicing cillum irure. Non nostrud consequat do culpa fugiat occaecat proident. Anim eiusmod minim consequat Lorem laborum enim labore irure
                         Lorem Lorem ad adipisicing. Sunt cupidatat ea Lorem Lorem occaecat ipsum quis do excepteur.</p>
                     <div class="languages-wrapper">
-                        <span class="tag html"></span>
-                        <span class="tag css"></span>
-                        <span class="tag scss"></span>
-                        <span class="tag js"></span>
-                        <span class="tag jquery"></span>
-                        <span class="tag bootstrap"></span>
-                        <span class="tag react"></span>
-                        <span class="tag git"></span>
-                        <span class="tag tailwind"></span>
-                        <span class="tag mysql"></span>
-                        <span class="tag php"></span>
-                        <span class="tag cs"></span>
-                        <span class="tag ahk"></span>
-                        <span class="tag lua"></span>
-                        <span class="tag rest"></span>
+                        <span class="tag | html"></span>
+                        <span class="tag | css"></span>
+                        <span class="tag | scss"></span>
+                        <span class="tag | js"></span>
+                        <span class="tag | jquery"></span>
+                        <span class="tag | bootstrap"></span>
+                        <span class="tag | react"></span>
+                        <span class="tag | git"></span>
+                        <span class="tag | tailwind"></span>
+                        <span class="tag | mysql"></span>
+                        <span class="tag | php"></span>
+                        <span class="tag | cs"></span>
+                        <span class="tag | ahk"></span>
+                        <span class="tag | lua"></span>
+                        <span class="tag | rest"></span>
                     </div>
                 </div>
             </div> -->

@@ -36,17 +36,17 @@
 
 <body>
     <nav>
-        <input class="menu" id="menu" type="checkbox">
-        <label class="menu-label" for="menu"></label>
-        <div class="nav-links">
+        <input class="menuToggle" id="menu" type="checkbox">
+        <label class="menuLabel" for="menu"></label>
+        <div class="navigation">
             <ul>
-                <li><a class="active" href="/">Home</a></li>
+                <li><a href="/" class="active">Home</a></li>
                 <li><a href="/projects">Projects</a></li>
                 <li><a class="disabled">About</a></li>
             </ul>
         </div>
         <div class="logo">
-            <a href="https://github.com/misternano/nanos.club" title="Visit GitHub Repo" alt="GitHub Repository" target="_blank"><img id="avatar"></a>
+            <a href="https://github.com/misternano/nanos.club" title="Visit GitHub Repo" alt="GitHub Repository" target="_blank"><img alt="Avatar" id="avatar"></a>
         </div>
     </nav>
 
@@ -62,26 +62,32 @@
     <main>
         <div class="hero-container">
             <div class="hero-wrapper">
-                <h1 data-aos="fade-in" data-aos-delay="100"><span id="greet"></span>, I'm Nano :)</h1>
+                <h1 class="rainbow" data-aos="fade-in" data-aos-delay="100"><span id="greet"></span>, I'm Nano :)</h1>
                 <!-- <div class="hero__quote" id="quotes"></div> -->
                 <div class="socials-wrapper" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
-                    <div class="socials discord">
-                        <a href="https://www.discord.com/users/272535850200596480/" alt="Discord" target="_blank"><i class="fa-brands fa-discord"></i></a>
+                    <div class="socials | discord">
+                        <a href="https://www.discord.com/users/272535850200596480/" target="_blank">
+                            <p class="sr-only">Discord</p><i class="fa-brands fa-discord"></i></a>
                     </div>
-                    <div class="socials twitter">
-                        <a href="https://www.twitter.com/fruitynano/" alt="Twitter" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    <div class="socials | twitter">
+                        <a href="https://www.twitter.com/fruitynano/" target="_blank">
+                            <p class="sr-only">Twitter</p><i class="fa-brands fa-twitter"></i></a>
                     </div>
-                    <div class="socials twitch">
-                        <a href="https://www.twitch.tv/mrnanovirus/" alt="Twitch" target="_blank"><i class="fa-brands fa-twitch"></i></a>
+                    <div class="socials | twitch">
+                        <a href="https://www.twitch.tv/mrnanovirus/" target="_blank">
+                            <p class="sr-only">Twitch</p><i class="fa-brands fa-twitch"></i></a>
                     </div>
-                    <div class="socials youtube">
-                        <a href="https://www.youtube.com/channel/UCMhXoxlrF-iJvPZcMjZyn_g/" alt="YouTube" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                    <div class="socials | youtube">
+                        <a href="https://www.youtube.com/channel/UCMhXoxlrF-iJvPZcMjZyn_g/" target="_blank">
+                            <p class="sr-only">YouTube</p><i class="fa-brands fa-youtube"></i></a>
                     </div>
-                    <div class="socials steam">
-                        <a href="https://www.steamcommunity.com/id/cjstitt/" alt="Steam" target="_blank"><i class="fa-brands fa-steam"></i></a>
+                    <div class="socials | steam">
+                        <a href="https://www.steamcommunity.com/id/cjstitt/" target="_blank">
+                            <p class="sr-only">Steam</p><i class="fa-brands fa-steam"></i></a>
                     </div>
-                    <div class="socials github">
-                        <a href="https://github.com/misternano/" alt="Github" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <div class="socials | github">
+                        <a href="https://github.com/misternano/" target="_blank">
+                            <p class="sr-only">GitHub</p><i class="fa-brands fa-github"></i></a>
                     </div>
                 </div>
             </div>

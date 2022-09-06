@@ -28,7 +28,7 @@ h3 {
     padding: 0;
 }
 
-h1 {
+.rainbow {
     background: url("../assets/EecPYwAAAABJRU5ErkJggg.png") 100%;
     background-size: cover;
     -webkit-text-fill-color: transparent;
@@ -197,8 +197,8 @@ nav li:not(:last-child)::after {
     border-radius: 50%;
 }
 
-.menu-label,
-.menu {
+.menuLabel,
+.menuToggle {
     display: none;
 }
 
@@ -234,7 +234,7 @@ footer p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3rem;
+    gap: 2rem;
 }
 
 .hero-wrapper h1 {
@@ -451,8 +451,8 @@ footer p {
     bottom: 0;
     color: #bbb;
     background-color: rgb(var(--clr-primary) / .5);
-    backdrop-filter: blur(1rem);
-    -webkit-backdrop-filter: blur(1rem);
+    backdrop-filter: blur(.5rem);
+    -webkit-backdrop-filter: blur(.5rem);
     padding: .35rem 0;
     border-radius: 0 0 var(--border) var(--border);
     transition: opacity .2s linear;
@@ -472,6 +472,18 @@ footer p {
     width: 100%;
     border: 2px solid #333;
     border-radius: var(--border);
+}
+
+.infocard-wrapper .changelog {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    color: #aaa;
+    transition: color;
+}
+
+.infocard-wrapper .changelog:hover {
+    color: #fff;
 }
 
 
@@ -690,8 +702,7 @@ footer p {
     nav li:not(:last-child)::after {
         display: none;
     }
-    /* hambuger menu clusterfuck */
-    .nav-links {
+    .navigation {
         display: none;
         position: absolute;
         padding: 5rem 3rem;
@@ -705,34 +716,30 @@ footer p {
         transform: translateX(0);
         animation: menu .3s;
     }
-    .menu {
-        display: none;
-    }
-    .menu-label {
+    .menuLabel {
         font-size: 2rem;
         cursor: pointer;
         display: flex;
         align-items: center;
         z-index: 100;
     }
-    .menu-label::before {
+    .menuLabel::before {
         font: var(--fa-font-solid);
         content: "\f0c9";
     }
-    .menu:checked~.nav-links {
+    .menuToggle:checked~.navigation {
         display: block;
     }
-    .menu:checked~.menu-label::before {
+    .menuToggle:checked~.menuLabel::before {
         font: var(--fa-font-solid);
         content: "\f00d";
     }
-    /*  */
     footer {
         max-width: 100%;
     }
     /* Homepage */
     .hero-container {
-        padding: 10vh 0;
+        padding-top: 10vh;
     }
     .hero-wrapper {
         gap: 5rem;
@@ -783,6 +790,13 @@ footer p {
     .infocard-content p {
         padding: 1rem;
         text-align: center;
+    }
+    .media-wrapper::before {
+        backdrop-filter: blur(.25rem);
+        -webkit-backdrop-filter: blur(.25rem);
+    }
+    .infocard-wrapper .changelog {
+        display: none;
     }
     /* Top btn */
     .topBtn {
@@ -856,4 +870,15 @@ footer p {
     100% {
         transform: translateX(0);
     }
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
