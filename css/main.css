@@ -28,14 +28,6 @@ h3 {
     padding: 0;
 }
 
-.rainbow {
-    background: url("../assets/EecPYwAAAABJRU5ErkJggg.png") 100%;
-    background-size: cover;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-}
-
 
 /* BASE */
 
@@ -65,6 +57,25 @@ html {
     --clr-youtube: #ff0000;
     --clr-steam: #2a475e;
     --clr-github: #646464;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.rainbow {
+    background: url("../assets/EecPYwAAAABJRU5ErkJggg.png") 100%;
+    background-size: cover;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
 }
 
 
@@ -277,11 +288,11 @@ footer p {
     padding: 0 0.25rem;
     cursor: pointer;
     transition: color .2s ease-in;
-    transition: transform .2s ease-in;
+    transition: scale .2s ease-in;
 }
 
 .socials:hover {
-    transform: scale(1.2);
+    scale: 1.1;
 }
 
 .discord:hover {
@@ -320,7 +331,7 @@ footer p {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    translate: -50% -50%;
 }
 
 .project-wrapper h1 {
@@ -377,7 +388,7 @@ footer p {
     padding: 2rem;
     border-radius: var(--border);
     color: var(--clr-white);
-    transition: transform 0.2s ease-in;
+    transition: translate 0.2s ease-in;
 }
 
 .infocard-wrapper::before {
@@ -390,7 +401,7 @@ footer p {
 
 .infocard__spacer {
     position: relative;
-    transform: translateY(5%);
+    translate: 0 5%;
     max-height: 90%;
     border-right: 3px solid rgb(51 51 51 / .5);
 }
@@ -403,17 +414,15 @@ footer p {
 }
 
 .infocard-content h3 {
-    --fs-titl: 1.4rem;
     text-transform: uppercase;
-    font-size: var(--fs-titl);
+    font-size: 1.4rem;
     font-weight: 600;
     color: #fff;
 }
 
 .infocard-content p {
-    --fs-desc: 1.15rem;
     display: flex;
-    font-size: var(--fs-desc);
+    font-size: 1.15rem;
     padding: 1rem 0;
     justify-content: center;
     align-items: center;
@@ -440,7 +449,7 @@ footer p {
     display: flex;
     flex: 45%;
     position: relative;
-    transition: transform .3s ease-in;
+    transition: scale .3s ease-in;
 }
 
 .media-wrapper::before {
@@ -459,7 +468,7 @@ footer p {
 }
 
 .media-wrapper:hover {
-    transform: scale(1.03);
+    scale: 1.02;
 }
 
 .media-wrapper:hover::before {
@@ -537,11 +546,11 @@ footer p {
     padding: 1.75rem;
     inset: auto 3rem 3rem auto;
     cursor: pointer;
-    transition: transform .2s ease-in;
+    transition: scale .2s ease-in;
 }
 
 .topBtn:hover {
-    transform: scale(1.1);
+    scale: 1.1;
 }
 
 .topBtn::before {
@@ -550,7 +559,7 @@ footer p {
     content: "\f077";
     color: white;
     font-size: 1.5rem;
-    transform: translate(-50%, -50%);
+    translate: -50% -50%;
 }
 
 
@@ -582,7 +591,7 @@ footer p {
 }
 
 .tag:hover {
-    transform: scale(1.1);
+    scale: 1.1;
 }
 
 .tag.tbd,
@@ -713,7 +722,7 @@ footer p {
         -webkit-backdrop-filter: blur(.5rem);
         z-index: 99;
         inset: 0 30% 0 0;
-        transform: translateX(0);
+        translate: 0 0;
         animation: menu .3s;
     }
     .menuLabel {
@@ -774,10 +783,10 @@ footer p {
         gap: 1rem;
     }
     .infocard__spacer {
-        transform: translateX(5%);
+        max-width: 90%;
+        translate: 5% 0;
         border-right: unset;
         border-bottom: 2px solid #333;
-        max-width: 90%;
     }
     .infocard-content {
         min-width: unset;
@@ -803,9 +812,8 @@ footer p {
         inset: auto 1rem 5rem auto;
     }
     .topBtn:hover {
-        transform: unset;
+        scale: unset;
     }
-    /* Socials branding */
     .discord {
         color: var(--clr-discord);
     }
@@ -835,9 +843,6 @@ footer p {
     }
 }
 
-
-/* LARGE SCREEN ADJUSTMENTS */
-
 @media only screen and (min-width: 2500px) {
     .infocard-container {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -845,7 +850,7 @@ footer p {
 }
 
 
-/* ANIMATION */
+/* ANIMATIONS */
 
 @keyframes bounce {
     0%,
@@ -853,32 +858,21 @@ footer p {
     50%,
     80%,
     100% {
-        transform: translate(-50%, 0);
+        translate: -50% 0;
     }
     40% {
-        transform: translate(-50%, -15px);
+        translate: -50% -15px;
     }
     60% {
-        transform: translate(-50%, -7px);
+        translate: -50% -7px;
     }
 }
 
 @keyframes menu {
     0% {
-        transform: translateX(-100%);
+        translate: -100% 0;
     }
     100% {
-        transform: translateX(0);
+        translate: 0 0;
     }
-}
-
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
 }
