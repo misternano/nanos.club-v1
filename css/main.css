@@ -402,7 +402,7 @@ footer p {
     flex: 55%;
 }
 
-.infocard-content h2 {
+.infocard-content h3 {
     --fs-titl: 1.4rem;
     text-transform: uppercase;
     font-size: var(--fs-titl);
@@ -535,7 +535,7 @@ footer p {
 .topBtn::before {
     position: absolute;
     font: var(--fa-font-solid);
-    content: "\f062";
+    content: "\f077";
     color: white;
     font-size: 1.5rem;
     transform: translate(-50%, -50%);
@@ -702,6 +702,7 @@ footer p {
         -webkit-backdrop-filter: blur(.5rem);
         z-index: 99;
         inset: 0 30% 0 0;
+        transform: translateX(0);
         animation: menu .3s;
     }
     .menu {
@@ -720,7 +721,6 @@ footer p {
     }
     .menu:checked~.nav-links {
         display: block;
-        transition: inset .2s ease-in;
     }
     .menu:checked~.menu-label::before {
         font: var(--fa-font-solid);
@@ -851,9 +851,9 @@ footer p {
 
 @keyframes menu {
     0% {
-        inset: 0 80% 0 0;
+        transform: translateX(-100%);
     }
     100% {
-        inset: 0 30% 0 0;
+        transform: translateX(0);
     }
 }
