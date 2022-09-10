@@ -481,18 +481,6 @@ footer p {
     border-radius: var(--border);
 }
 
-.infocard-wrapper .changelog {
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
-    color: #aaa;
-    transition: color;
-}
-
-.infocard-wrapper .changelog:hover {
-    color: #fff;
-}
-
 
 /* MISCELLANEOUS */
 
@@ -706,7 +694,6 @@ footer p {
 
 #projs {
     margin: 0 auto;
-    margin-top: 1rem;
     width: fit-content;
     padding: .5rem 1rem;
     background-color: rgb(36 36 36 / 0.5);
@@ -820,9 +807,6 @@ footer p {
     .infocard-content p {
         padding: 1rem;
         text-align: center;
-    }
-    .infocard-wrapper .changelog {
-        display: none;
     }
     /* Top btn */
     .topBtn {
