@@ -1,12 +1,12 @@
-var topbutton = document.getElementById("topBtn");
+const topButton = document.getElementById("topBtn");
 
 window.onscroll = function() { scrollFunction() };
 
 function scrollFunction() {
-    if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 1000) { // 1299px until button appears
-        topbutton.style.display = "block";
+    if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 800) { // 1299px until button appears
+        topButton.style.display = "block";
     } else {
-        topbutton.style.display = "none";
+        topButton.style.display = "none";
     }
 }
 
@@ -15,7 +15,7 @@ function topFunction() {
     document.documentElement.scrollTop = 0;
 }
 
-// FADE AWAY BOUNCING ARROW ON PROJECTS
+// FADE AWAY BOUNCING ARROW IN PROJECTS
 $(window).scroll(function() {
     $("#projectsBtn").css("opacity", 1 - $(window).scrollTop() / 500);
 });

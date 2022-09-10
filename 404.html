@@ -5,7 +5,6 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta http-equiv=refresh content="1; url=/">
 
     <title>Nano's Club &mdash; Home</title>
     <link href="assets/flash.png" rel="icon" type="image/png">
@@ -28,9 +27,26 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <script src="https://kit.fontawesome.com/8ab913bf22.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <nav>
+        <input class="menuToggle" id="menu" type="checkbox">
+        <label class="menuLabel" for="menu"></label>
+        <div class="navigation">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a class="disabled">About</a></li>
+            </ul>
+        </div>
+        <div class="logo">
+            <a href="https://github.com/misternano/nanos.club" title="Visit GitHub Repo" target="_blank"><img id="avatar" src="assets/avatar.png" alt="Avatar" /></a>
+        </div>
+    </nav>
+
     <noscript>
         <div class="nojs-container">
             <div class="nojs-wrapper">
@@ -39,12 +55,11 @@
             </div>
         </div>
     </noscript>
+
     <main>
         <div class="notfound">
             <h1>404</h1>
-            <h2>Page Not Found</h2>
-            <br><br>
-            <a data-aos="zoom-in" data-aos-delay="2000" class="link" href="/">Click here if you are not redirected.</a>
+            <h2>Not Found</h2>
         </div>
     </main>
     <script src="js/init.js"></script>

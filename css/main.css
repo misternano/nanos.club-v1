@@ -161,7 +161,7 @@ nav li {
 nav a {
     color: #ccc;
     text-underline-offset: 0.35rem;
-    transition: color 0.3s, text-decoration-color 0.3s;
+    transition: color .3s, text-decoration-color .3s;
     text-decoration-color: transparent;
 }
 
@@ -259,7 +259,6 @@ footer p {
     border-radius: var(--border);
     padding: 1rem;
     text-align: left;
-    box-shadow: var(--shadow);
     font-style: oblique;
     color: #808080;
     font-weight: bold;
@@ -280,7 +279,6 @@ footer p {
     padding: 0.5rem 1rem;
     background-color: rgb(32, 32, 32, 0.75);
     border-radius: var(--border);
-    box-shadow: var(--shadow);
 }
 
 .socials {
@@ -383,12 +381,12 @@ footer p {
     display: flex;
     flex-direction: row;
     gap: 1.5rem;
-    background-color: rgb(36 36 36 / 0.5);
-    box-shadow: var(--shadow);
     padding: 2rem;
+    background-color: rgb(36 36 36 / 0.5);
+    backdrop-filter: blur(.1rem);
     border-radius: var(--border);
     color: var(--clr-white);
-    transition: translate 0.2s ease-in;
+    transition: translate .2s ease-in;
 }
 
 .infocard-wrapper::before {
@@ -460,8 +458,8 @@ footer p {
     bottom: 0;
     color: #bbb;
     background-color: rgb(var(--clr-primary) / .5);
-    backdrop-filter: blur(.5rem);
-    -webkit-backdrop-filter: blur(.5rem);
+    backdrop-filter: blur(.1rem);
+    -webkit-backdrop-filter: blur(.1rem);
     padding: .35rem 0;
     border-radius: 0 0 var(--border) var(--border);
     transition: opacity .2s linear;
@@ -527,11 +525,23 @@ footer p {
 }
 
 .notfound {
-    margin: 0 auto;
-    padding: 0;
-    font-size: 2rem;
-    height: 100%;
-    margin-top: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+    margin: 25vh 25%;
+    padding: 5rem 0;
+    background-color: rgb(var(--clr-primary) / .5);
+    border-radius: var(--border);
+}
+
+.notfound>* {
+    font-size: 4rem;
+}
+
+.notfound h2 {
+    color: grey;
 }
 
 
@@ -692,6 +702,20 @@ footer p {
 }
 
 
+/* PROJECT COUNTER */
+
+#projs {
+    margin: 0 auto;
+    margin-top: 1rem;
+    width: fit-content;
+    padding: .5rem 1rem;
+    background-color: rgb(36 36 36 / 0.5);
+    backdrop-filter: blur(.1rem);
+    border-radius: var(--border);
+    color: var(--clr-white);
+}
+
+
 /* SMALL SCREEN ADJUSTMENTS */
 
 @media only screen and (max-width: 1200px) {
@@ -764,9 +788,6 @@ footer p {
         padding: 1.5rem;
     }
     /* Project */
-    .project-container {
-        height: 85vh;
-    }
     .project-wrapper h1 {
         max-width: 100%;
     }
@@ -799,10 +820,6 @@ footer p {
     .infocard-content p {
         padding: 1rem;
         text-align: center;
-    }
-    .media-wrapper::before {
-        backdrop-filter: blur(.25rem);
-        -webkit-backdrop-filter: blur(.25rem);
     }
     .infocard-wrapper .changelog {
         display: none;
@@ -838,8 +855,9 @@ footer p {
         flex-direction: column;
     }
     .notfound {
-        margin: 2rem;
-        margin-top: 40%;
+        flex-direction: column;
+        margin: 20vh 2rem 0;
+        padding: 2rem;
     }
 }
 

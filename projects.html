@@ -29,8 +29,6 @@
     <script src="https://kit.fontawesome.com/8ab913bf22.js" crossorigin="anonymous"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" crossorigin="anonymous"></script>
-
-    <script src="js/avatar.js"></script>
 </head>
 
 <body>
@@ -45,7 +43,7 @@
             </ul>
         </div>
         <div class="logo">
-            <a href="https://github.com/misternano/nanos.club" title="Visit GitHub Repo" alt="GitHub Repository" target="_blank"><img alt="Avatar" id="avatar"></a>
+            <a href="https://github.com/misternano/nanos.club" title="Visit GitHub Repo" target="_blank"><img id="avatar" src="assets/avatar.png" alt="Avatar" /></a>
         </div>
     </nav>
 
@@ -67,9 +65,11 @@
             <a href="#projects"><button class="projectsBtn" id="projectsBtn"></button></a>
         </div>
         <a name="projects"></a>
+        <div id="projs"></div>
         <div class="infocard-container">
 
             <!-- A Project List -->
+
 
             <div class="infocard-wrapper">
                 <div class="media-wrapper"><img loading="lazy" src="docs/images/N6fgt.png" alt="Personal Portfolio" /></div>
@@ -95,7 +95,6 @@
                     <p>Concept dashboard featuring a member management panel, interactive calender, messaging system, task management and project management board.</p>
                     <div class="languages-wrapper">
                         <span class="tag | html"></span>
-                        <span class="tag | mysql"></span>
                         <span class="tag | css"></span>
                         <span class="tag | jquery"></span>
                     </div>
@@ -226,6 +225,9 @@
         <p>Back to <a class="link" href="/">Home</a></p>
     </footer>
     <div id="fade"></div>
+    <script>
+        document.getElementById("projs").innerHTML = document.querySelectorAll('.infocard-wrapper').length + " projects";
+    </script>
     <script src="js/buttons.js"></script>
     <script src="js/init.js"></script>
 </body>
