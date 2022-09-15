@@ -34,6 +34,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/avatar.js"></script>
 </head>
 
 <body>
@@ -69,7 +70,7 @@
             </div>
             <a href="#projects"><button class="projectsBtn" id="projectsBtn"></button></a>
         </div>
-        <a name="projects" id="projs"></a>
+        <a name="projects"></a>
         <div class="infocard-container">
 
             <!-- A Project List -->
@@ -179,7 +180,7 @@
                 <span class="infocard__spacer"></span>
                 <div class="infocard-content">
                     <h3>Dedicated FiveM Server</h3>
-                    <p>An online dedicated FiveM menu based roleplay server.</p>
+                    <p>An online FiveM menu based roleplay server.</p>
                     <div class="languages-wrapper">
                         <span class="tag | lua"></span>
                         <span class="tag | mysql"></span>
@@ -227,9 +228,6 @@
         <p>Back to <a class="link" href="/">Home</a></p>
     </footer>
     <div id="fade"></div>
-    <script>
-        document.getElementById("projs").innerHTML = document.querySelectorAll('.infocard-wrapper').length + " projects";
-    </script>
     <script src="js/buttons.js"></script>
     <script src="js/init.js"></script>
 </body>
