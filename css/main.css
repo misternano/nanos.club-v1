@@ -29,6 +29,10 @@ h3 {
     padding: 0;
 }
 
+[data-aos] {
+    z-index: -1;
+}
+
 
 /* BASE */
 
@@ -567,7 +571,6 @@ footer p {
 /* Languages tags */
 
 .tag {
-    --fs-tags: 11px;
     padding: 3px 4px;
     font-size: var(--fs-tags);
     font-weight: bold;
