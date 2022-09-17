@@ -486,10 +486,29 @@ footer p {
     padding: 0.5rem 1rem 0.5rem 0.5rem;
     gap: 1rem;
     background-color: rgb(36 36 36 / 0.25);
-    border: 1px solid #1fdf64;
+    border: 1px solid rgb(31 223 100 / 0.75);
     border-radius: var(--border);
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);
+    transition: border-color 0.3s;
+}
+
+.spotify-wrapper:hover {
+    border-color: rgb(31 223 100 / 1);
+}
+
+.spotify-wrapper::before {
+    position: absolute;
+    content: "\f1bc";
+    font: var(--fa-font-brands);
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.spotify-wrapper:hover::before {
+    color: #1fdf64;
 }
 
 .spotify-wrapper img {
@@ -507,13 +526,18 @@ footer p {
     justify-content: center;
     align-items: flex-start;
     padding: 0.25rem;
-    white-space: nowrap;
-    overflow: hidden;
 }
 
 .spotify__info>* {
     font-size: 1rem;
     font-weight: 500;
+}
+
+.spotify-truncate {
+    max-width: 17rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .spotify__info #spotify-song {
