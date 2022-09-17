@@ -28,7 +28,7 @@ export const onRequestGet = async({ env }) => {
     }
 };
 
-const refreshToken = async(refreshToken, CLIENT_ID, CLIENT_SECRET) => {
+const refresh = async(refreshToken, CLIENT_ID, CLIENT_SECRET) => {
     const bodyData = new URLSearchParams({
         grant_type: "refresh_token",
         client_id: CLIENT_ID,
@@ -48,7 +48,7 @@ const refreshToken = async(refreshToken, CLIENT_ID, CLIENT_SECRET) => {
 
     const newSession = {
         accessToken: body.access_token,
-        refreshToken: body.refresh_token ? body.refresh_token : session.refreshToken,
+        refreshToken: body.refresh_token ? body.refresh_token : refreshToken,
     };
 
     await env.TOKENS.put("tokens", JSON.stringify(newSession));
@@ -64,7 +64,7 @@ const request = async(url, accessToken, refreshToken, CLIENT_ID, CLIENT_SECRET) 
     });
 
     if (response.status === 401) {
-        const newAccessToken = await refreshToken(session);
+        const newAccessToken = await refresh(refreshToken, CLIENT_ID, CLIENT_SECRET);
 
         if (!newAccessToken) {
             return null;
