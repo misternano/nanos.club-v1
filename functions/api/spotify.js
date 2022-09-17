@@ -7,14 +7,20 @@ export const onRequestGet = async({ env }) => {
             return new Response(JSON.stringify({ is_playing: false }), {
                 status: 200,
                 headers: {
-                    "content-type": "application/json"
+                    "content-type": "application/json",
+                    "access-control-allow-origin": "*",
+                    "access-control-allow-headers": "*",
+                    "access-control-allow-methods": "GET, POST, OPTIONS"
                 }
             });
         }
 
         return new Response(JSON.stringify(response), {
             headers: {
-                "content-type": "application/json"
+                "content-type": "application/json",
+                "access-control-allow-origin": "*",
+                "access-control-allow-headers": "*",
+                "access-control-allow-methods": "GET, POST, OPTIONS"
             }
         });
     } catch (err) {

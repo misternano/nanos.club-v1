@@ -46,7 +46,7 @@ html {
 }
 
 :root {
-    --bar-width: 0%;
+    --bar-length: 0%;
     --border: 0.5rem;
     --shadow: 0 0 0.4rem rgb(var(--clr-primary));
     --nav-alpha: 0.75;
@@ -970,7 +970,7 @@ footer p {
     position: absolute;
     background-color: rgb(31 223 100 / 0.5);
     left: 0;
-    width: var(--bar-width);
+    width: var(--bar-length);
     height: 0.25rem;
     border-radius: 9999px;
 }
@@ -980,7 +980,7 @@ footer p {
     position: absolute;
     height: 0.5rem;
     width: 0.5rem;
-    left: var(--bar-width);
+    left: var(--bar-length);
     top: 0;
     border-radius: 9999px;
     background-color: #1fdf64;
