@@ -263,8 +263,6 @@ footer p {
     gap: 2.5rem;
     padding: 0.5rem 1rem;
     background-color: rgb(var(--clr-primary) / 0.35);
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
     border-radius: var(--border);
 }
 
@@ -552,6 +550,47 @@ footer p {
     margin: 0 10px 4px;
     text-align: left;
     pointer-events: none;
+}
+
+
+/* SPOTIFY -> PROGRESS BAR */
+
+.bar-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 0 0.25rem;
+}
+
+.bar {
+    position: relative;
+    display: block;
+    height: 0.25rem;
+    width: 100%;
+    border-radius: 9999px;
+    background-color: #808080;
+}
+
+.bar::before {
+    content: "";
+    position: absolute;
+    background-color: rgb(31 223 100 / 0.5);
+    left: 0;
+    width: var(--bar-length);
+    height: 0.25rem;
+    border-radius: 9999px;
+}
+
+.bar::after {
+    content: "";
+    position: absolute;
+    height: 0.5rem;
+    width: 0.5rem;
+    left: var(--bar-length);
+    top: 0;
+    border-radius: 9999px;
+    background-color: #1fdf64;
+    transform: translate(-50%, -25%);
 }
 
 
@@ -871,6 +910,7 @@ footer p {
         padding: 1rem;
         text-align: center;
     }
+    /* spotify */
     .spotify-container {
         bottom: 1rem;
         left: 1rem;
@@ -878,6 +918,17 @@ footer p {
     }
     .spotify-wrapper {
         width: 100%;
+        border-color: #1fdf64;
+    }
+    .spotify-wrapper::before {
+        color: white;
+    }
+    .spotify-wrapper:hover,
+    .spotify-wrapper:hover::before {
+        color: unset;
+    }
+    .spotify-truncate {
+        max-width: 12rem;
     }
     /* Top btn */
     .topBtn {
@@ -948,45 +999,4 @@ footer p {
     100% {
         translate: 0 0;
     }
-}
-
-
-/* unfinished */
-
-.bar-wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin: 0.5rem 0 0.25rem;
-}
-
-.bar {
-    position: relative;
-    display: block;
-    height: 0.25rem;
-    width: 100%;
-    border-radius: 9999px;
-    background-color: #808080;
-}
-
-.bar::before {
-    content: "";
-    position: absolute;
-    background-color: rgb(31 223 100 / 0.5);
-    left: 0;
-    width: var(--bar-length);
-    height: 0.25rem;
-    border-radius: 9999px;
-}
-
-.bar::after {
-    content: "";
-    position: absolute;
-    height: 0.5rem;
-    width: 0.5rem;
-    left: var(--bar-length);
-    top: 0;
-    border-radius: 9999px;
-    background-color: #1fdf64;
-    transform: translate(-50%, -25%);
 }
