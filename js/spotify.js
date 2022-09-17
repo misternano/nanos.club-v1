@@ -14,7 +14,6 @@ const spotifyInfo = async() => {
                     const album = json.item.album.name;
                     const albumCover = json.item.album.images[0].url;
                     const trackID = json.item.id;
-
                     const length = json.item.duration_ms;
                     const progress = json.progress_ms;
 

@@ -475,7 +475,7 @@ footer p {
     display: none;
     position: absolute;
     bottom: 2rem;
-    left: 3rem;
+    left: 2rem;
 }
 
 .spotify-wrapper {
@@ -912,7 +912,7 @@ footer p {
         padding: 1rem;
         text-align: center;
     }
-    /* spotify */
+    /* Spotify */
     .spotify-container {
         bottom: 1rem;
         left: 1rem;
