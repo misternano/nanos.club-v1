@@ -3,6 +3,15 @@ export const onRequestGet = async({ env }) => {
         const tokens = await env.TOKENS.get("tokens", { type: "json" });
         const response = await request("https://api.spotify.com/v1/me/player/currently-playing", tokens.accessToken, tokens.refreshToken, env.CLIENT_ID, env.CLIENT_SECRET);
 
+        if (response.status !== 200) {
+            return new Response(JSON.stringify({ is_playing: false }), {
+                status: 200,
+                headers: {
+                    "content-type": "application/json"
+                }
+            });
+        }
+
         return new Response(JSON.stringify(response), {
             headers: {
                 "content-type": "application/json"
