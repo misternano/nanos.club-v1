@@ -72,7 +72,7 @@ const request = async(url, accessToken, refreshToken, CLIENT_ID, CLIENT_SECRET) 
     }
 
     if (response.status === 200) {
-        const body = await request.json();
+        const body = await response.json();
 
         return body;
     }
