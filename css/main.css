@@ -378,8 +378,8 @@ footer p {
 
 .infocard-wrapper::before {
     position: absolute;
-    right: 1%;
-    top: 4%;
+    right: 1rem;
+    top: 1rem;
     font: var(--fa-font-solid);
     content: "\f121 \00a0";
 }
@@ -516,7 +516,6 @@ footer p {
     height: 96px;
     width: 96px;
     border-radius: calc(var(--border)/2);
-    border: 1px solid white;
 }
 
 .spotify__info {
@@ -866,7 +865,7 @@ footer p {
     }
     .infocard-wrapper::before {
         top: unset;
-        bottom: 2%;
+        bottom: 1rem;
     }
     .infocard-content p {
         padding: 1rem;
