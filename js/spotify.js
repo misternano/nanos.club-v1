@@ -22,8 +22,8 @@ const spotifyInfo = () => {
             } else {
                 $("#spotify").css("display", "block");
                 $("#spotify-album").attr("src", albumCover).prop("title", album);
-                $("#spotify-song").text(song.replace(/ *\([^)]*\)/g, "").replace(/ *\[[^\]]*]/g, "").replace(/ - [Rr]ecorded [Aa]t.*/g, ""));
-                $("#spotify-artist").text(artist.split("; ").join(" • "));
+                $("#spotify-song").text(song.replace(/ *\([^)]*\)/g, "").replace(/ *\[[^\]]*]/g, "").replace(/ - [Rr]ecorded [Aa]t.*/g, "")).prop("title", song);
+                $("#spotify-artist").text(artist.split("; ").join(" • ")).prop("title", artist);
                 $("#spotify-track").attr("href", "https://open.spotify.com/track/" + trackID);
                 $("#bar-total").text(time);
                 if (screen.width < 1200) {
