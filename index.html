@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-    <title>Nano's Club &mdash; Home</title>
+    <title>Nano's Club</title>
     <link href="assets/flash.png" rel="icon" type="image/png">
     <meta name="theme-color" content="#171717" />
 
@@ -34,6 +34,8 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <script src="js/spotify.js"></script>
 </head>
 
 <body>
@@ -64,8 +66,8 @@
     <main>
         <div class="hero-container">
             <div class="hero-wrapper">
-                <h1 class="rainbow" data-aos="fade-in" data-aos-delay="100"><span id="greet"></span>, I'm Nano :)</h1>
-                <div class="socials-wrapper" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <h1 class="rainbow"><span id="greet"></span>, I'm Nano</h1>
+                <div class="socials-wrapper">
                     <div class="socials | discord"><a href="https://www.discord.com/users/272535850200596480/" target="_blank"><span class="sr-only">Discord</span><i class="fa-brands fa-discord"></i></a></div>
                     <div class="socials | twitter"><a href="https://www.twitter.com/fruitynano/" target="_blank"><span class="sr-only">Twitter</span><i class="fa-brands fa-twitter"></i></a></div>
                     <div class="socials | twitch"><a href="https://www.twitch.tv/mrnanovirus/" target="_blank"><span class="sr-only">Twitch</span><i class="fa-brands fa-twitch"></i></a></div>
@@ -76,6 +78,25 @@
             </div>
         </div>
     </main>
+
+    <div id="spotify" class="spotify-container">
+        <p class="spotify__listening">Currently Playing</p>
+        <a id="spotify-track" target="_blank">
+            <div class="spotify-wrapper">
+                <img id="spotify-album" src="assets/album.png" alt="album cover" />
+                <div class="spotify__info">
+                    <p id="spotify-song"></p>
+                    <p id="spotify-artist"></p>
+                    <div class="bar-wrapper">
+                        <p id="bar-current">0:00</p>
+                        <p id="bar-total"></p>
+                    </div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </a>
+    </div>
+
     <script src="js/init.js"></script>
 </body>
 
