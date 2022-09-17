@@ -26,9 +26,6 @@ const spotifyInfo = async() => {
                     $("#bar-total").text(formatTime(length));
                     $("#bar-current").text(formatTime(progress));
                     $(":root").css("--bar-length", `${(progress / length * 100)}%`);
-                    if (screen.width < 1200) {
-                        $("#spotify").css("display", "none");
-                    }
                 }
             });
 

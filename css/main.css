@@ -822,10 +822,10 @@ footer p {
     }
     /* Homepage */
     .hero-container {
-        padding-top: 10vh;
+        padding-top: 5vh;
     }
     .hero-wrapper {
-        gap: 5rem;
+        gap: 2rem;
     }
     .hero-wrapper h1 {
         font-size: 4rem;
@@ -872,7 +872,12 @@ footer p {
         text-align: center;
     }
     .spotify-container {
-        display: none;
+        bottom: 1rem;
+        left: 1rem;
+        right: 1rem;
+    }
+    .spotify-wrapper {
+        width: 100%;
     }
     /* Top btn */
     .topBtn {
