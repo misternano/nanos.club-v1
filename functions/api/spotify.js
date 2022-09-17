@@ -3,7 +3,7 @@ export const onRequestGet = async({ env }) => {
         const tokens = await env.TOKENS.get("tokens", { type: "json" });
         const response = await request("https://api.spotify.com/v1/me/player/currently-playing", tokens.accessToken, tokens.refreshToken, env.CLIENT_ID, env.CLIENT_SECRET);
 
-        if (response.status !== 200) {
+        if (!response) {
             return new Response(JSON.stringify({ is_playing: false }), {
                 status: 200,
                 headers: {
@@ -71,9 +71,9 @@ const request = async(url, accessToken, refreshToken, CLIENT_ID, CLIENT_SECRET) 
         });
     }
 
-    const body = await response.json();
+    if (response.status === 200) {
+        const body = await request.json();
 
-    if (response.status >= 200 && response.status < 300) {
         return body;
     }
 
