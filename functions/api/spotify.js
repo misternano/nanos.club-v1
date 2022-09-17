@@ -1,7 +1,7 @@
 export const onRequestGet = async({ env }) => {
     try {
         const tokens = await env.TOKENS.get("tokens", { type: "json" });
-        const response = await request("https://api.spotify.com/v1/me/player/currently-playing", tokens.accessToken, tokens.refreshToken, env.CLIENT_ID, env.CLIENT_SECRET);
+        const response = await request("https://api.spotify.com/v1/me/player/currently-playing", tokens.accessToken, tokens.refreshToken, env.CLIENT_ID, env.CLIENT_SECRET, env);
 
         if (!response) {
             return new Response(JSON.stringify({ is_playing: false }), {
@@ -28,7 +28,7 @@ export const onRequestGet = async({ env }) => {
     }
 };
 
-const refresh = async(refreshToken, CLIENT_ID, CLIENT_SECRET) => {
+const refresh = async(refreshToken, CLIENT_ID, CLIENT_SECRET, env) => {
     const bodyData = new URLSearchParams({
         grant_type: "refresh_token",
         client_id: CLIENT_ID,
@@ -56,7 +56,7 @@ const refresh = async(refreshToken, CLIENT_ID, CLIENT_SECRET) => {
     return body.access_token;
 };
 
-const request = async(url, accessToken, refreshToken, CLIENT_ID, CLIENT_SECRET) => {
+const request = async(url, accessToken, refreshToken, CLIENT_ID, CLIENT_SECRET, env) => {
     let response = await fetch(url, {
         headers: {
             authorization: "Bearer " + accessToken
@@ -64,7 +64,7 @@ const request = async(url, accessToken, refreshToken, CLIENT_ID, CLIENT_SECRET) 
     });
 
     if (response.status === 401) {
-        const newAccessToken = await refresh(refreshToken, CLIENT_ID, CLIENT_SECRET);
+        const newAccessToken = await refresh(refreshToken, CLIENT_ID, CLIENT_SECRET, env);
 
         if (!newAccessToken) {
             return null;
