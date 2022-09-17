@@ -533,19 +533,19 @@ footer p {
     font-weight: 500;
 }
 
-.spotify-truncate {
-    max-width: 17rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
 .spotify__info #spotify-song {
     color: #fff;
 }
 
 .spotify__info #spotify-artist {
     color: #808080;
+}
+
+.spotify-truncate {
+    max-width: 17rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .spotify__listening {
