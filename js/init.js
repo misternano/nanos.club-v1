@@ -45,8 +45,3 @@ $(document).ready(() => {
     setGreeting();
     setAvatar();
 });
-
-// START AOS
-AOS.init({
-    // global settings
-});

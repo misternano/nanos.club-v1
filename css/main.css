@@ -315,7 +315,6 @@ footer p {
     top: 50%;
     left: 50%;
     translate: -50% -50%;
-    z-index: -1;
 }
 
 .project-wrapper h1 {
@@ -345,7 +344,6 @@ footer p {
     color: white;
     font-size: 2rem;
     animation: bounce 3s ease-in-out infinite;
-    z-index: -1;
 }
 
 .projectsBtn::before {
@@ -833,8 +831,8 @@ footer p {
         padding: 5rem 3rem;
         background-color: rgb(var(--clr-primary) / 0.8);
         border-radius: 0 var(--border) var(--border) 0;
-        backdrop-filter: blur(0.5rem);
-        -webkit-backdrop-filter: blur(0.5rem);
+        /* backdrop-filter: blur(0.5rem);
+        -webkit-backdrop-filter: blur(0.5rem); */
         inset: 0 30% 0 0;
         translate: 0 0;
         z-index: 99;
